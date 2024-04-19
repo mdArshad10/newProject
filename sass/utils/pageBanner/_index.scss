@@ -1,0 +1,71 @@
+@forward "../../global";
+$background-color: "#fea300";
+
+/* ====== orange craft Section, "setting the standard","Building timeless elegance"  ====== */
+
+#crafting,
+#setting-standard,
+#building-timeless {
+  min-height: 90vh;
+  width: 100%;
+  position: relative;
+  padding-top: 10vh;
+  scroll-snap-align: start;
+}
+
+.crafting-bg {
+  background-color: #fea300;
+}
+
+.setting-standard-bg {
+  background-image: url("./public/assets/3rd-img.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.building-timeless-bg {
+  background-image: url("./public/assets/img6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#crafting-content,
+#setting-standard-content {
+  position: absolute;
+  width: 50vw;
+  left: 6vw;
+  bottom: 20%;
+}
+
+#building-timeless-content {
+  position: absolute;
+  top: 24%;
+  left: 60%;
+  width: fit-content;
+}
+
+.crafting-heading,
+.setting-standard-heading,
+.building-timeless-heading {
+  font-size: var(--font-size-heading);
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.building-timeless-heading {
+  font-size: var(--font-size-heading);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.crafting-para,
+.setting-standard-para,
+.building-timeless-para {
+  margin-top: 2vh;
+  line-height: 1.1;
+  width: 70%;
+  font-size: var(--font-size-mobile-paragraph);
+}
+
+/* ----- orange craft Section end ----- */

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | PSM</title>
+    <link rel="stylesheet" href="../../style.css" />
+  </head>
+  <body>
+    <div id="retail_register_page">
+      <nav class="container">
+        <div id="navbar-logo">
+          <img src="./public/logo-1.png" alt="" />
+        </div>
+        <div id="navbar-menu">
+          <div id="address-1">
+            <strong>Brisbane</strong> <a href="#">123456789</a>
+          </div>
+          <div id="address-2">
+            <strong>Sunshine Coast</strong> <a href="#">123456789</a>
+          </div>
+        </div>
+      </nav>
+
+      <section class="registeration_form">
+        <h3><strong>Retail</strong> Online Ordering</h3>
+        <form id="user-form" method="post">
+          <div id="input_field">
+            <label for="userName">Name:<sup>*</sup></label>
+            <input
+              type="text"
+              id="userName"
+              name="customer_name"
+              maxlength="225"
+              placeholder="E.g. Harry Potter"
+              title="Oops! I think you missed something. We need your name to set up your account. Please fill out and we can set you up!"
+              required
+            />
+          </div>
+
+          <div id="input_field">
+            <label for="userEmail">Email:<sup>*</sup></label>
+            <input
+              type="email"
+              id="userEmail"
+              name="customer_email"
+              maxlength="225"
+              placeholder="E.g. harry@potter.com"
+              required
+            />
+          </div>
+
+          <div id="input_field">
+            <label for="userPhone">Phone Number:<sup>*</sup></label>
+            <input
+              type="tel"
+              id="userPhone"
+              name="customer_phone"
+              maxlength="14"
+              required
+            />
+          </div>
+
+          <div id="input_field">
+            <label for="userAddress">Address:<sup>*</sup></label>
+            <input
+              type="text"
+              id="userAddress"
+              name="customer_address"
+              maxlength="225"
+              placeholder="E.g. 42 Wallaby Way"
+              required
+            />
+          </div>
+
+          <div id="input_field">
+            <label for="userSuburb">Suburb:<sup>*</sup></label>
+            <input
+              type="text"
+              id="userSuburb"
+              name="customer_suburb"
+              maxlength="225"
+              required
+            />
+          </div>
+
+          <div id="input_field">
+            <label for="userPostCode">Postcode:<sup>*</sup></label>
+            <input
+              type="text"
+              id="userPostCode"
+              name="customer_postcode"
+              pattern="[0-9]{4}"
+              maxlength="4"
+              placeholder="E.g. 2000"
+              required
+            />
+          </div>
+
+          <div id="input_field">
+            <label for="customer_state">State:<sup>*</sup></label>
+            <select name="customer_state" id="customer_state" required>
+              <option>--Select a language --</option>
+              <option value="QLD">New South Wales</option>
+              <option value="TAS">Tasmania</option>
+              <option value="VIC">Victoria</option>
+              <option value="WA">Western Australia</option>
+              <option value="ACT">Australian Capital Territory</option>
+              <option value="NT">Northern Territory</option>
+            </select>
+
+            <p></p>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+
+    <script type="module" src="./retial_form_submit.js"></script>
+  </body>
+</html>

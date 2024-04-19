@@ -1,0 +1,10 @@
+@forward "../global";
+
+#thank-you-message {
+  @extend %content-with-paragraph; // global boilerplate
+  margin-top: 8rem;
+}
+
+#thank-you-page {
+  @extend %navbar-order-online-container; // global boilerplate
+}

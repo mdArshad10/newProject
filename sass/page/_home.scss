@@ -1,0 +1,179 @@
+@forward "../global";
+
+#page2 {
+  width: 100%;
+  min-height: 80vh;
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+  scroll-snap-align: start;
+}
+
+.page2-heading {
+  color: #000;
+  font-size: 73px;
+  text-transform: uppercase;
+}
+
+
+.slider {
+  width: 60%;
+  /* height: 50%; */
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 10vh;
+}
+
+.slick-slide {
+  transform: scale(0.8);
+  transition: all 0.4s ease-in-out;
+  padding: 40px 0;
+}
+
+.slick-slide img {
+  max-width: 100%;
+  transition: all 0.4s ease-in-out;
+  border-radius: 1rem;
+}
+
+.slick-center {
+  transform: scale(1.1);
+}
+
+.slick-center > img {
+  /* transition: all 0.4s ease-in; */
+  box-shadow: 0px 12px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 12px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 12px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.slick-next::before {
+  content: url("./assets/slider_arrows/arrow-right-s-line.svg");
+}
+
+.slick-prev::after {
+  content: url("./assets/slider_arrows/arrow-left-s-line.svg");
+}
+
+.swiper-slide-caption {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #000;
+  font-size: 18px;
+  background-color: rgb(255 255 255 / 50%);
+  padding: 10px;
+  display: none;
+}
+
+.slick-center .swiper-slide-caption {
+  display: block;
+}
+
+.slick-dots {
+  bottom: -10%;
+}
+
+// ====== sticker start ======
+#sticker {
+  /* width: 100%; */
+  position: absolute;
+  width: 22%;
+  height: 3%;
+  top: 4%;
+  left: 72%;
+  width: fit-content;
+  /* outline: 5px solid red; */
+  text-align: end;
+  z-index: 100;
+}
+
+#sticker > img {
+  width: 18%;
+}
+
+// ------- sticker end --------
+
+// ====== video section ============
+
+⁡​⁡.video-section {
+  width: 100%;
+  height: 100vh;
+}
+
+.video-section > video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+// ------- video section end ------- 
+
+
+.feature-section {
+  background-image: url("./assets/wooden-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.feature-section > h1 {
+  font-size: var(--font-size-heading);
+  text-transform: uppercase;
+  margin-top: 25vh;
+  font-weight: 700;
+}
+
+.feature-blocks {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0 5vw;
+  /* flex-basis: 1rem; */
+  flex-shrink: 2;
+
+  /* width: 1rem; */
+  /* width: 10rem; */
+  gap: 1vw;
+}
+
+.feature-single-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5vh;
+  flex: 1;
+}
+
+.feature-blocks > .feature-single-block > #block {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  background-color: #fff;
+  object-fit: cover;
+}
+
+.feature-single-block > h1 {
+  font-size: large;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 300;
+  text-wrap: stable;
+}
+
+/* ----- Feature section end ----- */
+
+
