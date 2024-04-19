@@ -1,0 +1,149 @@
+#contact-us-wrapper > h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: black;
+  padding-top: 10vh;
+  font-size: 3rem;
+}
+
+#map-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#map-container-left,
+#map-container-right {
+  display: flex;
+  flex-direction: column;
+}
+
+#map-container-left > span,
+#map-container-right > span {
+  color: black;
+  text-align: center;
+}
+
+/* .map-container-left > iframe,
+.map-container-right > iframe {
+  width: 100%;
+} */
+
+#contact-us {
+  background-color: #35463d;
+}
+
+#contact-us-content {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-us-content > h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contact-addesses {
+  display: flex;
+  justify-content: space-around;
+}
+
+#contact-us-names,
+#contact-us-email {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#contact-us-names > input,
+#contact-us-email > input {
+  width: 45%;
+  padding: 0.25rem 0.5rem;
+  color: black;
+}
+
+#contact-us-interest > h4 {
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+#contact-us-interest > div {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+#contact-us-boxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+#contact-us-inquary > label {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+#contact-us-inquary-state {
+  width: 100%;
+  color: black;
+  padding: 0.4rem;
+}
+
+#contact-us-inquary-state:focus {
+  outline: none;
+}
+
+#contact-us-inquary-state > option {
+  color: black;
+}
+
+#contact-us-inquary {
+  flex-basis: 45%;
+}
+
+textarea {
+  color: black;
+  width: 100%;
+  height: 20vh;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+textarea:focus {
+  border: none;
+  outline: none;
+}
+
+.cta-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact-us-submit {
+  color: white;
+  border: none;
+  background-color: red;
+  padding: 0.5rem 2rem;
+  margin-top: 0.5rem;
+  transition: all 0.2s ease-in;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 200;
+}
+
+#contact-us-submit:hover {
+  box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 7px 5px 0px rgba(0, 0, 0, 0.75);
+}
