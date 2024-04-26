@@ -12,8 +12,10 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.10.1",
     "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.12.5",
-    "just-validate": "^4.3.0"
+    "just-validate": "^4.3.0",
+    "swiper": "^11.1.1"
   }
 }

@@ -1,0 +1,28 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+
+  & > .swiper-slide-content {
+    position: absolute;
+    top: 40vh;
+    left: 10vw;
+    font-size: large;
+    color: white;
+
+    &> p{
+      width: 60%;
+      font-size: 1.2rem;
+    }
+  }
+
+  & > .swiper-slide-image {
+    display: block;
+    width: 100%;
+    height: 80vh;
+  }
+}

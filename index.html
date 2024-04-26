@@ -30,6 +30,12 @@
       rel="stylesheet"
     />
 
+    <!-- swiper-js css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -38,56 +44,56 @@
       <div id="india-tag"><a href="#">ind</a></div>
 
       <!-- Navbar -->
-      <nav class="navbar">
-        <div id="center_logos">
-          <div class="center-logo">
+      <!-- <nav class="navbar">
+        <div id="center_logos"> -->
+          <!-- <div class="center-logo">
             <img src="./public/assets/psm.png" alt="center_logo" />
           </div>
           <div id="tag-line">
             <img src="./public/assets/60 year silver.svg" alt="tagline" />
-          </div>
-        </div>
+          </div> -->
+        <!-- </div>
         <ul class="navbar-menu">
           <li class="psm-doors-drop-down">
-            <a href="#">PSM Doors & Cabinets</a>
+            <a href="#">PSM Doors & Cabinets</a> -->
             <!-- psm door dropdown menu -->
-            <ul class="menu-dropdown swing-in-top-bck">
+            <!-- <ul class="menu-dropdown swing-in-top-bck">
               <li><a href="#">Order Online</a></li>
               <li><a href="#">Comprehensive solution</a></li>
               <li><a href="#">Flat Package and diy</a></li>
             </ul>
           </li>
           <li class="inspiration-drop-down">
-            <a href="#">Inspiration</a>
+            <a href="#">Inspiration</a> -->
             <!-- inspiration dropdown menu -->
-            <ul class="menu-dropdown swing-in-top-bck">
+            <!-- <ul class="menu-dropdown swing-in-top-bck">
               <li><a href="#">Gallary</a></li>
               <li><a href="#">Blog</a></li>
             </ul>
-          </li>
+          </li> -->
 
-          <li class="why-us-drop-down">
-            <a href="#">Why us</a>
+          <!-- <li class="why-us-drop-down">
+            <a href="#">Why us</a> -->
             <!-- why us dropdown menu -->
-            <ul class="menu-dropdown swing-in-top-bck">
+            <!-- <ul class="menu-dropdown swing-in-top-bck">
               <li><a href="#">About us</a></li>
               <li><a href="#">Comparative price</a></li>
               <li><a href="#">FAQ</a></li>
               <li><a href="#">Price Guide</a></li>
               <li><a href="#">Our Process</a></li>
             </ul>
-          </li>
+          </li> -->
 
-          <li class="contact-drop-down">
-            <a href="#">Contact</a>
+          <!-- <li class="contact-drop-down">
+            <a href="#">Contact</a> -->
             <!-- contact dropdown -->
-            <ul class="menu-dropdown">
+            <!-- <ul class="menu-dropdown">
               <li><a href="#">Book a Consultancy</a></li>
               <li><a href="#">Job Vacancy</a></li>
               <li><a href="#">Contact Us</a></li>
             </ul>
           </li>
-        </ul>
+        </ul> -->
 
         <!-- navbar-icon -->
         <!-- <div class="navbar-icon">
@@ -134,91 +140,245 @@
             </li>
           </ul>
         </div> -->
-      </nav>
+      <!-- </nav> -->
 
-      <div id="main" class="home-hero-section">
-        <!-- sticker -->
-        <img id="sticker" src="./public/assets/STICKER-16.png" alt="sticker" />
+      <!--=============== HEADER ===============-->
+      <header class="header">
+         <nav class="nav container">
+            <div class="nav__data">
+               <a href="#" class="nav__logo">
+                  
+               </a>
+               
+               <div class="nav__toggle" id="nav-toggle">
+                  <i class="ri-menu-line nav__burger"></i>
+                  <i class="ri-close-line nav__close"></i>
+               </div>
+            </div>
 
-        <!--main content  -->
-        <div class="one-time-sliders">
-          <div class="one-time">
-            <div class="slider window-1">
-              <img
-                src="./public/assets/sliderImage/milled_panel.jpeg"
-                alt="window-1"
-              />
-              <div>
-                <h1>PSM</h1>
-                <p>
-                  PSM is the leading PSM company in India. We offer a wide range
-                  of PSM products and services.
-                </p>
-              </div>
+            <!--=============== NAV MENU ===============-->
+            <div class="nav__menu" id="nav-menu">
+               <ul class="nav__list">
+
+                  <!-- <li><a href="#" class="nav__link">PSM Kitchen & cabinetry</a></li> -->
+
+                  <!--=============== DROPDOWN 1 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        Kitchen & cabinetry <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="#" class="dropdown__link">
+                               Signature
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                             Elegant
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+                  
+
+                  <!--=============== DROPDOWN 2 ===============-->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        INSPIRATION <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="#" class="dropdown__link">
+                               Profiles
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                               Accounts
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                               Messages
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <!-- ====== DROPDOWN 3 ========= -->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        WHY US <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="#" class="dropdown__link">
+                               Profiles
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                               Accounts
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                               Messages
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <!-- ======== DROPDOWN 4 ========= -->
+                  <li class="dropdown__item">
+                     <div class="nav__link">
+                        CONTACT <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                           <a href="#" class="dropdown__link">
+                               Profiles
+                           </a>                          
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                               Accounts
+                           </a>
+                        </li>
+
+                        <li>
+                           <a href="#" class="dropdown__link">
+                               Messages
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+
+                  <!-- ======= DROPDOWN 5 ========== -->
+                  <li class="dropdown__item">
+                     <div class="nav__link order__now-btn">
+                        Order Now <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                     </div>
+
+                     <ul class="dropdown__menu">
+                        <li>
+                          <!-- REGISTRATION AND LOGIN PAGE -->
+                           <a href="./pages/ascut/index.html" class="dropdown__link">
+                               kitchen & cabinets
+                           </a>                          
+                        </li>
+
+                        <li>
+                          <!-- TODO: EITHER USER GIVE / OR WE CREATE -->
+                           <a href="#" class="dropdown__link">
+                               DIY & FLATPACK
+                           </a>
+                        </li>
+
+                        <li>
+                          <!-- TODO: SHOPIFY LINKS -->
+                           <a href="#" class="dropdown__link">
+                               DOORS
+                           </a>
+                        </li>
+                     </ul>
+                  </li>
+               </ul>
             </div>
-            <div class="slider window-2">
-              <img
-                src="./public/assets/contentImage/japandi-living-room-interior-design.jpg"
-                alt="window-2"
-              />
-              <div>
-                <h1>kitchen satck</h1>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit
-                  officiis enim nobis!
-                </p>
-              </div>
-            </div>
-            <div class="slider window-3">
-              <img
-                src="./public/assets/contentImage/pink-armchair-white-living-room-with-copy-space.jpg"
-                alt="window-3"
-              />
-              <div>
-                <h1>Ascut</h1>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Quisquam cum unde quos autem!
-                </p>
-              </div>
-            </div>
-            <div class="slider window-4">
-              <img
-                src="./public/assets/contentImage/plant-against-blue-wall-background-with-copy-space.jpg"
-                alt="window-4"
-              />
-              <div>
-                <h1>brandbajade.com</h1>
-                <p>
-                  quibusdam voluptatum necessitatibus voluptates distinctio
-                  repellendus blanditiis non, id soluta eaque dolore veniam
-                  provident minima, nemo cum.
-                </p>
-              </div>
+         </nav>
+      </header>
+
+
+      <!-- HERO SECTION -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              class="swiper-slide-image"
+              src="public/assets/homeTopSlider/1.webp"
+            />
+            <img
+              id="sticker"
+              src="/public/assets/STICKER-16.png"
+              alt="sticker"
+            />
+            <div class="swiper-slide-content">
+              <h1>This is the heading</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Incidunt aspernatur omnis voluptatibus sapiente officia
+                molestias debitis quisquam, architecto laboriosam temporibus
+                possimus nostrum, obcaecati mollitia unde modi id, adipisci
+                officiis sint.
+              </p>
             </div>
           </div>
-          <!-- <div class="main-content">
-          <div class="main-content-container">
-            <h1>CULTURING WOOD CURVING LIFE</h1>
-            <p>
-              An inspiring work of Architecture, which is not just a product of
-              luxury but a reflection of superior taste, quality and strength
-              that cannot be just bought into.
-            </p>
-            <p>
-              Art is PSM’s DNA and the same is reflected in all of it’s actions
-              where values are not just the guiding principles of this brand,
-              but the four pillars on which the brand is built. It is Natural,
-              Creative, Inspiring and Exclusive.
-            </p>
-
-            <button id="order-btn">
-              <a href="#">order online</a>
-              <img src="./public/assets/" alt="cta-arrow" />
-            </button>
+          <div class="swiper-slide">
+            <img
+              class="swiper-slide-image"
+              src="public/assets/homeTopSlider/2.webp"
+              alt="2nd-slider-image"
+            />
+            <div class="swiper-slide-content">
+              <h1>This is the heading</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Incidunt aspernatur omnis voluptatibus sapiente officia
+                molestias debitis quisquam, architecto laboriosam temporibus
+                possimus nostrum, obcaecati mollitia unde modi id, adipisci
+                officiis sint.
+              </p>
+            </div>
           </div>
-        </div> -->
+          <div class="swiper-slide">
+            <img
+              class="swiper-slide-image"
+              src="public/assets/homeTopSlider/3.webp"
+              alt="3rd-slider-image"
+            />
+            <div class="swiper-slide-content">
+              <h1>This is the heading</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Incidunt aspernatur omnis voluptatibus sapiente officia
+                molestias debitis quisquam, architecto laboriosam temporibus
+                possimus nostrum, obcaecati mollitia unde modi id, adipisci
+                officiis sint.
+              </p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="swiper-slide-image"
+              src="public/assets/homeTopSlider/4.webp"
+              alt="4th-slider-image"
+            />
+            <div class="swiper-slide-content">
+              <h1>This is the heading</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Incidunt aspernatur omnis voluptatibus sapiente officia
+                molestias debitis quisquam, architecto laboriosam temporibus
+                possimus nostrum, obcaecati mollitia unde modi id, adipisci
+                officiis sint.
+              </p>
+            </div>
+          </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
 
       <!-- page-2 slider -->
@@ -227,7 +387,7 @@
         <h1 class="page2-heading">collections</h1>
 
         <!-- slider js -->
-        <div class="slider">
+        <div class="slider collection-slider">
           <div class="item">
             <img src="./public/assets/sliderImage/slider-4.jpg" alt="doors" />
             <div class="swiper-slide-caption">DOORS</div>
@@ -262,11 +422,6 @@
           </div>
         </div>
       </div>
-
-      <!-- video section -->
-      <!-- <section class="video-section"> -->
-      <!-- <video src="./video/production_id.mp4" type="" autoplay muted loop ></video> -->
-      <!-- </section> -->
 
       <!-- Feature section -->
       <section class="feature-section">
@@ -323,6 +478,15 @@
         </div>
       </section>
 
+      <section class="video-section">
+        <video
+          src="./public/assets/video/intro.mp4"
+          autoplay
+          muted
+          loop
+        ></video>
+      </section>
+
       <!-- "crafting trust" heading -->
       <section id="crafting" class="crafting-bg">
         <div id="crafting-content" class="crafting-bg-position">
@@ -339,7 +503,9 @@
             continuous improvement. This commitment to excellence has allowed
             PSM to gain unwavering trust among customers and industry peers
           </p>
-          <button><a href="./pages/Retail_register/index.html">Order Online</a></button>
+          <button>
+            <a href="./pages/Retail_register/index.html">Order Online</a>
+          </button>
         </div>
       </section>
 
@@ -408,7 +574,7 @@
                     <a href="tel:+919163350082"
                       ><i class="ri-phone-line"></i> +61432200001</a
                     >
-                    <a href="mailto:arshadwebdeveloper10@gmail.com"
+                    <a href="mailto:Info@psmcabinets.com.au"
                       ><i class="ri-mail-line"></i> Info@psmcabinets.com.au</a
                     >
                   </div>
@@ -418,27 +584,22 @@
 
             <img
               id="asutralian-certificate"
-              src=""
+              src="/public/assets/basic/australian-made-campaign-logo.png"
               alt="australian-made-owned"
             />
           </div>
-          <form id="footer-top-right-form">
+          <!-- <form id="footer-top-right-form">
             <p>Get the latest design tips and offers</p>
-            <input type="text" name="name" id="" required placeholder="Name*" />
+            <input type="text" name="name" required placeholder="Name*" />
             <input
               type="email"
               name="user_email"
               required
-              id=""
               placeholder="Email*"
             />
-            <textarea
-              name="text message"
-              id=""
-              placeholder="Message ..."
-            ></textarea>
+            <textarea name="text message" placeholder="Message ..."></textarea>
             <button type="submit">SUBSCRIBE</button>
-          </form>
+          </form> -->
         </div>
         <hr />
         <div id="footer-bottom">
@@ -447,11 +608,6 @@
               id="footer-logo-1"
               src="./assets/footer/psm-cabinate-metal.png"
               alt="psm_cabinate"
-            />
-            <img
-              id="footer-logo-2"
-              src="./assets/footer/psm-door-metal.png"
-              alt=""
             />
           </div>
           <div id="footer-Privacy-Policy-content">
@@ -497,6 +653,7 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
 
-    <script type="module" src="main.js"></script>
+    <!-- <script type="module" src="main.js"></script> -->
+    <script type="module" src="slider.js"></script>
   </body>
 </html>

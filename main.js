@@ -1,7 +1,7 @@
 import { gsap } from "gsap";
 import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import contentSlider from './slider';
+import {carousel,contentSlider} from './slider.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -58,22 +58,6 @@ const tagLineMove = gsap.to("#tag-line", {
   duration: 2,
 });
 
-function carousel() {
-  $(document).ready(function () {
-    $(".slider").slick({
-      dots: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      // speed: 750,
-      // autoplaySpeed: 2500,
-      infinite: true,
-      // autoplay: true,
-      centerMode: true,
-      centerPadding: "0",
-    });
-  });
-}
 
 // animation done
 function featureSectionMovement() {
@@ -224,18 +208,4 @@ settingStandardMovement();
 buildingTimelessMovement();
 carouselMovement();
 mainContentMovement();
-
-const crossIcon = document.querySelector(".ri-menu-line");
-
-const navbarMenu = document.querySelector(".navbar-active");
-
-crossIcon.addEventListener("click", (e) => {
-  console.log("this is the navbar icon");
-
-  navbarMenu.classList.toggle("navbar-active");
-});
-
-function changeIcon(icon) {
-  icon.classList.toggle("ri-close-line");
-}
 

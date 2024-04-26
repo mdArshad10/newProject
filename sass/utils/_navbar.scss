@@ -1,0 +1,174 @@
+#center_logos {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+
+  & > .center-logo {
+    width: 15%;
+  }
+   & > #tag-line{
+    width: 10%;
+   }
+}
+
+#wrapper {
+  position: relative;
+}
+
+/* ====== india tag ====== */
+#india-tag {
+  position: fixed;
+  text-transform: uppercase;
+  top: 30%;
+  z-index: 99;
+  font-size: var(--india-tag-font-size);
+
+  background-color: #fff;
+  border-top-right-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
+#india-tag > a {
+  color: red;
+  padding: 4px 8px;
+}
+
+/* ====== india tag end ====== */
+
+
+#logos-container {
+  position: relative;
+}
+
+#logos-container > img {
+  position: fixed;
+}
+
+#tag-line {
+  margin-top: -10px;
+  width: 15%;
+}
+
+/*  ====== Navbar ======  */
+// .navbar {
+//   display: flex;
+//   background-color: black;
+//   justify-content: flex-end;
+//   align-items: center;
+//   top: -1px;
+//   position: fixed;
+//   width: 100%;
+//   z-index: 1000;
+// }
+
+// .navbar-icon {
+//   display: none;
+// }
+
+// .navbar-menu {
+//   display: flex;
+//   list-style: none;
+//   margin-left: auto;
+//   gap: 10px;
+// }
+
+// .navbar-menu > li {
+//   text-decoration: none;
+//   padding: 1rem 2rem;
+//   position: relative;
+  
+
+//   & > a {
+//     color: white;
+//     text-decoration: none;
+//     text-transform: uppercase;
+//     letter-spacing: 0;
+//     position: relative;
+//   }
+// }
+
+/* ---- navbar for mobile responsive ---- */
+// #active {
+//   display: none;
+// }
+// .navbar-active {
+//   display: none;
+//   align-items: flex-start;
+//   justify-content: center;
+//   flex-direction: column;
+//   width: 100%;
+//   gap: 14px;
+//   padding: 10px;
+// }
+
+// li > span {
+//   cursor: pointer;
+// }
+
+/* ---- dropdown menu ---- */
+// .menu-dropdown {
+//   background-color: black;
+//   min-height: 5vh;
+//   list-style: none;
+//   gap: 0.5rem;
+//   display: none;
+//   position: absolute;
+//   font-size: 16px;
+//   padding: 10px;
+//   text-align: center;
+// }
+
+// .mobile-menu-dropdown {
+//   display: none;
+// }
+
+// .mobile-inspiration-drop-down:hover > ul,
+// .mobile-psm-doors-drop-down:hover > ul,
+// .mobile-why-us-drop-down:hover > ul,
+// .mobile-contact-drop-down:hover > ul {
+//   display: flex;
+  
+//   flex-direction: column;
+//   gap: 10px;
+//   padding-left: 10px;
+// }
+
+// .inspiration-drop-down:hover > ul,
+// .psm-doors-drop-down:hover > ul,
+// .why-us-drop-down:hover > ul,
+// .contact-drop-down:hover > ul {
+//   display: flex;
+//   color: white;
+//   flex-direction: column;
+//   align-items: center;
+//   top: 3rem;
+//   left: 0;
+//   text-transform: uppercase;
+// }
+
+// .inspiration-drop-down:hover > ul {
+//   left: 20%;
+//   width: fit-content;
+// }
+
+/* ====== Navbar End ====== */
+
+/* ====== Sticker ====== */
+#sticker {
+  position: absolute;
+  width: 22%;
+  height: 30%;
+  top: 30%;
+  left: 72%;
+  width: fit-content;
+  text-align: end;
+  z-index: 100;
+
+  & > img {
+    width: 18%;
+  }
+}
+
+/* ====== Sticker End ====== */

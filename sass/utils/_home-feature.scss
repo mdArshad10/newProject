@@ -1,0 +1,55 @@
+/* ====== Feature Section ====== */
+.feature-section {
+  background-image: url("./assets/wooden-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+  align-items: center;
+  scroll-snap-align: start;
+}
+
+.feature-section > h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 25vh;
+  font-weight: 700;
+}
+
+.feature-blocks {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 0 5vw;
+  flex-shrink: 2;
+  gap: 1vw;
+}
+
+.feature-single-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5vh;
+  flex: 1;
+}
+
+.feature-blocks > .feature-single-block > #block {
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  background-color: #fff;
+  object-fit: cover;
+}
+
+.feature-single-block > h1 {
+  font-size: large;
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 300;
+  text-wrap: stable;
+}
+
+/* ----- Feature section end ----- */
