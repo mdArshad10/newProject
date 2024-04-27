@@ -9,14 +9,29 @@
 
   & > .swiper-slide-content {
     position: absolute;
-    top: 40vh;
-    left: 10vw;
+    width: 40%;
+    top: 0;
+    left: 0;
+    height: 100%;
     font-size: large;
     color: white;
 
-    &> p{
-      width: 60%;
-      font-size: 1.2rem;
+    background: rgba(255, 255, 255, 0.7);
+    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    & > p {
+      position: absolute;
+      top: 40%;
+      left: 10%;
+      padding: 1rem;
+      width: 70%;
+      color: rgb(0, 0, 0);
+      // color: white;
+      font-size: 2.2rem;
     }
   }
 

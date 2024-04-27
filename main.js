@@ -21,30 +21,30 @@ function scrollingEffect() {
 }
 
 // adding the new gsap property
-gsap.set(".navbar", {
+gsap.set(".nav", {
   height: "80vh",
   backgroundColor: "black",
   justifyContent: "space-between",
 });
 
-gsap.set(".navbar-menu", {
+gsap.set(".nav__menu", {
   display: "none",
 });
 
 gsap.set("#center_logos", {
-  scale: 1.5,
+  scale: 1,
 });
 
 const tl = gsap.timeline();
 
-const navbarMove = gsap.to(".navbar", {
+const navbarMove = gsap.to(".nav", {
   height: "10vh",
   delay: 2,
   duration: 2,
   justifyContent: "space-evenly",
 });
 
-const centerLogoMove = gsap.to("#center_logos", {
+const centerLogoMove = gsap.to(".nav__logo", {
   x: "-38vw",
   y: 6,
   delay: 2,
@@ -136,12 +136,13 @@ function buildingTimelessMovement() {
 }
 
 function navbarMenuMovement() {
-  const menuChild = document.querySelector(".navbar-menu");
+  const menuChild = document.querySelector(".nav__menu");
+  const dropdown__item = document.querySelectorAll(".dropdown__item");
   gsap.to(menuChild, {
     delay: 3,
     display: "flex",
   });
-  gsap.from(menuChild.children, {
+  gsap.from(dropdown__item, {
     duration: 0.5,
     opacity: 0,
     y: 10,
@@ -151,11 +152,11 @@ function navbarMenuMovement() {
 }
 
 function stickerMovement() {
-  gsap.from("#sticker", {
-    y: -200,
-    scale: 0.5,
-    opacity: 0.4,
-  });
+  // gsap.from("#sticker", {
+  //   y: -200,
+  //   scale: 0.5,
+  //   opacity: 0.4,
+  // });
 }
 
 // adding the delay
@@ -197,7 +198,7 @@ function carouselMovement() {
 }
 
 scrollingEffect();
-navbarMenuMovement();
+
 stickerMovement();
 contentSlider();
 carousel();
