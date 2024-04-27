@@ -8,10 +8,11 @@ export default defineConfig({
   base: "/",
   // Build Options
 
+  
+
   plugins: [
     partytownVite({
       dest: path.join(__dirname, "dist", "~partytown"),
     }),
-    
   ],
 });
