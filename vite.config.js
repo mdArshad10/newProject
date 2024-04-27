@@ -6,11 +6,8 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   base: "/",
-  // Build Options
 
   build: {
-    base:"https://psm-new-project.vercel.app",
-
     rollupOptions: {
       input: {
         index:"./index.html",
