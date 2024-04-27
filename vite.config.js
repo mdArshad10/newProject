@@ -8,10 +8,13 @@ export default defineConfig({
   base: "/",
   // Build Options
 
-  rollupOptions: {
-    input: {
-      main: resolve(__dirname, "index.html"),
-      pages: resolve(__dirname, "ascut/index.html"),
+  build: {
+    base:"https://psm-new-project.vercel.app/",
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, "index.html"),
+        pages: resolve(__dirname, "ascut/index.html"),
+      },
     },
   },
 
