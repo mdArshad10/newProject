@@ -10,10 +10,16 @@ export default defineConfig({
 
   build: {
     base:"https://psm-new-project.vercel.app/",
+    outDir:"/",
+    emptyOutDir: true,
+
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        pages: resolve(__dirname, "ascut/index.html"),
+        ascut: resolve(__dirname, "ascut","index.html"),
+        retail: resolve(__dirname, "retail","index.html"),
+        retail_register: resolve(__dirname, "retail_register","index.html"),
+        thank_you: resolve(__dirname, "thank_you","index.html"),
       },
     },
   },
