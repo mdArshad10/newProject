@@ -1,4 +1,4 @@
-import path from "path";
+import path,{resolve} from "path";
 import { partytownVite } from "@builder.io/partytown/utils";
 import { defineConfig } from "vite";
 
