@@ -16,10 +16,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        ascut: resolve(__dirname, "ascut","index.html"),
-        retail: resolve(__dirname, "retail","index.html"),
-        retail_register: resolve(__dirname, "retail_register","index.html"),
-        thank_you: resolve(__dirname, "thank_you","index.html"),
+        ascut: resolve(__dirname, "pages/ascut","index.html"),
+        
+        retail_register: resolve(__dirname, "pages/retail_register","index.html"),
+        thank_you: resolve(__dirname, "pages/thank_you","index.html"),
       },
     },
   },
