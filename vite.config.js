@@ -8,15 +8,10 @@ export default defineConfig({
   base: "/",
   // Build Options
 
-  build: {
-    base: "/",
-  },
-  rollupOptions: {
-    input: ["index.html", "/pages/ascut/index.html", "/pages/retail_register/index.html"],
-  },
   plugins: [
     partytownVite({
       dest: path.join(__dirname, "dist", "~partytown"),
     }),
+    
   ],
 });
