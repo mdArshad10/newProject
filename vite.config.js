@@ -8,7 +8,12 @@ export default defineConfig({
   base: "/",
   // Build Options
 
-  
+  rollupOptions: {
+    input: {
+      main: resolve(__dirname, "index.html"),
+      pages: resolve(__dirname, "ascut/index.html"),
+    },
+  },
 
   plugins: [
     partytownVite({
