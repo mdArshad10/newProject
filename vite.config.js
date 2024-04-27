@@ -9,17 +9,14 @@ export default defineConfig({
   // Build Options
 
   build: {
-    base:"https://psm-new-project.vercel.app/",
-    outDir:"/",
-    emptyOutDir: true,
+    base:"https://psm-new-project.vercel.app",
 
     rollupOptions: {
       input: {
-        main: resolve(__dirname, "index.html"),
-        ascut: resolve(__dirname, "pages/ascut","index.html"),
-        
-        // retail_register: resolve(__dirname, "pages/retail_register","index.html"),
-        thank_you: resolve(__dirname, "pages/thank_you","index.html"),
+        index:"./index.html",
+        ascut:"./pages/ascut/index.html",
+        retail_register:"./pages/retail_register/index.html",
+        thank_you:"./pages/thank_you/index.html",  
       },
     },
   },
