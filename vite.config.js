@@ -18,7 +18,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         ascut: resolve(__dirname, "pages/ascut","index.html"),
         
-        retail_register: resolve(__dirname, "pages/retail_register","index.html"),
+        // retail_register: resolve(__dirname, "pages/retail_register","index.html"),
         thank_you: resolve(__dirname, "pages/thank_you","index.html"),
       },
     },
