@@ -310,8 +310,6 @@ label {
 /*=============== DROPDOWN ===============*/
 .dropdown__item {
   cursor: pointer;
-  display: grid;
-  place-content: center;
 }
 .dropdown__arrow {
   font-size: 1.25rem;
@@ -424,7 +422,6 @@ label {
 /* for order now button */
 .order__now-btn {
   background-color: orange;
-  border-radius: 10px;
   padding: 1rem;
 }
 
