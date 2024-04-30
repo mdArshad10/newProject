@@ -120,8 +120,8 @@ validate.onSuccess(async (event) => {
     const response = await data.json();
     console.log(response);
     if (response.status === "success") {
-      console.log(response.success);
-      window.location.href = "http://localhost:5173/pages/thank_you/index.html";
+      const current = window.location.origin;
+      window.location.href = `${current}/src/thank_you/index.html`;
     } else {
       if (!emailExistsErrorShown) {
         const emailField = document.getElementById("userEmail");
@@ -131,7 +131,6 @@ validate.onSuccess(async (event) => {
         emailField.parentNode.appendChild(errorElement);
         emailExistsErrorShown = true;
       }
-      console.log("this is the successfully");
     }
   } catch (error) {
     console.error(error.message);

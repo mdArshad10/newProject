@@ -1,11 +1,35 @@
 import { gsap } from "gsap";
 import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import {carousel,contentSlider} from './slider.js';
-
-gsap.registerPlugin(ScrollTrigger);
-
+import { carousel, contentSlider } from "./slider.js";
 console.log("this is for testing purposes");
+
+document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("load", () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.set(".nav__menu", {
+      display: "none",
+    });
+
+    // adding the new gsap property
+    gsap.set(".nav", {
+      height: "80vh",
+      backgroundColor: "black",
+      justifyContent: "space-between",
+    });
+
+    showMenu("nav-toggle", "nav-menu");
+
+    centerLogoMove();
+    navbarMove();
+    carousel();
+    showMenuMovement();
+
+    // scrollingEffect();
+    // contentSlider();
+  });
+});
 
 // scrolling effect
 function scrollingEffect() {
@@ -20,44 +44,39 @@ function scrollingEffect() {
   gsap.ticker.lagSmoothing(0);
 }
 
-// adding the new gsap property
-gsap.set(".nav", {
-  height: "80vh",
-  backgroundColor: "black",
-  justifyContent: "space-between",
-});
+function navbarMove() {
+  gsap.to(".nav", {
+    height: "10vh",
+    delay: 2,
+    duration: 2,
+    justifyContent: "space-evenly",
+    onComplete: contentSlider(),
+  });
+}
 
-gsap.set(".nav__menu", {
-  display: "none",
-});
+function centerLogoMove() {
+  gsap.to(".psm-logo", {
+    x: "-41vw",
+    y: 5,
+    delay: 2,
+    scale: 0.3,
+    duration: 2,
+    onStart: tagLineMove(),
+    onComplete: navbarMenuMovement(),
+  });
+}
 
-gsap.set("#center_logos", {
-  scale: 1,
-});
-
-const tl = gsap.timeline();
-
-const navbarMove = gsap.to(".nav", {
-  height: "10vh",
-  delay: 2,
-  duration: 2,
-  justifyContent: "space-evenly",
-});
-
-const centerLogoMove = gsap.to(".nav__logo", {
-  x: "-38vw",
-  y: 6,
-  delay: 2,
-  scale: 0.3,
-  duration: 2,
-});
-
-const tagLineMove = gsap.to("#tag-line", {
-  opacity: 0,
-  delay: 2,
-  duration: 2,
-});
-
+function tagLineMove() {
+  gsap.to(".psm-work-experience", {
+    x: "-42vw",
+    y: 5,
+    opacity: 0,
+    scale: 0.2,
+    // display: "none",
+    delay: 2,
+    duration: 2,
+  });
+}
 
 // animation done
 function featureSectionMovement() {
@@ -151,62 +170,61 @@ function navbarMenuMovement() {
   });
 }
 
-function stickerMovement() {
-  // gsap.from("#sticker", {
-  //   y: -200,
-  //   scale: 0.5,
-  //   opacity: 0.4,
-  // });
+function showMenuMovement() {
+  gsap.to(".nav__toggle", {
+    display:"block",
+    duration: 0.5,
+    delay: 4,
+  });
 }
 
 // adding the delay
-function mainContentMovement() {
-  gsap.from(".main-content-container", {
-    y: 1000,
-    opacity: 1,
-    delay: 2,
-  });
-}
+// function mainContentMovement() {
+//   gsap.from(".main-content-container", {
+//     y: 1000,
+//     opacity: 1,
+//     delay: 2,
+//   });
+// }
 
 // moving the background image
-function mainPageMovement() {
-  gsap.from("#main", {
-    y: 100,
-    opacity: 1,
-    duration: 2,
-    // backgroundPosition: "0% 50%",
-    delay: 2,
+// function mainPageMovement() {
+//   gsap.from("#main", {
+//     y: 100,
+//     opacity: 1,
+//     duration: 2,
+//     // backgroundPosition: "0% 50%",
+//     delay: 2,
+//   });
+// }
+
+// function carouselMovement() {
+//   gsap.from("#page2>.slider, #page2>.page2-heading", {
+//     y: 200,
+//     opacity: 0,
+//     scale: 0.2,
+//     duration: 0.5,
+//     stagger: 1,
+//     scrollTrigger: {
+//       trigger: "#page2",
+//       scroller: "body",
+//       start: "30% center",
+//       end: "80% center",
+//       toggleActions: "play reverse play none",
+//     },
+//   });
+// }
+
+/*=============== SHOW MENU ===============*/
+const showMenu = (toggleId, navId) => {
+  const toggle = document.getElementById(toggleId),
+    nav = document.getElementById(navId);
+
+  toggle.addEventListener("click", () => {
+    // Add show-menu class to nav menu
+    nav.classList.toggle("show-menu");
+
+    // Add show-icon to show and hide the menu icon
+    toggle.classList.toggle("show-icon");
   });
-}
-
-function carouselMovement() {
-  gsap.from("#page2>.slider, #page2>.page2-heading", {
-    y: 200,
-    opacity: 0,
-    scale: 0.2,
-    duration: 0.5,
-    stagger: 1,
-    scrollTrigger: {
-      trigger: "#page2",
-      scroller: "body",
-      // markers: true,
-      start: "30% center",
-      end: "80% center",
-      toggleActions: "play reverse play none",
-    },
-  });
-}
-
-scrollingEffect();
-
-stickerMovement();
-contentSlider();
-carousel();
-
-featureSectionMovement();
-craftingContentMovement();
-settingStandardMovement();
-buildingTimelessMovement();
-carouselMovement();
-mainContentMovement();
-
+};

@@ -8,9 +8,9 @@
   & > .center-logo {
     width: 15%;
   }
-   & > #tag-line{
+  & > #tag-line {
     width: 10%;
-   }
+  }
 }
 
 #wrapper {
@@ -37,7 +37,6 @@
 
 /* ====== india tag end ====== */
 
-
 #logos-container {
   position: relative;
 }
@@ -46,9 +45,36 @@
   position: fixed;
 }
 
-#tag-line {
-  margin-top: -10px;
-  width: 15%;
+#psm-logo {
+  position: absolute;
+  width: initial;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// black screen background
+.black-screen-for-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-25%, -50%);
+}
+
+// psm working experience
+.psm-work-experience {
+  width: 40%;
+}
+
+// psm big logo
+.center-element {
+  width: fit-content;
+  /* background-color: brown; */
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-end;
 }
 
 /*  ====== Navbar ======  */
@@ -78,7 +104,6 @@
 //   text-decoration: none;
 //   padding: 1rem 2rem;
 //   position: relative;
-  
 
 //   & > a {
 //     color: white;
@@ -129,7 +154,7 @@
 // .mobile-why-us-drop-down:hover > ul,
 // .mobile-contact-drop-down:hover > ul {
 //   display: flex;
-  
+
 //   flex-direction: column;
 //   gap: 10px;
 //   padding-left: 10px;

@@ -16,7 +16,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        ascut: resolve(__dirname, "src/ascut/index.html"),
+        cabinets_order: resolve(__dirname, "src/cabinets_order/index.html"),
         retail_register: resolve(__dirname, "src/retail_register/index.html"),
         thank_you: resolve(__dirname, "src/thank_you/index.html"),
         process_pages: resolve(__dirname, "src/process_pages/index.html"),

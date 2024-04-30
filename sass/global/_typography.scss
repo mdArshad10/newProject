@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "helvetica";
+  src: url("/public/fonts/Helvetica.ttf");
+}
+
+@font-face {
+  font-family: "helveticaBold";
+  src: url("/public/fonts/Helvetica-Bold.ttf");
+}
+
 h1,
 h2,
 h3 {
@@ -14,24 +24,21 @@ a,
 a:visited,
 a:active {
   text-decoration: none;
-  color:white;
+  color: white;
 }
 
 ul > li {
   list-style-type: none;
 }
 
-label{
+label {
   font-size: 16px;
 }
 
-
-
-%content-with-paragraph{
+%content-with-paragraph {
   display: flex;
   align-items: center;
   flex-direction: column;
-  
 
   & > h3 {
     font-size: 2.5rem;
@@ -44,12 +51,10 @@ label{
     font-size: 1.2rem;
   }
 
-  &> a{
+  & > a {
     padding: 0.8rem 1.6rem;
     background-color: green;
     color: white;
     border-radius: 5px;
   }
 }
-
-

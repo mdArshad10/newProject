@@ -1,0 +1,255 @@
+@forward "../global";
+
+#orderOnlinePageHeader {
+  & > nav {
+    background: #8b1919;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 3.2%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    & > #navbar-logo {
+      width: 8%;
+      padding-top: 1rem;
+    }
+  }
+}
+
+#order-container {
+  background: linear-gradient(#a4a5a6b3, #d9d5ccbc),
+    url("/public/assets/orderOnlinePage/background.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  // margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+#order-container-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  & > h3 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  & > p {
+    text-align: center;
+    line-height: 1.3;
+    font-size: 1.2rem;
+  }
+}
+
+#Brisbane-forms {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+}
+
+.account-container {
+  flex: 1 1 50%;
+  padding: 1rem 2.5rem;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+}
+
+#Brisbane-retail-account {
+  background-color: #d98d30;
+}
+
+.account-cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  & > a {
+    padding: 0.75rem 1rem;
+
+    background-color: #d98d30;
+    color: #fff;
+    font-weight: 500;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+
+  & > .retail-register-btn,
+  & > .retail-login-btn {
+    background-color: #30a0d9;
+
+    &:hover {
+      background-color: #487e99;
+    }
+  }
+
+  & > .trade-register-btn , & > .trade-login-btn {
+    background-color: #d98d30;
+    &:hover {
+      background-color: #ad722a;
+    }
+  }
+}
+
+#Brisbane-trade-account {
+  background-color: #30A0D9;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#Online-Ordering-Process-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  &>h3{
+    font-size: 3rem;
+  }
+}
+
+#online-Ordering-process-steps {
+  width: 100%;
+  background-color: rgba(0, 128, 0, 0);
+  display: flex;
+  color: white;
+  margin-top: 3rem;
+  background-color: green;
+
+  & > .process-single-step {
+    flex: 1 1 50%;
+    padding: 2rem 2rem 1rem 4rem;
+
+    & > #registerButtons {
+      display: flex;
+      gap: 1rem;
+
+      & > a {
+        outline: 1px solid white;
+        padding: 0.5rem 1rem;
+        text-wrap: wrap;
+        width: 40%;
+        text-align: center;
+        color: white;
+
+        &:hover {
+          background-color: rgba(3, 154, 3, 0.894);
+        }
+
+        &:first-child {
+          background-color: #8b1919;
+        }
+
+        &:first-child:hover {
+          background-color: #a71e1ed7;
+        }
+      }
+    }
+  }
+}
+
+@mixin grid-container-for-list($row, $col, $rowgap, $colgap, $width) {
+  display: grid;
+  grid-template-columns: repeat($col, 1fr);
+  grid-template-rows: repeat($row, 1fr);
+  column-gap: $colgap;
+  row-gap: $rowgap;
+  width: $width;
+  margin: 0 auto;
+}
+
+.grid-container {
+  @include grid-container-for-list(2, 3, 1.5rem, 0.75rem, 80%);
+  margin-top: 2rem;
+
+  & > .grid-container-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    -webkit-box-shadow: 0 0 9px 5.5px #dddddd;
+    -moz-box-shadow: 0 0 9px 5.5px #dddddd;
+    box-shadow: 0 0 9px 5.5px #dddddd;
+    padding: 0.5rem;
+
+    & > img {
+      width: 40%;
+    }
+
+    & > span {
+      width: 50%;
+      text-wrap: pretty;
+      text-align: center;
+      font-size: 0.6rem;
+      font-weight: 700;
+    }
+  }
+}
+
+@mixin parallex($imageUrl) {
+  background-image: linear-gradient(
+      rgba(65, 155, 45, 0.731),
+      rgba(30, 167, 73, 0.723)
+    ),
+    url($imageUrl);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.process-step-1 {
+  @include parallex("../../pages/ascut/asset/background-image.jpg");
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 992px) {
+  .account-cta-buttons {
+    flex-direction: column;
+  }
+
+
+}
+
+@media (max-width: 768px) {
+
+  .grid-container{
+     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+
+  .account-cta-buttons {
+    flex-direction: row;
+  }
+  #Brisbane-forms {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600) {
+  .account-cta-buttons{
+    flex-direction: column;
+  }
+
+  .grid-container{
+    
+  }
+}

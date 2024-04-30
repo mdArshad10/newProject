@@ -36,28 +36,6 @@ sup {
   margin: 0 auto;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  column-gap: 1rem;
-  row-gap: 1rem;
-  width: 90%;
-  margin: 0 auto;
-}
-.grid-container > .grid-container-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.grid-container > .grid-container-item > img {
-  margin-bottom: 10px;
-}
-.grid-container > .grid-container-item > span {
-  text-align: center;
-}
-
 #thank-you-page, #retail_register_page {
   color: black;
 }
@@ -77,6 +55,14 @@ sup {
   padding: 8px 6px;
 }
 
+@font-face {
+  font-family: "helvetica";
+  src: url("/public/fonts/Helvetica.ttf");
+}
+@font-face {
+  font-family: "helveticaBold";
+  src: url("/public/fonts/Helvetica-Bold.ttf");
+}
 h1,
 h2,
 h3 {
@@ -169,9 +155,33 @@ label {
   position: fixed;
 }
 
-#tag-line {
-  margin-top: -10px;
-  width: 15%;
+#psm-logo {
+  position: absolute;
+  width: initial;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.black-screen-for-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-25%, -50%);
+}
+
+.psm-work-experience {
+  width: 40%;
+}
+
+.center-element {
+  width: fit-content;
+  /* background-color: brown; */
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: flex-end;
 }
 
 /*  ====== Navbar ======  */
@@ -204,19 +214,28 @@ label {
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
   z-index: 100;
 }
+.header::-webkit-scrollbar {
+  /* Chrome, Safari, etc. */
+  display: none;
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   width: 90%;
-  margin-inline: 1.5rem;
 }
 
 /*=============== NAV ===============*/
 .nav {
   height: 3.5rem;
+  position: relative;
+  margin-right: 0.4rem;
 }
-.nav__logo, .nav__burger, .nav__close {
+.nav__burger, .nav__close {
   color: #fff;
+}
+.nav__logo {
+  display: flex;
+  flex-direction: column;
 }
 .nav__data {
   height: 100%;
@@ -260,6 +279,8 @@ label {
     position: absolute;
     left: 0;
     top: 2.5rem;
+    justify-content: flex-end;
+    display: flex;
     width: 100%;
     height: calc(100vh - 3.5rem);
     overflow: auto;
@@ -273,6 +294,9 @@ label {
   .nav__list {
     background-color: black;
     padding-top: 1rem;
+    width: 12rem;
+    padding-left: 0;
+    height: fit-content;
   }
 }
 .nav__link {
@@ -369,7 +393,6 @@ label {
     display: none;
   }
   .nav__list {
-    height: 100%;
     display: flex;
     column-gap: 1rem;
   }
@@ -408,7 +431,7 @@ label {
   }
   .dropdown__item:hover .dropdown__menu {
     opacity: 1;
-    top: 5.5rem;
+    top: 3.5rem;
     pointer-events: initial;
     transition: top 0.3s;
   }
@@ -490,6 +513,7 @@ label {
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
+  padding-bottom: 20rem;
   background-color: lightblue;
   display: flex;
   flex-direction: column;
@@ -497,11 +521,10 @@ label {
   align-items: center;
   scroll-snap-align: start;
 }
-
 .feature-section > h1 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   text-transform: uppercase;
-  margin-top: 25vh;
+  margin-top: 3rem;
   font-weight: 700;
 }
 
@@ -568,7 +591,7 @@ label {
   padding: 1rem;
   width: 70%;
   color: rgb(0, 0, 0);
-  font-size: 2.2rem;
+  font-size: 1.5rem;
 }
 .swiper-slide > .swiper-slide-image {
   display: block;
@@ -580,11 +603,10 @@ label {
 #crafting,
 #setting-standard,
 #building-timeless {
-  min-height: 90vh;
+  padding: 14rem;
   color: white;
   width: 100%;
   position: relative;
-  padding-top: 10vh;
   scroll-snap-align: start;
 }
 
@@ -700,6 +722,7 @@ label {
 
 .registeration_form {
   margin-top: 7rem;
+  margin-bottom: 5rem;
 }
 .registeration_form > h3 {
   font-size: 2rem;
@@ -852,8 +875,8 @@ textarea:focus {
 
 #page2 {
   width: 100%;
-  min-height: 80vh;
-  padding-top: 2vh;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -889,14 +912,14 @@ textarea:focus {
 }
 
 ⁡​⁡.video-section {
-  width: 100%;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .video-section > video {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .feature-section {
@@ -905,7 +928,7 @@ textarea:focus {
   background-size: cover;
   background-attachment: fixed;
   width: 100%;
-  height: 100vh;
+  padding-bottom: 20rem;
   background-color: lightblue;
   display: flex;
   flex-direction: column;
@@ -915,9 +938,9 @@ textarea:focus {
 }
 
 .feature-section > h1 {
-  font-size: var(--font-size-heading);
+  font-size: 2rem;
   text-transform: uppercase;
-  margin-top: 25vh;
+  margin-top: 3rem;
   font-weight: 700;
 }
 
@@ -955,28 +978,32 @@ textarea:focus {
 }
 
 /* ----- Feature section end ----- */
-#orderOnlinePage {
-  color: black;
-}
-#orderOnlinePage > nav {
+#orderOnlinePageHeader > nav {
   background: #8b1919;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding-top: 4rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 1rem;
   position: fixed;
+  width: 100%;
   top: 3.2%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+#orderOnlinePageHeader > nav > #navbar-logo {
+  width: 8%;
+  padding-top: 1rem;
+}
 
 #order-container {
-  background-image: url("./public/Untitled-1.jpg");
+  background: linear-gradient(rgba(164, 165, 166, 0.7019607843), rgba(217, 213, 204, 0.737254902)), url("/public/assets/orderOnlinePage/background.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-top: 4rem;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
   margin-bottom: 4rem;
 }
 
@@ -1006,10 +1033,11 @@ textarea:focus {
   padding: 1rem 2.5rem;
   text-align: center;
   border-radius: 10px;
+  color: #fff;
 }
 
 #Brisbane-retail-account {
-  background-color: aquamarine;
+  background-color: #d98d30;
 }
 
 .account-cta-buttons {
@@ -1020,21 +1048,42 @@ textarea:focus {
 }
 .account-cta-buttons > a {
   padding: 0.75rem 1rem;
-  outline: 2px solid red;
-  background-color: blue;
+  background-color: #d98d30;
   color: #fff;
   font-weight: 500;
 }
 .account-cta-buttons > a:hover {
   background-color: red;
 }
+.account-cta-buttons > .retail-register-btn, .account-cta-buttons > .retail-login-btn {
+  background-color: #30a0d9;
+}
+.account-cta-buttons > .retail-register-btn:hover, .account-cta-buttons > .retail-login-btn:hover {
+  background-color: #487e99;
+}
+.account-cta-buttons > .trade-register-btn, .account-cta-buttons > .trade-login-btn {
+  background-color: #d98d30;
+}
+.account-cta-buttons > .trade-register-btn:hover, .account-cta-buttons > .trade-login-btn:hover {
+  background-color: #ad722a;
+}
 
 #Brisbane-trade-account {
-  background-color: brown;
+  background-color: #30A0D9;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+}
+
+#Online-Ordering-Process-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#Online-Ordering-Process-content > h3 {
+  font-size: 3rem;
 }
 
 #online-Ordering-process-steps {
@@ -1071,6 +1120,36 @@ textarea:focus {
   background-color: rgba(167, 30, 30, 0.8431372549);
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 0.75rem;
+  row-gap: 1.5rem;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+.grid-container > .grid-container-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-shadow: 0 0 9px 5.5px #dddddd;
+  -moz-box-shadow: 0 0 9px 5.5px #dddddd;
+  box-shadow: 0 0 9px 5.5px #dddddd;
+  padding: 0.5rem;
+}
+.grid-container > .grid-container-item > img {
+  width: 40%;
+}
+.grid-container > .grid-container-item > span {
+  width: 50%;
+  text-wrap: pretty;
+  text-align: center;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
 .process-step-1 {
   background-image: linear-gradient(rgba(65, 155, 45, 0.731), rgba(30, 167, 73, 0.723)), url("../../pages/ascut/asset/background-image.jpg");
   background-repeat: no-repeat;
@@ -1090,10 +1169,18 @@ textarea:focus {
   }
 }
 @media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
   .account-cta-buttons {
     flex-direction: row;
   }
   #Brisbane-forms {
+    flex-direction: column;
+  }
+}
+@media (max-width: 600) {
+  .account-cta-buttons {
     flex-direction: column;
   }
 }

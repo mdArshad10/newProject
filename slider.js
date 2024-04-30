@@ -1,7 +1,5 @@
 // import Swiper JS
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
-// import Swiper styles
-import "swiper/css";
 
 function contentSlider() {
   const swiper = new Swiper(".mySwiper", {
@@ -9,11 +7,11 @@ function contentSlider() {
     centeredSlides: true,
     loop: true,
     slidesPerView: 1,
-    // infinite: true,
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
+    infinite: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     keyboard: {
       enabled: true,
     },
@@ -45,8 +43,7 @@ function carousel() {
   });
 }
 
-carousel();
-contentSlider();
+
 
 
 export { carousel , contentSlider};
