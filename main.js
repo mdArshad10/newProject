@@ -9,18 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger);
     const mm = gsap.matchMedia();
 
-    gsap.set(".nav__menu, .nav__toggle", {
-      display: "none",
-    });
-
-    // adding the new gsap property
-    gsap.set(".nav", {
-      height: "80vh",
-      backgroundColor: "black",
-      justifyContent: "space-between",
-    });
-
-
     showMenu("nav-toggle", "nav-menu");
 
     centerLogoMove();
@@ -35,6 +23,17 @@ document.addEventListener("DOMContentLoaded", () => {
       showMenuMovement();
     });
   });
+});
+
+gsap.set(".nav__menu, .nav__toggle", {
+  display: "none",
+});
+
+// adding the new gsap property
+gsap.set(".nav", {
+  height: "80vh",
+  backgroundColor: "black",
+  justifyContent: "space-between",
 });
 
 // scrolling effect

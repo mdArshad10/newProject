@@ -224,8 +224,9 @@
     &__link {
       height: 100%;
       padding: 0;
+      width: max-content;
       justify-content: initial;
-      column-gap: 0.25rem;
+      column-gap: 0.4rem;
 
       &:hover {
         background-color: transparent;
