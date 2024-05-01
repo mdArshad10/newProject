@@ -1,142 +1,216 @@
 footer {
-  background-color: #000;
+  background-color: #2d2827;
+  padding: 1rem 4rem;
   color: white;
-  padding: 2.3rem 4.2rem 1rem;
-  display: flex;
-  flex-direction: column;
+}
 
-  & > hr {
-    width: 100%;
+#footer-top-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
+
+  & > #footer-top-psm-about > p {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-weight: 300;
   }
 }
 
-#footer-top {
-  display: flex;
-  gap: 1rem;
-}
-
-#footer-top-left-contents {
-  flex: 1 1 80%;
-  display: flex;
-  justify-content: space-between;
-  margin-right: 1rem;
-}
-
-#footer-links {
-  display: flex;
-  gap: 2rem;
-}
-
-#footer-link-container > div {
+#footer-top-addess1,
+#footer-top-addess2 {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  margin-top: 5px;
 
   & > a {
-    color: white;
+    margin-top: 10px;
+    font-size: 0.8rem;
+    font-weight: 300;
+  }
+
+  & > span {
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
+    font-weight: 300;
   }
 }
 
-#asutralian-certificate {
-  height: 70%;
-  // max-height: 60%;
-  width: 20% !important;
+#footer-bottom-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 2fr 1fr 1fr;
+  column-gap: 1rem;
+
+  & > p {
+    font-size: 0.65rem;
+    font-weight: 500;
+  }
 }
 
-#footer-top-right-form {
+#footer-bottom-social-media {
+  /* margin-top: 2rem; */
+}
+
+#footer-bottom-social-media > ul {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  gap: 10px;
+  gap: 0.8rem;
 
-  & > input,
-  & > textarea {
-    padding: 0.5rem 1rem;
-    color: black !important;
-  }
-
-  & > textarea {
-    height: 74px;
-    margin-bottom: 10px;
-  }
-
-  & > button[type="submit"] {
-    padding: 0.5rem 1rem;
-    text-align: center;
-    color: black;
-    cursor: pointer;
+  & > li > a {
+    font-size: 0.65rem;
+    background-color: black;
+    border-radius: 50%;
+    padding: 0.5rem;
 
     &:hover {
-      background-color: red;
-      color: #fff;
+      background-color: #505050;
     }
   }
 }
 
-// #footer-top-right-form > input,
-// #footer-top-right-form > textarea {
-//   padding: 0.5rem 1rem;
-//   color: black !important;
-// }
-
-input:focus,
-textarea:focus {
-  outline: none;
-}
-
-// #footer-top-right-form > textarea {
-//   height: 74px;
-//   margin-bottom: 10px;
-// }
-
-// #footer-top-right-form > button[type="submit"] {
-//   padding: 0.5rem 1rem;
-//   text-align: center;
-//   color: black;
-//   cursor: pointer;
-// }
-
-// #footer-top-right-form > button[type="submit"]:hover {
-//   background-color: red;
-//   color: #fff;
-// }
-
-#footer-bottom {
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-#footer-logos {
-  display: flex;
-  height: 3rem;
-
-  & > img {
-    height: 100%;
-  }
-}
-
-// #footer-logos > img {
-//   height: 100%;
-//   width: 100%;
-//   object-fit: cover;
-//   margin-right: 10px;
-// }
-
-#footer-Privacy-Policy-content {
-  width: 45%;
-
-  & > p {
+#footer-top-additional-links > ul {
+  padding-left: 0;
+  margin-top: 0;
+  & > li > a {
     font-size: 0.8rem;
-    margin-bottom: 0.5rem;
+    font-weight: 300;
+  }
+}
+#footer-australian-made-logo {
+  width: 30%;
+  object-fit: cover;
+}
 
-    //     margin-bottom: 10px;
-    //   font-size: 15px;
+#footer-bottom-disclaimer > p {
+  font-size: 0.68rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1200px) {
+  #footer-bottom-container {
+    margin-top: 1rem;
   }
 }
 
-// #footer-Privacy-Policy-content > p {
+@media (max-width: 992px) {
+  #footer-top-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  #footer-bottom-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  #footer-bottom-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
+// footer {
+//   background-color: #000;
+//   color: white;
+//   padding: 2.3rem 4.2rem 1rem;
+//   display: flex;
+//   flex-direction: column;
+
+//   & > hr {
+//     width: 100%;
+//   }
+// }
+
+// #footer-top {
+//   display: flex;
+//   gap: 1rem;
+// }
+
+// #footer-top-left-contents {
+//   flex: 1 1 80%;
+//   display: flex;
+//   justify-content: space-between;
+//   margin-right: 1rem;
+// }
+
+// #footer-links {
+//   display: flex;
+//   gap: 2rem;
+// }
+
+// #footer-link-container > div {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 5px;
+//   margin-top: 5px;
+
+//   & > a {
+//     color: white;
+//   }
+// }
+
+// #asutralian-certificate {
+//   height: 70%;
+//   width: 20% !important;
+// }
+
+// #footer-top-right-form {
+//   display: flex;
+//   flex-direction: column;
 //   margin-bottom: 10px;
-//   font-size: 15px;
+//   gap: 10px;
+
+//   & > input,
+//   & > textarea {
+//     padding: 0.5rem 1rem;
+//     color: black !important;
+//   }
+
+//   & > textarea {
+//     height: 74px;
+//     margin-bottom: 10px;
+//   }
+
+//   & > button[type="submit"] {
+//     padding: 0.5rem 1rem;
+//     text-align: center;
+//     color: black;
+//     cursor: pointer;
+
+//     &:hover {
+//       background-color: red;
+//       color: #fff;
+//     }
+//   }
+// }
+
+// input:focus,
+// textarea:focus {
+//   outline: none;
+// }
+
+// #footer-bottom {
+//   margin-top: 0.5rem;
+//   display: flex;
+//   justify-content: space-between;
+// }
+
+// #footer-logos {
+//   display: flex;
+//   height: 3rem;
+
+//   & > img {
+//     height: 100%;
+//   }
+// }
+
+// #footer-Privacy-Policy-content {
+//   width: 45%;
+
+//   & > p {
+//     font-size: 0.8rem;
+//     margin-bottom: 0.5rem;
+//   }
 // }

@@ -65,10 +65,11 @@ sup {
 }
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-weight: 700;
   line-height: 1.1;
-  margin-top: 0;
+  margin-bottom: 0;
 }
 
 p {
@@ -615,13 +616,13 @@ label {
 }
 
 .setting-standard-bg {
-  background-image: url("./public/assets/3rd-img.jpg");
+  background-image: url("/public/assets/3rd-img.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .building-timeless-bg {
-  background-image: url("./public/assets/img6.png");
+  background-image: url("/public/assets/img6.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -730,100 +731,111 @@ label {
 }
 
 footer {
-  background-color: #000;
-  color: white;
-  padding: 2.3rem 4.2rem 1rem;
-  display: flex;
-  flex-direction: column;
-}
-footer > hr {
-  width: 100%;
-}
-
-#footer-top {
-  display: flex;
-  gap: 1rem;
-}
-
-#footer-top-left-contents {
-  flex: 1 1 80%;
-  display: flex;
-  justify-content: space-between;
-  margin-right: 1rem;
-}
-
-#footer-links {
-  display: flex;
-  gap: 2rem;
-}
-
-#footer-link-container > div {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 5px;
-}
-#footer-link-container > div > a {
+  background-color: #2d2827;
+  padding: 1rem 4rem;
   color: white;
 }
 
-#asutralian-certificate {
-  height: 70%;
-  width: 20% !important;
+#footer-top-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 1rem;
 }
-
-#footer-top-right-form {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 10px;
-  gap: 10px;
-}
-#footer-top-right-form > input, #footer-top-right-form > textarea {
-  padding: 0.5rem 1rem;
-  color: black !important;
-}
-#footer-top-right-form > textarea {
-  height: 74px;
-  margin-bottom: 10px;
-}
-#footer-top-right-form > button[type=submit] {
-  padding: 0.5rem 1rem;
-  text-align: center;
-  color: black;
-  cursor: pointer;
-}
-#footer-top-right-form > button[type=submit]:hover {
-  background-color: red;
-  color: #fff;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-}
-
-#footer-bottom {
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-#footer-logos {
-  display: flex;
-  height: 3rem;
-}
-#footer-logos > img {
-  height: 100%;
-}
-
-#footer-Privacy-Policy-content {
-  width: 45%;
-}
-#footer-Privacy-Policy-content > p {
+#footer-top-container > #footer-top-psm-about > p {
+  margin-top: 10px;
   font-size: 0.8rem;
-  margin-bottom: 0.5rem;
+  font-weight: 300;
 }
 
+#footer-top-addess1,
+#footer-top-addess2 {
+  display: flex;
+  flex-direction: column;
+}
+#footer-top-addess1 > a,
+#footer-top-addess2 > a {
+  margin-top: 10px;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+#footer-top-addess1 > span,
+#footer-top-addess2 > span {
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+#footer-bottom-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 2fr 1fr 1fr;
+  column-gap: 1rem;
+}
+#footer-bottom-container > p {
+  font-size: 0.65rem;
+  font-weight: 500;
+}
+
+#footer-bottom-social-media {
+  /* margin-top: 2rem; */
+}
+
+#footer-bottom-social-media > ul {
+  display: flex;
+  gap: 0.8rem;
+}
+#footer-bottom-social-media > ul > li > a {
+  font-size: 0.65rem;
+  background-color: black;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+#footer-bottom-social-media > ul > li > a:hover {
+  background-color: #505050;
+}
+
+#footer-top-additional-links > ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+#footer-top-additional-links > ul > li > a {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+#footer-australian-made-logo {
+  width: 30%;
+  object-fit: cover;
+}
+
+#footer-bottom-disclaimer > p {
+  font-size: 0.68rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1200px) {
+  #footer-bottom-container {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 992px) {
+  #footer-top-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+  #footer-bottom-container {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  #footer-bottom-container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+}
 #door-gallery {
   background-color: aqua;
   padding-bottom: 1.5rem;
