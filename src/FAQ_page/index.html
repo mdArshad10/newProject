@@ -3,17 +3,179 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./public/assets/basic/favicon.png"
+    />
     <title>FAQ pages</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="wrapper">
+    <div id="faq_page_wrapper">
+      <div id="india-tag"><a href="#">ind</a></div>
+
+      <!--=============== HEADER ===============-->
+      <header class="header">
+        <nav class="nav container">
+          <div class="black-screen-for-logo">
+            <div class="center-element">
+              <img
+                class="psm-logo"
+                src="/public/assets/basic/psm.png"
+                alt="psm-logo"
+              />
+              <img
+                class="psm-work-experience"
+                src="/public/assets/basic/60 year silver.svg"
+                alt="60-year-silver"
+              />
+            </div>
+          </div>
+          <div class="nav__data">
+            <div class="center-logo"></div>
+
+            <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line nav__burger"></i>
+              <i class="ri-close-line nav__close"></i>
+            </div>
+          </div>
+
+          <!--=============== NAV MENU ===============-->
+          <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+              <!--=============== DROPDOWN 1 ===============-->
+              <li class="dropdown__item">
+                <div class="nav__link">
+                  Kitchen & Cabinets
+                  <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                  <li>
+                    <a href="#" class="dropdown__link"> Signature </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown__link"> Elegant </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!--=============== DROPDOWN 2 ===============-->
+              <li class="dropdown__item">
+                <div class="nav__link">
+                  Inspiration
+                  <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                  <li>
+                    <a href="#" class="dropdown__link"> Gallary </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown__link"> Blogs </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- ====== DROPDOWN 3 ========= -->
+              <li class="dropdown__item">
+                <div class="nav__link">
+                  Why us <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                  <li>
+                    <a href="#" class="dropdown__link"> About us </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown__link"> Comparative prices </a>
+                  </li>
+
+                  <li>
+                    <a href="/src/faq_page/index.html" class="dropdown__link">
+                      FAQs
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown__link">Price Guide</a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown__link">Our process</a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- ====== DROPDOWN 4 ========= -->
+              <li class="dropdown__item">
+                <div class="nav__link">
+                  Contact <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                  <li>
+                    <a href="#" class="dropdown__link"> Book a consultation </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown__link"> Job vacancy </a>
+                  </li>
+
+                  <li>
+                    <a href="#" class="dropdown__link"> Contact us </a>
+                  </li>
+                </ul>
+              </li>
+
+              <!-- ======= DROPDOWN 4 ========== -->
+              <li class="dropdown__item">
+                <div class="nav__link order__now-btn">
+                  Order Now <i class="ri-arrow-down-s-line dropdown__arrow"></i>
+                </div>
+
+                <ul class="dropdown__menu">
+                  <li>
+                    <!-- REGISTRATION AND LOGIN PAGE -->
+                    <a
+                      href="/src/cabinets_order/index.html"
+                      class="dropdown__link"
+                    >
+                      Kitchen & Cabinets
+                    </a>
+                  </li>
+
+                  <li>
+                    <!-- TODO: EITHER USER GIVE / OR WE CREATE -->
+                    <a href="#" class="dropdown__link"> Diy & FlatPack </a>
+                  </li>
+
+                  <li>
+                    <!-- TODO: SHOPIFY LINKS -->
+                    <a href="#" class="dropdown__link"> Doors </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
       <div id="faq_main">
         <div id="faq_main_content">
           <h3>FAQ</h3>
           <p>Frequently Asked Questions</p>
           <h4>HOW DO I MAKE THE MOST FROM A PSM KITCHEN?</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit voluptates ducimus ad ipsam, quasi earum ipsa! Quidem praesentium, quia, tempora nihil ullam voluptatibus maxime recusandae corrupti ratione quis molestias doloremque?</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+            voluptates ducimus ad ipsam, quasi earum ipsa! Quidem praesentium,
+            quia, tempora nihil ullam voluptatibus maxime recusandae corrupti
+            ratione quis molestias doloremque?
+          </p>
         </div>
       </div>
 

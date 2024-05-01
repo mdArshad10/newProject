@@ -2,13 +2,14 @@ import { gsap } from "gsap";
 import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { carousel, contentSlider } from "./slider.js";
-console.log("this is for testing purposes");
+
 
 document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", () => {
     gsap.registerPlugin(ScrollTrigger);
+    const mm = gsap.matchMedia();
 
-    gsap.set(".nav__menu", {
+    gsap.set(".nav__menu, .nav__toggle", {
       display: "none",
     });
 
@@ -19,15 +20,20 @@ document.addEventListener("DOMContentLoaded", () => {
       justifyContent: "space-between",
     });
 
+
     showMenu("nav-toggle", "nav-menu");
 
     centerLogoMove();
     navbarMove();
     carousel();
-    showMenuMovement();
+    
+    mm.add("(max-width: 1118px)", () => {
 
-    // scrollingEffect();
-    // contentSlider();
+      // gsap.set(".nav__toggle",{
+      // });
+
+      showMenuMovement();
+    });
   });
 });
 
@@ -46,10 +52,9 @@ function scrollingEffect() {
 
 function navbarMove() {
   gsap.to(".nav", {
-    height: "10vh",
+    height: "5.5rem",
     delay: 2,
     duration: 2,
-    justifyContent: "space-evenly",
     onComplete: contentSlider(),
   });
 }

@@ -43,7 +43,7 @@ function carousel() {
   });
 }
 
+carousel();
+contentSlider();
 
-
-
-export { carousel , contentSlider};
+export { carousel, contentSlider };

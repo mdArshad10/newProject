@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   font-size: calc(1rem + 0.25vw);
 }
@@ -243,6 +242,7 @@ label {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
 }
 .nav__logo {
   display: inline-flex;
@@ -279,7 +279,7 @@ label {
   .nav__menu {
     position: absolute;
     left: 0;
-    top: 2.5rem;
+    top: 3.5rem;
     justify-content: flex-end;
     display: flex;
     width: 100%;
@@ -432,7 +432,7 @@ label {
   }
   .dropdown__item:hover .dropdown__menu {
     opacity: 1;
-    top: 3.5rem;
+    top: 5.5rem;
     pointer-events: initial;
     transition: top 0.3s;
   }
@@ -600,11 +600,10 @@ label {
   height: 80vh;
 }
 
-/* ====== orange craft Section, "setting the standard","Building timeless elegance"  ====== */
-#crafting,
+/* ======"setting the standard","Building timeless elegance"  ====== */
 #setting-standard,
 #building-timeless {
-  padding: 14rem;
+  padding: 17rem;
   color: white;
   width: 100%;
   position: relative;
@@ -612,7 +611,7 @@ label {
 }
 
 .crafting-bg {
-  background-color: #fea300;
+  background-color: #314036;
 }
 
 .setting-standard-bg {
@@ -627,7 +626,6 @@ label {
   background-size: cover;
 }
 
-#crafting-content,
 #setting-standard-content {
   position: absolute;
   width: 50vw;
@@ -642,7 +640,6 @@ label {
   width: fit-content;
 }
 
-.crafting-heading,
 .setting-standard-heading,
 .building-timeless-heading {
   font-size: 1.5rem;
@@ -657,13 +654,30 @@ label {
   font-weight: 600;
 }
 
-.crafting-para,
 .setting-standard-para,
 .building-timeless-para {
   margin-top: 2vh;
   line-height: 1.1;
   width: 70%;
   font-size: 0.8rem;
+}
+
+#crafting {
+  display: flex;
+  color: white;
+}
+#crafting > #crafting-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 4rem;
+  padding-right: 5rem;
+}
+#crafting > #crafting-content > .crafting-heading {
+  margin-bottom: 2vh;
+}
+#crafting > video {
+  width: 50%;
 }
 
 /* ----- orange craft Section end ----- */
@@ -923,17 +937,6 @@ footer {
   bottom: -10%;
 }
 
-⁡​⁡.video-section {
-  display: flex;
-  justify-content: center;
-}
-
-.video-section > video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: contain;
-}
-
 .feature-section {
   background-image: url("./assets/wooden-background.jpg");
   background-repeat: no-repeat;
@@ -962,7 +965,7 @@ footer {
   grid-template-columns: repeat(6, 1fr);
   padding: 0 5vw;
   flex-shrink: 2;
-  gap: 1vw;
+  gap: minmax(1fr, 3rem);
 }
 
 .feature-single-block {
@@ -990,6 +993,11 @@ footer {
 }
 
 /* ----- Feature section end ----- */
+@media (max-width: 768px) {
+  .feature-blocks {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
 #orderOnlinePageHeader > nav {
   background: #8b1919;
   display: flex;
@@ -1196,6 +1204,93 @@ footer {
     flex-direction: column;
   }
 }
+#faq_main {
+  background-image: url("/public/assets/Faq_page/faq_banner-section.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#faq_main_content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+#faq_main_content > h3 {
+  font-weight: 700;
+  font-size: 36px;
+}
+
+#faq_main_content > p {
+  font-size: 16px;
+  width: 100ch;
+}
+
+#faq_main_content {
+  color: white;
+  padding-left: 4rem;
+  padding-top: 15rem;
+  padding-bottom: 1rem;
+}
+
+.FAQ-container {
+  width: 80%;
+  margin: 50px auto;
+}
+
+h1.accordion {
+  width: 100%;
+  border-bottom: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid;
+  text-align: left;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s linear;
+  margin-bottom: 10px;
+  background-color: transparent;
+}
+
+h1.accordion:after {
+  content: url("/public/icons/arrow-down-s-line.svg")/"+";
+  font-size: 18px;
+  float: right;
+  font-weight: 700;
+  color: black;
+  background-color: red;
+}
+
+h1.accordion.is-open:after {
+  content: url("/public/icons/arrow-up-s-line.svg")/"-";
+  font-weight: 700;
+  color: black;
+  background-color: red;
+}
+
+h1.accordion:hover,
+h1.accordion.is-open {
+  background-color: #ddd;
+}
+
+.accordion-content {
+  background-color: white;
+  border-left: 1px solid whitesmoke;
+  border-right: 1px solid whitesmoke;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+}
+
+.accordion-content::before {
+  width: 100%;
+  border: 1px solid;
+  height: 1px;
+}
+
 #thank-you-message {
   margin-top: 8rem;
 }

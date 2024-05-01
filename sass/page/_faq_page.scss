@@ -1,17 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
 #faq_main {
-  background-image: url("./photo-2.jpg");
+  background-image: url("/public/assets/Faq_page/faq_banner-section.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -66,12 +54,14 @@ h1.accordion:after {
   float: right;
   font-weight: 700;
   color: black;
+  background-color: red;
 }
 
 h1.accordion.is-open:after {
   content: url("/public/icons/arrow-up-s-line.svg") / "-";
   font-weight: 700;
   color: black;
+  background-color: red;
 }
 
 h1.accordion:hover,
