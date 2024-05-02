@@ -62,6 +62,14 @@ sup {
   font-family: "helveticaBold";
   src: url("/public/fonts/Helvetica-Bold.ttf");
 }
+@font-face {
+  font-family: "baskerville";
+  src: url("/public/fonts/BaskervilleMTStd-Regular.ttf");
+}
+body {
+  font-family: "helvetica", "baskerville";
+}
+
 h1,
 h2,
 h3,
@@ -342,7 +350,7 @@ label {
   transition: transform 0.4s;
 }
 .dropdown__link {
-  padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+  padding: 0.75rem;
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
@@ -436,6 +444,7 @@ label {
     top: 5.5rem;
     pointer-events: initial;
     transition: top 0.3s;
+    font-size: 0.8rem;
   }
   .dropdown__subitem:hover > .dropdown__submenu {
     opacity: 1;

@@ -6,8 +6,10 @@
   "homepage": "https://mdarshad10.github.io/newProject/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "vite build": "vite build",
+    "build": "npm run partytown && vite build",
+    "preview": "vite preview",
+    "partytown": "partytown copylib public/~partytown"
   },
   "devDependencies": {
     "rollup-plugin-html": "^0.2.1",
@@ -16,7 +18,7 @@
     "vite-plugin-html": "^3.2.2"
   },
   "dependencies": {
-    "@builder.io/partytown": "^0.10.1",
+    "@builder.io/partytown": "^0.10.2",
     "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.12.5",
     "just-validate": "^4.3.0",

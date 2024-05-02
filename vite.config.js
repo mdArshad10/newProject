@@ -19,7 +19,8 @@ export default defineConfig({
         cabinets_order: resolve(__dirname, "src/cabinets_order/index.html"),
         retail_register: resolve(__dirname, "src/retail_register/index.html"),
         thank_you: resolve(__dirname, "src/thank_you/index.html"),
-        process_pages: resolve(__dirname, "src/process_pages/index.html")
+        process_pages: resolve(__dirname, "src/process_pages/index.html"),
+        faq_page: resolve(__dirname, "src/faq_page/index.html"),
       },
     },
   },

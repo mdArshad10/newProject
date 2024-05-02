@@ -8,6 +8,15 @@
   src: url("/public/fonts/Helvetica-Bold.ttf");
 }
 
+@font-face {
+  font-family: "baskerville";
+  src: url("/public/fonts/BaskervilleMTStd-Regular.ttf");
+}
+
+body {
+  font-family: "helvetica", "baskerville";
+}
+
 h1,
 h2,
 h3,

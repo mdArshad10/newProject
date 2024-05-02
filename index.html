@@ -38,6 +38,14 @@
     />
 
     <link rel="stylesheet" href="./style.css" />
+
+    <script type="module">
+      import { partytownSnippet } from "@builder.io/partytown/integration";
+
+      const snippetText = partytownSnippet();
+      const scriptTag = document.createElement("script");
+      scriptTag.innerHTML = snippetText;
+    </script>
   </head>
   <body>
     <div id="wrapper">
@@ -179,13 +187,13 @@
                   </li>
 
                   <li>
-                    <!-- TODO: EITHER USER GIVE / OR WE CREATE -->
-                    <a href="#" class="dropdown__link"> DIY & Flatpack </a>
+                    <!-- TODO: SHOPIFY LINKS -->
+                    <a href="#" class="dropdown__link"> Doors </a>
                   </li>
 
                   <li>
-                    <!-- TODO: SHOPIFY LINKS -->
-                    <a href="#" class="dropdown__link"> Doors </a>
+                    <!-- TODO: EITHER USER GIVE / OR WE CREATE -->
+                    <a href="#" class="dropdown__link"> DIY & Flatpack </a>
                   </li>
                 </ul>
               </li>
@@ -466,7 +474,7 @@
 
           <!-- section-2 -->
           <div id="footer-top-addess1">
-            <h4>Show room</h4>
+            <h4>Manufacturing unit</h4>
             <a
               href="https://www.google.com/maps/place/Psm+Cabinets/@-37.7593459,144.8333886,15z/data=!4m6!3m5!1s0xaa93c4f3bf5a2387:0xb5018dfc2bf06559!8m2!3d-37.7593459!4d144.8333886!16s%2Fg%2F11vq47ds66?entry=ttu"
               target="_blank"
@@ -479,7 +487,7 @@
           </div>
           <!-- section-3 -->
           <div id="footer-top-addess2">
-            <h4>Manufacturing unit</h4>
+            <h4>Show room</h4>
             <a
               href="https://google.com/maps/place/Factory+3%2F438+Mt+Dandenong+Rd,+Kilsyth+VIC+3137,+Australia/@-37.8016667,145.3046558,17z/data=!3m1!4b1!4m6!3m5!1s0x6ad63aaf4aa7926b:0x2869c1b7fd7cbd15!8m2!3d-37.8016667!4d145.3046558!16s%2Fg%2F11csjtphm0?entry=ttu"
               target="_blank"
@@ -532,7 +540,7 @@
           </div>
           <img
             id="footer-australian-made-logo"
-            src="public/assets/basic/australian-made-campaign-logo.png"
+            src="/public/assets/basic/australian-made-campaign-logo.png"
             alt="australian-made-logo"
           />
         </section>
