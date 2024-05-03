@@ -62,5 +62,12 @@
   & > h3 {
     font-size: 2rem;
     text-align: center;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .registeration_form>form{
+    width: 80%;
   }
 }

@@ -2,7 +2,7 @@
 
 #orderOnlinePageHeader {
   & > nav {
-    background: #8b1919;
+    background: #2D2926;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,7 +96,8 @@
     }
   }
 
-  & > .trade-register-btn , & > .trade-login-btn {
+  & > .trade-register-btn,
+  & > .trade-login-btn {
     background-color: #d98d30;
     &:hover {
       background-color: #ad722a;
@@ -105,62 +106,28 @@
 }
 
 #Brisbane-trade-account {
-  background-color: #30A0D9;
+  background-color: #30a0d9;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
 }
 
-#Online-Ordering-Process-content{
+#Online-Ordering-Process-content {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 
-  &>h3{
+  & > h3 {
     font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
   }
 }
 
-#online-Ordering-process-steps {
-  width: 100%;
-  background-color: rgba(0, 128, 0, 0);
-  display: flex;
-  color: white;
-  margin-top: 3rem;
-  background-color: green;
-
-  & > .process-single-step {
-    flex: 1 1 50%;
-    padding: 2rem 2rem 1rem 4rem;
-
-    & > #registerButtons {
-      display: flex;
-      gap: 1rem;
-
-      & > a {
-        outline: 1px solid white;
-        padding: 0.5rem 1rem;
-        text-wrap: wrap;
-        width: 40%;
-        text-align: center;
-        color: white;
-
-        &:hover {
-          background-color: rgba(3, 154, 3, 0.894);
-        }
-
-        &:first-child {
-          background-color: #8b1919;
-        }
-
-        &:first-child:hover {
-          background-color: #a71e1ed7;
-        }
-      }
-    }
-  }
+#Online-Ordering-Process-container {
+  margin-bottom: 2rem;
 }
 
 @mixin grid-container-for-list($row, $col, $rowgap, $colgap, $width) {
@@ -226,30 +193,43 @@
   .account-cta-buttons {
     flex-direction: column;
   }
-
-
 }
 
 @media (max-width: 768px) {
+  #orderOnlinePageHeader > nav {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    & > #navbar-logo {
+      width: 20%;
+    }
 
-  .grid-container{
-     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    & > #navbar-menu {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   }
 
   .account-cta-buttons {
     flex-direction: row;
   }
+
+  .trade-account-conatainer {
+    gap: 1rem;
+  }
+
   #Brisbane-forms {
     flex-direction: column;
   }
 }
 
 @media (max-width: 600) {
-  .account-cta-buttons{
+  .account-cta-buttons {
     flex-direction: column;
   }
 
-  .grid-container{
-    
-  }
+  
 }

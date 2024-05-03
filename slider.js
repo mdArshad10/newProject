@@ -7,11 +7,11 @@ function contentSlider() {
     centeredSlides: true,
     loop: true,
     slidesPerView: 1,
-    infinite: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+    // infinite: true,
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
     keyboard: {
       enabled: true,
     },
@@ -33,12 +33,33 @@ function carousel() {
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
-      speed: 750,
-      autoplaySpeed: 2500,
+      // speed: 750,
+      // autoplaySpeed: 2500,
       infinite: true,
-      autoplay: true,
+      // autoplay: true,
       centerMode: true,
       centerPadding: "0",
+
+      // responsive
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+          },
+        },
+      ],
     });
   });
 }

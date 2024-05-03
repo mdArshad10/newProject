@@ -17,9 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
     
     mm.add("(max-width: 1118px)", () => {
 
-      // gsap.set(".nav__toggle",{
-      // });
-
       showMenuMovement();
     });
   });
