@@ -3,6 +3,7 @@
 #thank-you-message {
   @extend %content-with-paragraph; // global boilerplate
   margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 #thank-you-page {

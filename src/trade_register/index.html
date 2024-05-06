@@ -25,13 +25,14 @@
             <img src="/public/assets/basic/psm.png" alt="" />
           </div>
           <div id="navbar-menu">
-            <strong>Sunshine Coast</strong> <a href="tel:+61-432-200-001">+61 432 200 001</a>
+            <strong>Contact No.</strong>
+            <a href="tel:+61-432-200-001">+61 432 200 001</a>
           </div>
         </nav>
       </header>
 
       <section class="registeration_form">
-        <h3><strong>Retail</strong> Online Ordering</h3>
+        <h3>Trade Online Ordering</h3>
         <form id="user-form" method="post">
           <div id="input_field">
             <label for="userName">Name:<sup>*</sup></label>
@@ -120,6 +121,145 @@
             <p></p>
           </div>
 
+          <h2 class="bussiness_details">Business Details</h2>
+
+          <p class="bussiness_details_para">
+            Share a little about your business. Don't have a business? You can
+            still sign up below!
+          </p>
+
+          <hr>
+
+          <div id="input_field">
+            <label for="bussinessName"
+              >Business Name (leave blank if not applicable)</label
+            >
+            <input
+              type="text"
+              id="bussinessName"
+              name="bussiness_name"
+              required
+            />
+          </div>
+
+          <div id="input_field">
+            <label for="profession"
+              >What is your profession? <span>*</span></label
+            >
+            <div class="radio-btn-controll">
+              <input
+                type="radio"
+                name="profession"
+                id="cabinetMaker"
+                value="Cabinet Maker"
+              />
+              <label for="cabinetMaker">Cabinet Maker</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="profession"
+                value="Kitchen & Bathroom Designer"
+                id="KitchenBathroomDesigner"
+              />
+
+              <label for="KitchenBathroomDesigner"
+                >Kitchen & Bathroom Designer</label
+              >
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="profession"
+                value="Builder - Residential"
+                id="BuilderResidential"
+              />
+
+              <label for="BuilderResidential">Builder - Residential</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="profession"
+                value="Cut To Size Supplier"
+                id="CutToSizeSupplier"
+              />
+              <label for="CutToSizeSupplier">Cut To Size Supplier</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="profession"
+                value="Cabinet / Kitchen Manufacturer"
+                id="CabinetKitchenManufacturer"
+              />
+              <label for="CabinetKitchenManufacturer"
+                >Cabinet / Kitchen Manufacturer</label
+              >
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="profession"
+                value="Installer"
+                id="Installer"
+              />
+              <label for="Installer">Installer</label>
+            </div>
+          </div>
+
+          <div id="input_field">
+            <label for="experience"
+              >How long have you been in business? <span>*</span></label
+            >
+            <div>
+              <input
+                type="radio"
+                name="experience"
+                value="Less than 2 years"
+                id="Lessthan2years"
+              />
+              <label for="Lessthan2years">Less than 2 years</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="experience"
+                value="3-5 years"
+                id="3-5years"
+              />
+              <label for="3-5years">3-5 years</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="experience"
+                value="6-10 years"
+                id="6-10years"
+              />
+              <label for="6-10years">6-10 years</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="experience"
+                value="11-15 years"
+                id="11-15years"
+              />
+              <label for="11-15years">11-15 years</label>
+            </div>
+            <div>
+              <input type="radio" name="experience" value="over 16 years" />
+              <label for="over16years">over 16 years</label>
+            </div>
+          </div>
+
+          <div>
+            <div>
+              <input type="checkbox" name="terms_conditions" id="" /> Yes, I
+              agree to the <a href="#" class="termsAndCondition">terms and conditions.</a>.
+            </div>
+          </div>
           <button type="submit">Submit</button>
         </form>
       </section>

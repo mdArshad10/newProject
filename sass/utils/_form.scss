@@ -20,10 +20,17 @@
     margin: auto;
     padding: 1rem 2rem;
 
-    & > div {
+    & > #input_field {
       display: flex;
       flex-direction: column;
-      margin-bottom: 0.9rem;
+      width: 100%;
+
+      & > input,
+      & > select,
+      & > option {
+        background-color: #e6e6e6;
+        border: none;
+      }
 
       & > p {
         margin-top: 4px;
@@ -34,26 +41,27 @@
       }
     }
 
-    & > button[type="submit"] {
-      padding: 0.4rem;
-      text-align: center;
-      color: #fff;
-      cursor: pointer;
-      border: none;
-      outline: none;
-      width: 6rem;
-      background-color: #008fca;
-      transition: all ease 0.2s;
+    & > .bussiness_details {
+      margin-bottom: 1rem;
+    }
 
-      &:focus,
-      &:hover {
-        box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.75);
-        -webkit-box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.75);
-      }
+    & > .bussiness_details_para {
+      font-size: 0.65rem;
+    }
+
+    & > hr {
+      margin: 0;
+      margin-bottom: 1rem;
+      color: black;
+    }
+    & > button[type="submit"] {
+      @extend %submit-button;
     }
   }
 }
+
+
+
 
 .registeration_form {
   margin-top: 7rem;
@@ -67,7 +75,7 @@
 }
 
 @media (max-width: 768px) {
-  .registeration_form>form{
+  .registeration_form > form {
     width: 80%;
   }
 }

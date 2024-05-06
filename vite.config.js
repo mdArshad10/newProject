@@ -19,7 +19,8 @@ export default defineConfig({
         retail_register: resolve(__dirname, "src/retail_register/index.html"),
         thank_you: resolve(__dirname, "src/thank_you/index.html"),
         process_pages: resolve(__dirname, "src/process_pages/index.html"),
-        faq: resolve(__dirname, "src/faq/index.html")
+        faq: resolve(__dirname, "src/faq/index.html"),
+        contact_us_page: resolve(__dirname, "src/contact_us_page/index.html"),
       },
     },
   },

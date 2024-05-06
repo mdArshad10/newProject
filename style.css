@@ -35,6 +35,36 @@ sup {
   margin: 0 auto;
 }
 
+form > .cta-btn {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#input_field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.9rem;
+}
+
+button[type=submit], .registeration_form > form > button[type=submit] {
+  padding: 0.4rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  width: 6rem;
+  background-color: #ffa300;
+  transition: all ease 0.2s;
+}
+button[type=submit]:focus, .registeration_form > form > button[type=submit]:focus, button[type=submit]:hover, .registeration_form > form > button[type=submit]:hover {
+  box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.75);
+}
+
 #thank-you-page, #retail_register_page {
   color: black;
 }
@@ -96,6 +126,10 @@ ul > li {
 
 label {
   font-size: 16px;
+}
+
+.termsAndCondition {
+  color: orange;
 }
 
 #thank-you-message {
@@ -459,6 +493,10 @@ label {
   padding: 1rem;
 }
 
+#navbar-menu > strong {
+  color: white;
+}
+
 .single-item {
   position: relative;
 }
@@ -742,35 +780,33 @@ label {
   margin: auto;
   padding: 1rem 2rem;
 }
-.registeration_form > form > div {
+.registeration_form > form > #input_field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 0.9rem;
+  width: 100%;
 }
-.registeration_form > form > div > p {
+.registeration_form > form > #input_field > input, .registeration_form > form > #input_field > select, .registeration_form > form > #input_field > option {
+  background-color: #e6e6e6;
+  border: none;
+}
+.registeration_form > form > #input_field > p {
   margin-top: 4px;
   padding: 1px 2px;
   font-size: 12px;
   color: #e04562;
   background-color: #f9e4e8;
 }
-.registeration_form > form > button[type=submit] {
-  padding: 0.4rem;
-  text-align: center;
-  color: #fff;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  width: 6rem;
-  background-color: #008fca;
-  transition: all ease 0.2s;
+.registeration_form > form > .bussiness_details {
+  margin-bottom: 1rem;
 }
-.registeration_form > form > button[type=submit]:focus, .registeration_form > form > button[type=submit]:hover {
-  box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.75);
+.registeration_form > form > .bussiness_details_para {
+  font-size: 0.65rem;
 }
-
+.registeration_form > form > hr {
+  margin: 0;
+  margin-bottom: 1rem;
+  color: black;
+}
 .registeration_form {
   margin-top: 7rem;
   margin-bottom: 5rem;
@@ -832,10 +868,6 @@ footer {
 #footer-bottom-container > p {
   font-size: 0.65rem;
   font-weight: 500;
-}
-
-#footer-bottom-social-media {
-  /* margin-top: 2rem; */
 }
 
 #footer-bottom-social-media > ul {
@@ -1041,7 +1073,7 @@ footer {
   }
 }
 #orderOnlinePageHeader > nav {
-  background: #2D2926;
+  background: #2d2926;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1073,6 +1105,7 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
+  color: white;
 }
 #order-container-content > h3 {
   font-size: 2.5rem;
@@ -1097,9 +1130,12 @@ footer {
   border-radius: 10px;
   color: #fff;
 }
+.account-container > h1 {
+  margin-bottom: 1rem;
+}
 
 #Brisbane-retail-account {
-  background-color: #d98d30;
+  background-color: #ffa300;
 }
 
 .account-cta-buttons {
@@ -1110,6 +1146,7 @@ footer {
 }
 .account-cta-buttons > a {
   padding: 0.75rem 1rem;
+  border-radius: 10px;
   background-color: #d98d30;
   color: #fff;
   font-weight: 500;
@@ -1118,20 +1155,20 @@ footer {
   background-color: red;
 }
 .account-cta-buttons > .retail-register-btn, .account-cta-buttons > .retail-login-btn {
-  background-color: #30a0d9;
+  background-color: #35463d;
 }
 .account-cta-buttons > .retail-register-btn:hover, .account-cta-buttons > .retail-login-btn:hover {
-  background-color: #487e99;
+  background-color: rgba(53, 70, 61, 0.7294117647);
 }
 .account-cta-buttons > .trade-register-btn, .account-cta-buttons > .trade-login-btn {
-  background-color: #d98d30;
+  background-color: #ffa300;
 }
 .account-cta-buttons > .trade-register-btn:hover, .account-cta-buttons > .trade-login-btn:hover {
-  background-color: #ad722a;
+  background-color: rgba(255, 162, 0, 0.7960784314);
 }
 
 #Brisbane-trade-account {
-  background-color: #30a0d9;
+  background-color: #35463d;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -1172,6 +1209,7 @@ footer {
   -moz-box-shadow: 0 0 9px 5.5px #dddddd;
   box-shadow: 0 0 9px 5.5px #dddddd;
   padding: 0.5rem;
+  outline: 3px solid #f9a21c;
 }
 .grid-container > .grid-container-item > img {
   width: 40%;
@@ -1182,6 +1220,7 @@ footer {
   text-align: center;
   font-size: 0.6rem;
   font-weight: 700;
+  color: orange;
 }
 
 .process-step-1 {
@@ -1320,8 +1359,78 @@ h1.accordion.is-open {
   height: 1px;
 }
 
+#contact-us-top-content {
+  margin-top: 6rem;
+}
+#contact-us-top-content > h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#map-container {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+#map-container > #map-container-left, #map-container > #map-container-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 48%;
+}
+#map-container > #map-container-left > iframe, #map-container > #map-container-right > iframe {
+  width: 100%;
+}
+
+#contact-us {
+  width: 100%;
+  background-color: #35463d;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding-bottom: 3rem;
+}
+
+#contact-us-content > h1 {
+  text-align: center;
+}
+
+#input_field {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+#input_field > input {
+  padding-left: 10px;
+}
+#input_field > #contactUsMessage {
+  height: 6rem;
+  padding: 10px;
+}
+
+button[type=submit] {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #map-container {
+    justify-content: center;
+    gap: 2rem;
+  }
+  #map-container > #map-container-left, #map-container > #map-container-right {
+    width: 100%;
+  }
+  #map-container > #map-container-left > iframe, #map-container > #map-container-right > iframe {
+    width: 100%;
+  }
+}
 #thank-you-message {
   margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
