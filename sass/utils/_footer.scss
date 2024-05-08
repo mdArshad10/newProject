@@ -107,3 +107,9 @@ footer {
     margin-top: 0.5rem;
   }
 }
+
+@media (max-width: 600px) {
+  footer{
+    padding: 1rem 2rem;
+  }
+}

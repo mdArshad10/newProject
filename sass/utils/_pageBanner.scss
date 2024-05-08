@@ -1,15 +1,13 @@
 /* ======"setting the standard","Building timeless elegance"  ====== */
 #setting-standard,
 #building-timeless {
-  padding: 17rem;
+  height: 100vh;
   color: white;
   width: 100%;
-  position: relative;
-
-  scroll-snap-align: start;
+  
 }
 
-.crafting-bg {
+.personalised-styles-bg {
   background-color: #314036;
 }
 
@@ -19,11 +17,7 @@
   background-size: cover;
 }
 
-.building-timeless-bg {
-  background-image: url("/public/assets/img6.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 #setting-standard-content {
   position: absolute;
@@ -61,43 +55,68 @@
   font-size: 0.8rem;
 }
 
-#crafting{
+#personalised-styles {
   display: flex;
   color: white;
+  height: 100vh;
+  background-image: url("/public/assets/2nd-image.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  &> #crafting-content{
+  & > #personalised-styles-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 4rem;
-    padding-right: 5rem;
+    padding-right: 4rem;
 
-    &> .crafting-heading{
+    & > .personalised-styles-heading {
       margin-bottom: 2vh;
     }
-  }
 
-  &>video{
-    width: 50%;
+    & > .personalised-styles-para {
+      width: 60%;
+    }
   }
 }
 
+#quick-fit-solution {
+  display: flex;
+  color: white;
+  height: 100vh;
+  background-image: url("/public/assets/3rd-img.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  & > #quick-fit-solution-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    & > .quick-fit-solution-heading {
+      margin-bottom: 2vh;
+      width: 60%;
+    }
+
+  }
+}
 
 /* ----- orange craft Section end ----- */
 
-@media screen and (min-width: 1200px) {
-}
-
-@media (max-width: 992px) {
-  #crafting-content,
-  #setting-standard-content {
-    width: 80%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-@media (max-width: 768px) {
-}
 @media (max-width: 600px) {
+  #personalised-styles > #personalised-styles-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  #quick-fit-solution > #quick-fit-solution-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    & > .quick-fit-solution-heading {
+      width: 100%;
+    }
+  }
 }

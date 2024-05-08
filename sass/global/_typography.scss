@@ -38,6 +38,11 @@ a:active {
   color: white;
 }
 
+ul{
+  margin: 0;
+  padding: 0;
+}
+
 ul > li {
   list-style-type: none;
 }
@@ -46,8 +51,8 @@ label {
   font-size: 16px;
 }
 
-.termsAndCondition{
-  color: orange;
+.termsAndCondition {
+  color: orange !important;
 }
 
 %content-with-paragraph {
