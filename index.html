@@ -37,7 +37,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <link rel="stylesheet" href="./style.css" />
+    <link defer rel="stylesheet" href="./style.css" />
 
     <script type="module">
       import { partytownSnippet } from "@builder.io/partytown/integration";
@@ -336,34 +336,52 @@
         <!-- slider js -->
         <div class="slider collection-slider">
           <div class="item">
-            <img src="./public/assets/sliderImage/slider-4.jpg" alt="doors" />
+            <img
+              src=""
+              data-src="./public/assets/sliderImage/slider-4.jpg"
+              loading="lazy"
+              class="lazy-loading"
+              alt="doors"
+            />
             <div class="swiper-slide-caption">DOORS</div>
           </div>
           <div class="item">
             <img
-              src="./public/assets/sliderImage/slider-1.jpg"
+              src=""
+              data-src="./public/assets/sliderImage/slider-1.jpg"
               alt="wardrobes"
+              loading="lazy"
+              class="lazy-loading"
             />
             <div class="swiper-slide-caption">WARDROBES</div>
           </div>
           <div class="item">
             <img
-              src="./public/assets/sliderImage/slider-2.jpg"
+              src=""
+              data-src="./public/assets/sliderImage/slider-2.jpg"
               alt="vanities"
+              loading="lazy"
+              class="lazy-loading"
             />
             <div class="swiper-slide-caption">VANITIES</div>
           </div>
           <div class="item">
             <img
-              src="./public/assets/sliderImage/slider-3.jpg"
+              src=""
+              data-src="./public/assets/sliderImage/slider-3.jpg"
               alt="milled_panel"
+              loading="lazy"
+              class="lazy-loading"
             />
             <div class="swiper-slide-caption">MILLED PANELS</div>
           </div>
           <div class="item">
             <img
-              src="./public/assets/sliderImage/slider-4.jpg"
+              src=""
               alt="tv unites"
+              data-src="/public/assets/sliderImage/slider-4.jpg"
+              loading="lazy"
+              class="lazy-loading"
             />
             <div class="swiper-slide-caption">TV UNITS</div>
           </div>
@@ -426,7 +444,7 @@
       </section>
 
       <!-- video section -->
-     
+
       <div id="video-section">
         <video
           class="lazy-video"
@@ -464,7 +482,10 @@
 
       <!-- "setting the standard"  -->
       <section id="quick-fit-solution" class="quick-fit-solution-bg">
-        <div id="quick-fit-solution-content" class="setting-standard-bg-position">
+        <div
+          id="quick-fit-solution-content"
+          class="setting-standard-bg-position"
+        >
           <h2 class="quick-fit-solution-heading">
             3 EASY STEPS – FROM ORDERING TO INSTALLING YOUR QUICK-FIT CABINETRY
             SOLUTION.
@@ -476,8 +497,6 @@
           </ol>
         </div>
       </section>
-
-      
 
       <!-- footer  -->
       <footer>
@@ -562,6 +581,8 @@
           <img
             id="footer-australian-made-logo"
             src="/public/assets/basic/australian-made-campaign-logo.png"
+            loading="lazy"
+            class="lazy-loading"
             alt="australian-made-logo"
           />
         </section>
@@ -596,7 +617,7 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
 
-    <script type="module" src="/main.js"></script>
+    <script defer type="module" src="/main.js"></script>
     <!-- <script type="module" src="/slider.js"></script> -->
     <script type="module" src="/video.js"></script>
   </body>

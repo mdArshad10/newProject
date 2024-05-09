@@ -3,25 +3,6 @@ import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { carousel, contentSlider } from "./slider.js";
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  window.addEventListener("load", () => {
-    gsap.registerPlugin(ScrollTrigger);
-    const mm = gsap.matchMedia();
-
-    showMenu("nav-toggle", "nav-menu");
-
-    centerLogoMove();
-    navbarMove();
-    carousel();
-    
-    mm.add("(max-width: 1118px)", () => {
-
-      showMenuMovement();
-    });
-  });
-});
-
 gsap.set(".nav__menu, .nav__toggle", {
   display: "none",
 });
@@ -32,6 +13,44 @@ gsap.set(".nav", {
   backgroundColor: "black",
   justifyContent: "space-between",
 });
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   window.addEventListener("load", (e) => {
+//     gsap.registerPlugin(ScrollTrigger);
+//     const mm = gsap.matchMedia();
+
+//     console.log(e);
+//     showMenu("nav-toggle", "nav-menu");
+
+//     centerLogoMove();
+//     navbarMove();
+//     carousel();
+    
+//     mm.add("(max-width: 1118px)", () => {
+
+//       showMenuMovement();
+//     });
+//   });
+// });
+
+$(document).ready(function() {
+  $(window).on('load', function(e) {
+    gsap.registerPlugin(ScrollTrigger);
+    const mm = gsap.matchMedia();
+
+    console.log(e);
+    showMenu("nav-toggle", "nav-menu");
+
+    centerLogoMove();
+    navbarMove();
+    carousel();
+
+    mm.add("(max-width: 1118px)", () => {
+      showMenuMovement();
+    });
+  })})
+
 
 // scrolling effect
 function scrollingEffect() {
@@ -49,7 +68,7 @@ function scrollingEffect() {
 function navbarMove() {
   gsap.to(".nav", {
     height: "5.5rem",
-    delay: 2,
+    // delay: 2,
     duration: 2,
     onComplete: contentSlider(),
   });
@@ -59,7 +78,7 @@ function centerLogoMove() {
   gsap.to(".psm-logo", {
     x: "-41vw",
     y: 5,
-    delay: 2,
+    // delay: 2,
     scale: 0.3,
     duration: 2,
     onStart: tagLineMove(),
@@ -74,7 +93,7 @@ function tagLineMove() {
     opacity: 0,
     scale: 0.2,
     // display: "none",
-    delay: 2,
+    // delay: 2,
     duration: 2,
   });
 }
@@ -159,7 +178,7 @@ function navbarMenuMovement() {
   const menuChild = document.querySelector(".nav__menu");
   const dropdown__item = document.querySelectorAll(".dropdown__item");
   gsap.to(menuChild, {
-    delay: 3,
+    delay: 2,
     display: "flex",
   });
   gsap.from(dropdown__item, {
@@ -167,7 +186,7 @@ function navbarMenuMovement() {
     opacity: 0,
     y: 10,
     stagger: 0.1,
-    delay: 4,
+    delay: 2,
   });
 }
 
