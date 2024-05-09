@@ -18,6 +18,7 @@ body {
   padding: 0;
   position: relative;
   height: 100%;
+  overflow-x: hidden;
 }
 
 img {
@@ -267,9 +268,23 @@ label {
   background-color: black;
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
   z-index: 100;
+  display: grid;
+  height: 80vh;
+  place-content: center;
 }
 .header::-webkit-scrollbar {
-  /* Chrome, Safari, etc. */
+  display: none;
+}
+
+nav > .nav__menu {
+  display: none;
+}
+
+nav > .black-screen-for-logo {
+  width: 25rem;
+}
+
+.nav__menu, .nav__toggle {
   display: none;
 }
 

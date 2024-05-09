@@ -3,54 +3,41 @@ import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { carousel, contentSlider } from "./slider.js";
 
-gsap.set(".nav__menu, .nav__toggle", {
-  display: "none",
-});
-
-// adding the new gsap property
-gsap.set(".nav", {
-  height: "80vh",
-  backgroundColor: "black",
-  justifyContent: "space-between",
-});
-
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   window.addEventListener("load", (e) => {
-//     gsap.registerPlugin(ScrollTrigger);
-//     const mm = gsap.matchMedia();
-
-//     console.log(e);
-//     showMenu("nav-toggle", "nav-menu");
-
-//     centerLogoMove();
-//     navbarMove();
-//     carousel();
-    
-//     mm.add("(max-width: 1118px)", () => {
-
-//       showMenuMovement();
-//     });
-//   });
+// gsap.set(".nav__menu, .nav__toggle", {
+//   display: "none",
 // });
 
-$(document).ready(function() {
-  $(window).on('load', function(e) {
+// adding the new gsap property
+// gsap.set(".nav", {
+//   height: "80vh",
+//   backgroundColor: "black",
+//   justifyContent: "space-between",
+// });
+
+$(document).ready(function () {
+  $(window).on("load", function (e) {
     gsap.registerPlugin(ScrollTrigger);
     const mm = gsap.matchMedia();
 
-    console.log(e);
+    console.log(e.timeStamp);
+    const ts = e.timeStamp / 1000;
+
     showMenu("nav-toggle", "nav-menu");
 
-    centerLogoMove();
-    navbarMove();
+    centerLogoMove(ts, 0.3, "-42vw");
+    navbarMove(ts);
     carousel();
 
     mm.add("(max-width: 1118px)", () => {
       showMenuMovement();
     });
-  })})
 
+    mm.add("(max-width:700px)", () => {
+      showMenuMovement();
+      centerLogoMove(ts, 0.3, "-35vw");
+    });
+  });
+});
 
 // scrolling effect
 function scrollingEffect() {
@@ -65,35 +52,44 @@ function scrollingEffect() {
   gsap.ticker.lagSmoothing(0);
 }
 
-function navbarMove() {
-  gsap.to(".nav", {
+// function navbarMove(ts) {
+//   gsap.to(".nav", {
+//     height: "5.5rem",
+//     delay: ts,
+//     duration: 2,
+//     onComplete: contentSlider(),
+//   });
+// }
+
+function navbarMove(ts) {
+  gsap.to("header", {
     height: "5.5rem",
-    // delay: 2,
+    delay: ts,
     duration: 2,
     onComplete: contentSlider(),
   });
 }
 
-function centerLogoMove() {
+function centerLogoMove(ts, scale, xPosition) {
   gsap.to(".psm-logo", {
-    x: "-41vw",
+    x: xPosition,
     y: 5,
-    // delay: 2,
-    scale: 0.3,
+    delay: ts,
+    scale,
     duration: 2,
-    onStart: tagLineMove(),
+    onStart: tagLineMove(ts),
     onComplete: navbarMenuMovement(),
   });
 }
 
-function tagLineMove() {
+function tagLineMove(ts) {
   gsap.to(".psm-work-experience", {
     x: "-42vw",
     y: 5,
     opacity: 0,
     scale: 0.2,
     // display: "none",
-    // delay: 2,
+    delay: ts,
     duration: 2,
   });
 }
@@ -177,6 +173,9 @@ function buildingTimelessMovement() {
 function navbarMenuMovement() {
   const menuChild = document.querySelector(".nav__menu");
   const dropdown__item = document.querySelectorAll(".dropdown__item");
+  gsap.set("header", {
+    justifyContent: "normal",
+  })
   gsap.to(menuChild, {
     delay: 2,
     display: "flex",
@@ -192,7 +191,7 @@ function navbarMenuMovement() {
 
 function showMenuMovement() {
   gsap.to(".nav__toggle", {
-    display:"block",
+    display: "block",
     duration: 0.5,
     delay: 4,
   });

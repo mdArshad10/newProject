@@ -7,11 +7,26 @@
   background-color: black;
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
   z-index: 100;
+  display: grid;
+  height: 80vh;
+  place-content: center;
 
   &::-webkit-scrollbar {
-    /* Chrome, Safari, etc. */
     display: none;
   }
+}
+
+// trying the navbar
+nav> .nav__menu {
+  display: none;
+}
+
+nav> .black-screen-for-logo{
+  width: 25rem;
+}
+
+.nav__menu, .nav__toggle{
+  display: none;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -25,7 +40,6 @@
   height: 3.5rem;
   position: relative;
   margin-right: 0.4rem;
-  
 
   &__burger,
   &__close {
@@ -156,7 +170,6 @@
     transition: transform 0.4s;
   }
   &__link {
-    // padding: 1.25rem 1.25rem 1.25rem 2.5rem;
     padding: 0.75rem;
 
     display: flex;
@@ -284,8 +297,7 @@
   padding: 1rem;
 }
 
-
-// for other navbar 
-#navbar-menu>strong{
+// for other navbar
+#navbar-menu > strong {
   color: white;
 }
