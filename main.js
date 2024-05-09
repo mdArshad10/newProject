@@ -78,7 +78,7 @@ function centerLogoMove(ts, scale, xPosition) {
     scale,
     duration: 2,
     onStart: tagLineMove(ts),
-    onComplete: navbarMenuMovement(),
+    onUpdate: navbarMenuMovement(ts+1),
   });
 }
 
@@ -170,14 +170,14 @@ function buildingTimelessMovement() {
   });
 }
 
-function navbarMenuMovement() {
+function navbarMenuMovement(ts) {
   const menuChild = document.querySelector(".nav__menu");
   const dropdown__item = document.querySelectorAll(".dropdown__item");
   gsap.set("header", {
     justifyContent: "normal",
   })
   gsap.to(menuChild, {
-    delay: 2,
+    delay: ts,
     display: "flex",
   });
   gsap.from(dropdown__item, {
@@ -185,7 +185,7 @@ function navbarMenuMovement() {
     opacity: 0,
     y: 10,
     stagger: 0.1,
-    delay: 2,
+    delay: ts,
   });
 }
 
