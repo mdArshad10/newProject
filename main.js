@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     showMenu("nav-toggle", "nav-menu");
 
-    centerLogoMove(ts, 0.3, "-42vw");
+    centerLogoMove(ts, 0.3, "-41.5vw");
     navbarMove(ts);
     carousel();
 
@@ -34,7 +34,7 @@ $(document).ready(function () {
 
     mm.add("(max-width:700px)", () => {
       showMenuMovement();
-      centerLogoMove(ts, 0.3, "-35vw");
+      centerLogoMove(ts, 0.3, "-36vw");
     });
   });
 });

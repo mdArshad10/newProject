@@ -18,7 +18,7 @@ body {
   padding: 0;
   position: relative;
   height: 100%;
-  overflow-x: hidden
+  overflow-x: hidden;
 }
 
 img {
@@ -31,14 +31,12 @@ sup {
   color: red;
 }
 
-
-
 .container {
   width: 75%;
   margin: 0 auto;
 }
 
-form>.cta-btn{
+form > .cta-btn {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -69,7 +67,6 @@ form>.cta-btn{
     -moz-box-shadow: 3px 2px 7px 0px rgba(0, 0, 0, 0.75);
   }
 }
-
 
 %navbar-order-online-container {
   color: black;
