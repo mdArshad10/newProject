@@ -270,7 +270,7 @@ label {
   z-index: 100;
   display: grid;
   height: 80vh;
-  place-content: center;
+  place-items: center;
 }
 .header::-webkit-scrollbar {
   display: none;
@@ -712,18 +712,11 @@ nav > .black-screen-for-logo {
     left: 65%;
   }
 }
-/* ======"setting the standard","Building timeless elegance"  ====== */
-.setting-standard-bg {
-  background-image: url("/public/assets/3rd-img.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 #personalised-styles {
   display: flex;
   color: white;
   height: 100vh;
-  background-image: url("/public/assets/2nd-image.webp");
+  background-image: url("/public/assets/Home_page/2nd-image.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -745,7 +738,7 @@ nav > .black-screen-for-logo {
   display: flex;
   color: white;
   height: 100vh;
-  background-image: url("/public/assets/3rd-img.webp");
+  background-image: url("/public/assets/Home_page/3rd-img.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }

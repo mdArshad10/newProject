@@ -1,63 +1,10 @@
-/* ======"setting the standard","Building timeless elegance"  ====== */
-// #setting-standard,
-// #building-timeless {
-//   height: 100vh;
-//   color: white;
-//   width: 100%;
 
-// }
-
-// .personalised-styles-bg {
-//   background-color: #314036;
-// }
-
-.setting-standard-bg {
-  background-image: url("/public/assets/3rd-img.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-// #setting-standard-content {
-//   position: absolute;
-//   width: 50vw;
-//   left: 6vw;
-//   bottom: 20%;
-// }
-
-// #building-timeless-content {
-//   position: absolute;
-//   top: 24%;
-//   left: 60%;
-//   width: fit-content;
-// }
-
-// .setting-standard-heading,
-// .building-timeless-heading {
-//   font-size: 1.5rem;
-//   text-transform: uppercase;
-//   font-weight: 600;
-//   line-height: normal;
-// }
-
-// .building-timeless-heading {
-//   font-size: 1.5rem;
-//   text-transform: uppercase;
-//   font-weight: 600;
-// }
-
-// .setting-standard-para,
-// .building-timeless-para {
-//   margin-top: 2vh;
-//   line-height: 1.1;
-//   width: 70%;
-//   font-size: 0.8rem;
-// }
 
 #personalised-styles {
   display: flex;
   color: white;
   height: 100vh;
-  background-image: url("/public/assets/2nd-image.webp");
+  background-image: url("/public/assets/Home_page/2nd-image.webp");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -82,7 +29,7 @@
   display: flex;
   color: white;
   height: 100vh;
-  background-image: url("/public/assets/3rd-img.webp");
+  background-image: url("/public/assets/Home_page/3rd-img.webp");
   background-repeat: no-repeat;
   background-size: cover;
 

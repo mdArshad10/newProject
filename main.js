@@ -78,7 +78,7 @@ function centerLogoMove(ts, scale, xPosition) {
     scale,
     duration: 2,
     onStart: tagLineMove(ts),
-    onUpdate: navbarMenuMovement(ts+1),
+    onComplete: navbarMenuMovement(ts+1),
   });
 }
 
