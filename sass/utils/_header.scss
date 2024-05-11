@@ -1,15 +1,16 @@
 /*=============== HEADER ===============*/
 .header {
   position: fixed;
-  top: 0;
+  top: -1px;
   left: 0;
   width: 100%;
   background-color: black;
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
   z-index: 100;
-  display: grid;
+  display: flex;
   height: 80vh;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   
 
   &::-webkit-scrollbar {
