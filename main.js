@@ -3,38 +3,29 @@ import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { carousel, contentSlider } from "./slider.js";
 
-// gsap.set(".nav__menu, .nav__toggle", {
-//   display: "none",
-// });
-
-// adding the new gsap property
-// gsap.set(".nav", {
-//   height: "80vh",
-//   backgroundColor: "black",
-//   justifyContent: "space-between",
-// });
 
 $(document).ready(function () {
   $(window).on("load", function (e) {
     gsap.registerPlugin(ScrollTrigger);
     const mm = gsap.matchMedia();
 
-    console.log(e.timeStamp);
     const ts = e.timeStamp / 1000;
 
     showMenu("nav-toggle", "nav-menu");
 
-    centerLogoMove(ts, 0.3, "-41.5vw");
+    centerLogoMove(ts, 0.3, "-41.5vw", true);
     navbarMove(ts);
     carousel();
-
-    mm.add("(max-width: 1118px)", () => {
+    
+    mm.add("(max-width: 1118px)", (e) => {
+      centerLogoMove(ts, 0.3, "-41.5vw", true);
       showMenuMovement();
     });
 
-    mm.add("(max-width:700px)", () => {
+    mm.add("(max-width:700px)", (e) => {
+      
+      centerLogoMove(ts, 0.3, "-36vw", false);
       showMenuMovement();
-      centerLogoMove(ts, 0.3, "-36vw");
     });
   });
 });
@@ -70,7 +61,7 @@ function navbarMove(ts) {
   });
 }
 
-function centerLogoMove(ts, scale, xPosition) {
+function centerLogoMove(ts, scale, xPosition, fullscreen) {
   gsap.to(".psm-logo", {
     x: xPosition,
     y: 5,
@@ -78,7 +69,7 @@ function centerLogoMove(ts, scale, xPosition) {
     scale,
     duration: 2,
     onStart: tagLineMove(ts),
-    onComplete: navbarMenuMovement(ts+1),
+    onComplete: navbarMenuMovement(ts + 1, fullscreen),
   });
 }
 
@@ -170,19 +161,19 @@ function buildingTimelessMovement() {
   });
 }
 
-function navbarMenuMovement(ts) {
+function navbarMenuMovement(ts, fullscreen) {
   const menuChild = document.querySelector(".nav__menu");
   const dropdown__item = document.querySelectorAll(".dropdown__item");
   gsap.set("header", {
     justifyContent: "normal",
-  })
+  });
   gsap.to(menuChild, {
     delay: ts,
     display: "flex",
   });
   gsap.from(dropdown__item, {
     duration: 0.5,
-    opacity: 0,
+    opacity: fullscreen ? 1 : 0,
     y: 10,
     stagger: 0.1,
     delay: ts,

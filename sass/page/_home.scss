@@ -13,7 +13,7 @@
 
 .page2-heading {
   color: #000;
-  font-size: clamp(1.3rem, 0.7940rem + 2.2550vw, 3.5rem);
+  font-size: clamp(1.3rem, 0.794rem + 2.255vw, 3.5rem);
   font-weight: 300;
 }
 
@@ -42,7 +42,7 @@
   width: 100%;
   color: white;
   padding-bottom: 7rem;
-  background-color: #35463D;
+  background-color: #35463d;
   display: flex;
   flex-direction: column;
   gap: 10vh;
@@ -51,11 +51,12 @@
 }
 
 .feature-section > h1 {
-  font-size: clamp(1.3rem, 0.7940rem + 2.2550vw, 3.5rem);
+  font-size: clamp(1.3rem, 0.794rem + 2.255vw, 3.5rem);
   text-transform: capitalize;
   text-align: center;
   margin-top: 2.5rem;
   font-weight: 300;
+  padding: 0 4rem;
 }
 
 .feature-blocks {
@@ -82,7 +83,7 @@
 }
 
 .feature-single-block > p {
-  font-size: clamp(0.75rem, 0.6350rem + 0.5125vw, 1.25rem);
+  font-size: clamp(0.75rem, 0.635rem + 0.5125vw, 1.25rem);
   text-transform: capitalize;
   text-align: center;
   font-weight: 300;
@@ -91,12 +92,23 @@
 
 /* ----- Feature section end ----- */
 
-@media (max-width:1200px) {
-  .feature-blocks{
+@media (max-width: 1200px) {
+  .feature-blocks {
     width: 100%;
-    gap: 1rem;
+    gap: 1.5rem;
     place-content: center;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
-  
+}
+
+@media (max-width: 528px) {
+  .feature-blocks {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width:600px) {
+  .feature-section > h1{
+    padding: 0 2rem;
+  }
 }

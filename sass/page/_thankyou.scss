@@ -9,3 +9,14 @@
 #thank-you-page {
   @extend %navbar-order-online-container; // global boilerplate
 }
+
+
+@media (max-width:600px) {
+  #thank-you-message{
+    padding: 0 2rem;
+
+    &> a{
+      padding: 0.5rem 1rem;
+    }
+  }
+}

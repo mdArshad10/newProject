@@ -66,3 +66,21 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  #personalised-styles {
+    background-image: url("/public/assets/Home_page/2nd-image-small.webp");
+  }
+  #quick-fit-solution {
+    background-image: url("/public/assets/Home_page/3rd-image-small.webp");
+  }
+}
+
+@media (max-width: 550px) {
+  #personalised-styles {
+    background-image: url("/public/assets/Home_page/2nd-image-extra-small.webp");
+  }
+  #quick-fit-solution {
+    background-image: url("/public/assets/Home_page/3rd-image-extra-small.webp");
+  }
+}

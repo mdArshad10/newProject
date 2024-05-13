@@ -42,16 +42,18 @@
     }
 
     & > .bussiness_details {
+      margin-top: 1rem;
       margin-bottom: 1rem;
     }
 
     & > .bussiness_details_para {
       font-size: 0.65rem;
+      margin-bottom: 1rem;
     }
 
     & > hr {
       margin: 0;
-      margin-bottom: 1rem;
+      margin-bottom: .5rem;
       color: black;
     }
     & > button[type="submit"] {
@@ -67,7 +69,7 @@
   margin-bottom: 5rem;
 
   & > h3 {
-    font-size: 2rem;
+    font-size: clamp(1.75rem, 1.3462rem + 1.7949vw, 3.5rem);
     text-align: center;
     padding-bottom: 1.5rem;
   }
