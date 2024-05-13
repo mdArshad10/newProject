@@ -37,6 +37,10 @@
   padding-bottom: 4rem;
   // margin-top: 4rem;
   margin-bottom: 4rem;
+
+  & > .container{
+    width: 80%;
+  }
 }
 
 #order-container-content {
@@ -60,7 +64,7 @@
   }
 }
 
-#Brisbane-forms {
+#sunshineNorthForm {
   display: flex;
   gap: 1rem;
   flex-direction: row;
@@ -78,7 +82,7 @@
   }
 }
 
-#Brisbane-retail-account {
+#sunshineNorth-retail-account {
   background-color: #ffa300;
 }
 
@@ -117,8 +121,9 @@
     }
   }
 }
-
-#Brisbane-trade-account {
+// sunshineNorth-retail-account
+// #Brisbane-trade-account {
+#sunshineNorth-trade-account {
   background-color: #35463d;
   display: flex;
   justify-content: space-between;
@@ -209,7 +214,9 @@
 
 @media (max-width: 1200px) {
   .container {
-    width: 90%;
+    width: 100% !important;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .grid-container {
@@ -249,12 +256,20 @@
     gap: 1rem;
   }
 
-  #Brisbane-forms {
+  #sunshineNorthForm {
     flex-direction: column;
   }
 }
 
 @media (max-width: 600px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  #order-container-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
   #Online-Ordering-Process-content {
     padding: 0 2rem;
   }
