@@ -9,7 +9,8 @@
     "vite build": "vite build",
     "build": "npm run partytown && vite build",
     "preview": "vite preview",
-    "partytown": "partytown copylib public/~partytown"
+    "partytown": "partytown copylib public/~partytown",
+    "mobile responsive": "vite --host 192.168.0.107"
   },
   "devDependencies": {
     "rollup-plugin-html": "^0.2.1",
@@ -22,6 +23,7 @@
     "@studio-freight/lenis": "^1.0.42",
     "gsap": "^3.12.5",
     "just-validate": "^4.3.0",
+    "normalize.css": "^8.0.1",
     "swiper": "^11.1.1"
   }
 }

@@ -59,11 +59,9 @@
 }
 
 .feature-blocks {
-  /* display: flex; */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  padding: 0 5vw;
-  flex-shrink: 2;
+  padding: 0 4rem;
   gap: minmax(1fr, 3rem);
 }
 

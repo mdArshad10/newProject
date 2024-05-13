@@ -12,7 +12,7 @@ html {
   box-sizing: border-box;
 }
 
-body {
+body, html {
   position: relative;
   height: 100%;
   overflow-x: hidden;
@@ -261,7 +261,7 @@ label {
   position: fixed;
   top: -1px;
   left: 0;
-  width: 100%;
+  width: 100vw;
   background-color: black;
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
   z-index: 100;
@@ -1047,11 +1047,9 @@ footer {
 }
 
 .feature-blocks {
-  /* display: flex; */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  padding: 0 5vw;
-  flex-shrink: 2;
+  padding: 0 4rem;
   gap: minmax(1fr, 3rem);
 }
 
