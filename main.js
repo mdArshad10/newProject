@@ -3,7 +3,6 @@ import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { carousel, contentSlider } from "./slider.js";
 
-
 $(document).ready(function () {
   $(window).on("load", function (e) {
     gsap.registerPlugin(ScrollTrigger);
@@ -16,15 +15,19 @@ $(document).ready(function () {
     centerLogoMove(ts, 0.3, "-41.5vw", true);
     navbarMove(ts);
     carousel();
-    
-    mm.add("(max-width: 1118px)", (e) => {
-      centerLogoMove(ts, 0.3, "-41.5vw", true);
+
+    mm.add("(max-width: 1118px)", () => {
+      centerLogoMove(ts, 0.3, "-41.5vw", false);
       showMenuMovement();
     });
 
-    mm.add("(max-width:700px)", (e) => {
-      
+    mm.add("(max-width:700px)", () => {
       centerLogoMove(ts, 0.3, "-36vw", false);
+      showMenuMovement();
+    });
+
+    mm.add("(max-width:450px)", () => {
+      centerLogoMove(ts, 0.3, "-31vw", false);
       showMenuMovement();
     });
   });
@@ -173,7 +176,7 @@ function navbarMenuMovement(ts, fullscreen) {
   });
   gsap.from(dropdown__item, {
     duration: 0.5,
-    opacity: fullscreen ? 1 : 0,
+    // opacity: fullscreen ? 1 : 0,
     y: 10,
     stagger: 0.1,
     delay: ts,
