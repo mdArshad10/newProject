@@ -1159,7 +1159,7 @@ footer {
 }
 
 #order-container {
-  background: linear-gradient(rgba(164, 165, 166, 0.7019607843), rgba(217, 213, 204, 0.737254902)), url("/public/assets/orderOnlinePage/background.webp");
+  background: linear-gradient(rgba(164, 165, 166, 0.7019607843), rgba(217, 213, 204, 0.737254902)), url("/public/assets/orderOnlinePage/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 10rem;
