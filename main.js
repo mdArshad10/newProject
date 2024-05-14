@@ -3,34 +3,34 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { carousel, contentSlider } from "./slider.js";
 
+$(document).ready(function (e) {
+  console.log(e);
+  gsap.registerPlugin(ScrollTrigger);
+  const mm = gsap.matchMedia();
 
-  $(window).on("load", function (e) {
-    gsap.registerPlugin(ScrollTrigger);
-    const mm = gsap.matchMedia();
+  const ts = e.timeStamp / 1000;
 
-    const ts = e.timeStamp / 1000;
+  showMenu("nav-toggle", "nav-menu");
 
-    showMenu("nav-toggle", "nav-menu");
+  centerLogoMove(ts, 0.3, "-41.5vw", true);
+  navbarMove(ts);
+  carousel();
 
-    centerLogoMove(ts, 0.3, "-41.5vw", true);
-    navbarMove(ts);
-    carousel();
-
-    mm.add("(max-width: 1118px)", () => {
-      centerLogoMove(ts, 0.3, "-41.5vw", false);
-      showMenuMovement();
-    });
-
-    mm.add("(max-width:700px)", () => {
-      centerLogoMove(ts, 0.3, "-36vw", false);
-      showMenuMovement();
-    });
-
-    mm.add("(max-width:450px)", () => {
-      centerLogoMove(ts, 0.3, "-31vw", false);
-      showMenuMovement();
-    });
+  mm.add("(max-width: 1118px)", () => {
+    centerLogoMove(ts, 0.3, "-41.5vw", false);
+    showMenuMovement();
   });
+
+  mm.add("(max-width:700px)", () => {
+    centerLogoMove(ts, 0.3, "-36vw", false);
+    showMenuMovement();
+  });
+
+  mm.add("(max-width:450px)", () => {
+    centerLogoMove(ts, 0.3, "-31vw", false);
+    showMenuMovement();
+  });
+});
 
 // scrolling effect
 // function scrollingEffect() {
