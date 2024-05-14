@@ -1,88 +1,94 @@
 import { gsap } from "gsap";
-// import Lenis from "@studio-freight/lenis";
+import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { carousel, contentSlider } from "./slider.js";
 
-$(document).ready(function (e) {
-  console.log(e);
+const startTime = performance.now() / 1000;
+
+// $(document).ready(function () {
+  $(window).on("load", function (e) {
+  const endTime = performance.now() / 1000; // when document is ready
+
+  const executionTime = startTime - endTime;
+
   gsap.registerPlugin(ScrollTrigger);
   const mm = gsap.matchMedia();
 
-  const ts = e.timeStamp / 1000;
-
+  console.log(`the execution time ${executionTime}`);
   showMenu("nav-toggle", "nav-menu");
-
-  centerLogoMove(ts, 0.3, "-41.5vw", true);
-  navbarMove(ts);
+  centerLogoMove(executionTime, 0.3, `-40rem`, true);
+  navbarMove(executionTime);
+  contentSlider();
   carousel();
 
   mm.add("(max-width: 1118px)", () => {
-    centerLogoMove(ts, 0.3, "-41.5vw", false);
+    centerLogoMove(executionTime, 0.3, "-40vw", false);
+    navbarMove(executionTime);
+    contentSlider();
     showMenuMovement();
+    carousel();
   });
 
   mm.add("(max-width:700px)", () => {
-    centerLogoMove(ts, 0.3, "-36vw", false);
+    centerLogoMove(executionTime, 0.3, "-36vw", false);
+    navbarMove(executionTime);
     showMenuMovement();
+    contentSlider();
+    carousel();
   });
 
   mm.add("(max-width:450px)", () => {
-    centerLogoMove(ts, 0.3, "-31vw", false);
+    centerLogoMove(endTime, 0.3, "-31vw", false);
+    navbarMove(executionTime);
     showMenuMovement();
+    contentSlider();
+    carousel();
   });
 });
+// });
 
 // scrolling effect
-// function scrollingEffect() {
-//   const lenis = new Lenis();
+function scrollingEffect() {
+  const lenis = new Lenis();
 
-//   lenis.on("scroll", ScrollTrigger.update);
+  lenis.on("scroll", ScrollTrigger.update);
 
-//   gsap.ticker.add((time) => {
-//     lenis.raf(time * 1000);
-//   });
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
 
-//   gsap.ticker.lagSmoothing(0);
-// }
+  gsap.ticker.lagSmoothing(0);
+}
 
-// function navbarMove(ts) {
-//   gsap.to(".nav", {
-//     height: "5.5rem",
-//     delay: ts,
-//     duration: 2,
-//     onComplete: contentSlider(),
-//   });
-// }
-
-function navbarMove(ts) {
+function navbarMove(et) {
   gsap.to("header", {
     height: "5.5rem",
-    delay: ts,
-    duration: 2,
+    delay: et,
+    duration: 2.5,
     onComplete: contentSlider(),
   });
 }
 
-function centerLogoMove(ts, scale, xPosition, fullscreen) {
+function centerLogoMove(et, scale, xPosition, fullscreen) {
   gsap.to(".psm-logo", {
     x: xPosition,
     y: 5,
-    delay: ts,
+    delay: et,
     scale,
     duration: 2,
-    onStart: tagLineMove(ts),
-    onComplete: navbarMenuMovement(ts + 1, fullscreen),
+    onStart: tagLineMove(et),
+    onComplete: navbarMenuMovement(et + 1.5, fullscreen),
   });
 }
 
-function tagLineMove(ts) {
+function tagLineMove(et) {
   gsap.to(".psm-work-experience", {
     x: "-42vw",
     y: 5,
     opacity: 0,
     scale: 0.2,
     // display: "none",
-    delay: ts,
+    delay: et,
     duration: 2,
   });
 }
@@ -163,14 +169,14 @@ function buildingTimelessMovement() {
   });
 }
 
-function navbarMenuMovement(ts, fullscreen) {
+function navbarMenuMovement(et, fullscreen) {
   const menuChild = document.querySelector(".nav__menu");
   const dropdown__item = document.querySelectorAll(".dropdown__item");
   gsap.set("header", {
     justifyContent: "normal",
   });
   gsap.to(menuChild, {
-    delay: ts,
+    delay: et,
     display: "flex",
   });
   gsap.from(dropdown__item, {
@@ -178,7 +184,7 @@ function navbarMenuMovement(ts, fullscreen) {
     // opacity: fullscreen ? 1 : 0,
     y: 10,
     stagger: 0.1,
-    delay: ts,
+    delay: et,
   });
 }
 

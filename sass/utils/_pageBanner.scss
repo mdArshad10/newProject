@@ -2,7 +2,7 @@
   display: flex;
   color: white;
   height: 100vh;
-  background-image: url("/public/assets/Home_page/2nd-image.webp");
+  background-image: url("/public/assets/Home_page/2nd-image-default.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -27,7 +27,7 @@
   display: flex;
   color: white;
   height: 100vh;
-  background-image: url("/public/assets/Home_page/3rd-img.webp");
+  background-image: url("/public/assets/Home_page/3rd-image-default.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -51,36 +51,34 @@
 
 /* ----- orange craft Section end ----- */
 
+@media (max-width: 768px) {
+  #personalised-styles {
+    background-image: url("/public/assets/Home_page/2nd-image-2.jpg");
+  }
+  #quick-fit-solution {
+    background-image: url("/public/assets/Home_page/3rd-image-small.jpg");
+  }
+}
+
 @media (max-width: 600px) {
-  #personalised-styles > #personalised-styles-content {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  #personalised-styles {
+    background-image: url("/public/assets/Home_page/2nd-image-mobile.jpg");
+    & > #personalised-styles-content {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 
-  #quick-fit-solution > #quick-fit-solution-content {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  #quick-fit-solution {
+    background-image: url("/public/assets/Home_page/3rd-image-mobile.jpg");
+    & > #quick-fit-solution-content {
+      padding-left: 2rem;
+      padding-right: 2rem;
 
-    & > .quick-fit-solution-heading {
-      width: 100%;
+      & > .quick-fit-solution-heading {
+        width: 100%;
+      }
     }
   }
 }
 
-@media (max-width: 768px) {
-  #personalised-styles {
-    background-image: url("/public/assets/Home_page/2nd-image-small.webp");
-  }
-  #quick-fit-solution {
-    background-image: url("/public/assets/Home_page/3rd-image-small.webp");
-  }
-}
-
-@media (max-width: 550px) {
-  #personalised-styles {
-    background-image: url("/public/assets/Home_page/2nd-image-extra-small.webp");
-  }
-  #quick-fit-solution {
-    background-image: url("/public/assets/Home_page/3rd-image-extra-small.webp");
-  }
-}

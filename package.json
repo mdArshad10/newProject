@@ -10,7 +10,7 @@
     "build": "npm run partytown && vite build",
     "preview": "vite preview",
     "partytown": "partytown copylib public/~partytown",
-    "mobile responsive": "vite --host 192.168.0.107"
+    "mobile responsive": "vite --host 192.168.0.132"
   },
   "devDependencies": {
     "rollup-plugin-html": "^0.2.1",

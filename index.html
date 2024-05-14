@@ -156,7 +156,12 @@
 
                 <ul class="dropdown__menu">
                   <li>
-                    <a href="#" class="dropdown__link"> Book a consultation </a>
+                    <a
+                      href="/src/consultancy_page/index.html"
+                      class="dropdown__link"
+                    >
+                      Book a consultation
+                    </a>
                   </li>
 
                   <li>
@@ -432,22 +437,23 @@
 
         <!-- slider js -->
         <div class="slider collection-slider">
+          <!-- Doors -->
           <div class="item">
             <picture>
               <img
-                src="/public/assets/Home_page/collection/doors.jpg"
+                src="/public/assets/Home_page/collection/Doors.webp"
                 loading="lazy"
                 class="lazy-loading"
-                alt="doors"
+                alt="Internal & External Doors"
               />
             </picture>
-            <div class="swiper-slide-caption">DOORS</div>
+            <div class="swiper-slide-caption">Internal & External Doors</div>
           </div>
+          <!-- Wardrobes -->
           <div class="item">
             <picture>
-              <source media="(min-width: )" srcset="" sizes="" />
               <img
-                src="/public/assets/Home_page/collection/wardrobes.jpg"
+                src="/public/assets/Home_page/collection/Wardrobes.webp"
                 alt="wardrobes"
                 loading="lazy"
                 class="lazy-loading"
@@ -455,23 +461,23 @@
             </picture>
             <div class="swiper-slide-caption">WARDROBES</div>
           </div>
+          <!-- Bathroom -->
           <div class="item">
             <picture>
               <img
-                src=""
-                data-src="./public/assets/sliderImage/slider-2.jpg"
-                alt="vanities"
+                src="/public/assets/Home_page/collection/Bathroom.webp"
+                alt="bathroom"
                 loading="lazy"
                 class="lazy-loading"
               />
             </picture>
-            <div class="swiper-slide-caption">VANITIES</div>
+            <div class="swiper-slide-caption">Bathroom</div>
           </div>
+          <!-- Milled panel -->
           <div class="item">
             <picture>
               <img
                 src="/public/assets/Home_page/collection/milled-panel.jpg"
-                data-src="./public/assets/sliderImage/slider-3.jpg"
                 alt="milled_panel"
                 loading="lazy"
                 class="lazy-loading"
@@ -479,10 +485,11 @@
             </picture>
             <div class="swiper-slide-caption">MILLED PANELS</div>
           </div>
+          <!-- Tv Units -->
           <div class="item">
             <picture>
               <img
-                src=""
+                src="/public/assets/Home_page/collection/TvUnits.webp"
                 alt="tv unites"
                 data-src="/public/assets/sliderImage/slider-4.jpg"
                 loading="lazy"
@@ -490,6 +497,54 @@
               />
             </picture>
             <div class="swiper-slide-caption">TV UNITS</div>
+          </div>
+          <!-- DIY -->
+          <div class="item">
+            <picture>
+              <img
+                src="/public/assets/Home_page/collection/DIY.webp"
+                alt="DIY & Trade Solutions"
+                loading="lazy"
+                class="lazy-loading"
+              />
+            </picture>
+            <div class="swiper-slide-caption">DIY & Trade Solutions</div>
+          </div>
+          <!-- kitchen -->
+          <div class="item">
+            <picture>
+              <img
+                src="/public/assets/Home_page/collection/Kitchen.webp"
+                alt="kitchen"
+                loading="lazy"
+                class="lazy-loading"
+              />
+            </picture>
+            <div class="swiper-slide-caption">Kitchen</div>
+          </div>
+          <!-- Laundries -->
+          <div class="item">
+            <picture>
+              <img
+                src="/public/assets/Home_page/collection/Laundries.webp"
+                alt="Laundries"
+                loading="lazy"
+                class="lazy-loading"
+              />
+            </picture>
+            <div class="swiper-slide-caption">Laundries</div>
+          </div>
+          <!-- shop-fitouts -->
+          <div class="item">
+            <picture>
+              <img
+                src="/public/assets/Home_page/collection/Shop-Fitouts.webp"
+                alt="Laundries"
+                loading="lazy"
+                class="lazy-loading"
+              />
+            </picture>
+            <div class="swiper-slide-caption">Shop Fitouts</div>
           </div>
         </div>
       </div>
@@ -551,17 +606,16 @@
       </section>
 
       <!-- video section -->
-
-      <!-- <div id="video-section">
+      <div id="video-section">
         <video
           class="lazy-video"
           controls
-          src="/public/assets/Home_page/video/PSM Cabinets Promo Video 3-24.mp4"
+          src="/public/assets/Home_page/video/PSMCabinetsPromoVideo.mp4"
           autoplay
           loop
           muted
         ></video>
-      </div> -->
+      </div>
 
       <!-- "crafting trust" heading -->
       <section id="personalised-styles" class="personalised-styles-bg">
@@ -653,7 +707,9 @@
               <li><a href="#">Our process</a></li>
               <li><a href="#">FAQs</a></li>
               <li><a href="#">Price guide</a></li>
-              <li><a href="#">Book consultation</a></li>
+              <li>
+                <a href="/src/consultancy_page/index.html">Book consultation</a>
+              </li>
             </ul>
           </div>
         </section>
@@ -729,7 +785,7 @@
     ></script>
 
     <script defer type="module" src="/main.js"></script>
+    <script type="module" src="/video.js"></script>
     <!-- <script type="module" src="/slider.js"></script> -->
-    <!-- <script type="module" src="/video.js"></script> -->
   </body>
 </html>

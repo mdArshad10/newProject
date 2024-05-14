@@ -1,0 +1,15 @@
+#consultancy_page-section {
+  margin-top: 6.5rem;
+  text-align: center;
+  & > h2 {
+    font-size: clamp(1.25rem, 1.0769rem + 0.7692vw, 2rem);
+  }
+}
+
+
+@media (max-width: 600px) {
+    #consultancy_page-section>h2{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
