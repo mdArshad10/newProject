@@ -1,93 +1,94 @@
 import { gsap } from "gsap";
-import Lenis from "@studio-freight/lenis";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import Lenis from "@studio-freight/lenis";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { carousel, contentSlider } from "./slider.js";
 
 const startTime = performance.now() / 1000;
 
 // $(document).ready(function () {
-  $(window).on("load", function (e) {
-  const endTime = performance.now() / 1000; // when document is ready
-
-  const executionTime = startTime - endTime;
-
-  gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("load", (e) => {
   const mm = gsap.matchMedia();
 
-  console.log(`the execution time ${executionTime}`);
   showMenu("nav-toggle", "nav-menu");
-  centerLogoMove(executionTime, 0.3, `-40rem`, true);
-  navbarMove(executionTime);
-  contentSlider();
-  carousel();
 
-  mm.add("(max-width: 1118px)", () => {
-    centerLogoMove(executionTime, 0.3, "-40vw", false);
-    navbarMove(executionTime);
-    contentSlider();
-    showMenuMovement();
-    carousel();
+  mm.add("(min-width: 768px", () => {
+    centerLogoMove("-2.75rem", "-7rem", 0.2, 0, true);
+    navbarMove(1);
+    // contentSlider();
+    // carousel();
   });
 
-  mm.add("(max-width:700px)", () => {
-    centerLogoMove(executionTime, 0.3, "-36vw", false);
-    navbarMove(executionTime);
-    showMenuMovement();
-    contentSlider();
-    carousel();
+  mm.add("(max-width: 768px)", () => {
+    centerLogoMove("-1.6rem", "-4.5rem", 0.25, 0, true);
+    navbarMove(1);
+    // contentSlider();
+    // carousel();
   });
-
-  mm.add("(max-width:450px)", () => {
-    centerLogoMove(endTime, 0.3, "-31vw", false);
-    navbarMove(executionTime);
-    showMenuMovement();
-    contentSlider();
-    carousel();
-  });
+});
+$(window).on("load", function (e) {
+  // const endTime = performance.now() / 1000; // when document is ready
+  // const executionTime = startTime - endTime;
+  // gsap.registerPlugin(ScrollTrigger);
+  // console.log(`the execution time ${executionTime}`);
+  // mm.add("(max-width: 1118px)", () => {
+  //   centerLogoMove(executionTime, 0.3, "-40vw", false);
+  //   navbarMove(executionTime);
+  //   contentSlider();
+  //   showMenuMovement();
+  //   carousel();
+  // });
+  // mm.add("(max-width:700px)", () => {
+  //   centerLogoMove(executionTime, 0.3, "-36vw", false);
+  //   navbarMove(executionTime);
+  //   showMenuMovement();
+  //   contentSlider();
+  //   carousel();
+  // });
 });
 // });
 
 // scrolling effect
-function scrollingEffect() {
-  const lenis = new Lenis();
+// function scrollingEffect() {
+//   const lenis = new Lenis();
 
-  lenis.on("scroll", ScrollTrigger.update);
+//   // lenis.on("scroll", ScrollTrigger.update);
 
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
+//   gsap.ticker.add((time) => {
+//     lenis.raf(time * 1000);
+//   });
 
-  gsap.ticker.lagSmoothing(0);
-}
+//   gsap.ticker.lagSmoothing(0);
+// }
 
 function navbarMove(et) {
   gsap.to("header", {
-    height: "5.5rem",
-    delay: et,
-    duration: 2.5,
+    height: "4rem",
+    duration: 2,
     onComplete: contentSlider(),
+    ease: "ease.out",
   });
 }
 
-function centerLogoMove(et, scale, xPosition, fullscreen) {
-  gsap.to(".psm-logo", {
-    x: xPosition,
-    y: 5,
+function centerLogoMove(top, left, scale, et, fullscreen) {
+  console.log("hi");
+  gsap.to(".center-element", {
+    transform: "translate(0, 0)",
+    top,
+    left,
     delay: et,
     scale,
     duration: 2,
     onStart: tagLineMove(et),
-    onComplete: navbarMenuMovement(et + 1.5, fullscreen),
+    onComplete: navbarMenuMovement(fullscreen),
   });
 }
 
 function tagLineMove(et) {
   gsap.to(".psm-work-experience", {
-    x: "-42vw",
-    y: 5,
+    // x: "-42vw",
+    // y: 5,
     opacity: 0,
     scale: 0.2,
-    // display: "none",
     delay: et,
     duration: 2,
   });
@@ -169,14 +170,14 @@ function buildingTimelessMovement() {
   });
 }
 
-function navbarMenuMovement(et, fullscreen) {
-  const menuChild = document.querySelector(".nav__menu");
+function navbarMenuMovement() {
   const dropdown__item = document.querySelectorAll(".dropdown__item");
-  gsap.set("header", {
-    justifyContent: "normal",
+  gsap.to(".nav__toggle", {
+    delay: 2.25,
+    opacity: 1,
   });
-  gsap.to(menuChild, {
-    delay: et,
+  gsap.to(".nav__menu", {
+    delay: 1,
     display: "flex",
   });
   gsap.from(dropdown__item, {
@@ -184,7 +185,7 @@ function navbarMenuMovement(et, fullscreen) {
     // opacity: fullscreen ? 1 : 0,
     y: 10,
     stagger: 0.1,
-    delay: et,
+    delay: 1,
   });
 }
 
