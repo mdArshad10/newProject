@@ -1,9 +1,9 @@
 import { gsap } from "gsap";
-import Lenis from "@studio-freight/lenis";
+// import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { carousel, contentSlider } from "./slider.js";
 
-$(document).ready(function () {
+
   $(window).on("load", function (e) {
     gsap.registerPlugin(ScrollTrigger);
     const mm = gsap.matchMedia();
@@ -31,20 +31,19 @@ $(document).ready(function () {
       showMenuMovement();
     });
   });
-});
 
 // scrolling effect
-function scrollingEffect() {
-  const lenis = new Lenis();
+// function scrollingEffect() {
+//   const lenis = new Lenis();
 
-  lenis.on("scroll", ScrollTrigger.update);
+//   lenis.on("scroll", ScrollTrigger.update);
 
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
+//   gsap.ticker.add((time) => {
+//     lenis.raf(time * 1000);
+//   });
 
-  gsap.ticker.lagSmoothing(0);
-}
+//   gsap.ticker.lagSmoothing(0);
+// }
 
 // function navbarMove(ts) {
 //   gsap.to(".nav", {
