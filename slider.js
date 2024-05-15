@@ -1,67 +1,54 @@
 // import Swiper JS
 import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
-function contentSlider() {
-  const swiper = new Swiper(".mySwiper", {
-    spaceBetween: 10,
-    centeredSlides: true,
-    loop: true,
-    slidesPerView: 1,
+function heroCarousel() {
+  $(".hero-slider").slick({
+    dots: true,
+    draggable: true,
+    arrows: true,
     infinite: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    keyboard: {
-      enabled: true,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 2000,
+    autoplaySpeed: 4000,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToShow: 1,
+          centerPadding: "0rem",
+        },
+      },
+    ],
   });
 }
 
 function carousel() {
-  $(document).ready(function () {
-    $(".slider").slick({
-      dots: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      speed: 750,
-      autoplaySpeed: 2500,
-      infinite: true,
-      autoplay: true,
-      centerMode: true,
-      centerPadding: "0",
-
-      // responsive
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            infinite: true,
-            dots: true,
-          },
+  $(".collection-slider").slick({
+    dots: true,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 2000,
+    autoplaySpeed: 3000,
+    autoplay: true,
+    centerMode: true,
+    centerPadding: "12rem",
+    // responsive
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToShow: 1,
+          centerPadding: "0rem",
         },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerMode: true,
-          },
-        },
-      ],
-    });
+      },
+    ],
   });
 }
 
-export { carousel, contentSlider };
+export { carousel, heroCarousel };

@@ -1,19 +1,20 @@
 footer {
   background-color: #2d2827;
-  padding: 2rem 4rem;
+  padding: 2rem;
   color: white;
 }
 
 #footer-top-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 35% 25% 20% 20%;
   grid-gap: 1rem;
   margin-bottom: 1rem;
 
   & > #footer-top-psm-about > p {
     margin-top: 10px;
-    font-size: 0.8rem;
+    font-size: 12px;
     font-weight: 300;
+    line-height: 150%;
   }
 }
 
@@ -24,14 +25,50 @@ footer {
 
   & > a {
     margin-top: 10px;
-    font-size: 0.8rem;
+    font-size: 12px;
     font-weight: 300;
+    line-height: 150%;
   }
 
   & > span {
-    margin-top: 0.2rem;
-    font-size: 0.8rem;
+    margin-top: 10px;
+    font-size: 12px;
     font-weight: 300;
+    line-height: 150%;
+  }
+}
+
+#footer-bottom-social-media > ul {
+  display: flex;
+  gap: 0.8rem;
+
+  & > li > a {
+    font-size: 14px;
+    background-color: white;
+    border-radius: 50%;
+    height: 1.75rem;
+    width: 1.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      color: black;
+    }
+
+    &:hover {
+      background-color: #505050;
+    }
+  }
+}
+
+#footer-top-additional-links > ul {
+  & > li > a {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 150%;
+    display: block;
   }
 }
 
@@ -41,7 +78,6 @@ footer {
   align-items: center;
   grid-template-columns: 2fr 1fr 1fr;
   column-gap: 1rem;
-  padding-top: 1rem;
 
   & > p {
     font-size: 0.65rem;
@@ -49,39 +85,16 @@ footer {
   }
 }
 
-
-#footer-bottom-social-media > ul {
-  display: flex;
-  gap: 0.8rem;
-
-  & > li > a {
-    font-size: 0.65rem;
-    background-color: black;
-    border-radius: 50%;
-    padding: 0.5rem;
-
-    &:hover {
-      background-color: #505050;
-    }
-  }
-}
-
-#footer-top-additional-links > ul {
-  padding-left: 0;
-  margin-top: 0;
-  & > li > a {
-    font-size: 0.8rem;
-    font-weight: 300;
-  }
-}
 #footer-australian-made-logo {
   width: 30%;
   object-fit: cover;
 }
 
 #footer-bottom-disclaimer > p {
-  font-size: 0.68rem;
-  font-weight: 400;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 150%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -111,7 +124,43 @@ footer {
 }
 
 @media (max-width: 600px) {
-  footer{
-    padding: 1rem 2rem;
+  footer {
+    padding: 2rem 1.5rem;
+
+    h4 {
+      font-size: 20px;
+    }
+  }
+
+  #footer-top-container {
+    grid-template-columns: repeat(1, 100%);
+    grid-gap: 1.5rem;
+
+    & > #footer-top-psm-about > p {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 150%;
+    }
+  }
+
+  #footer-top-addess1,
+  #footer-top-addess2 {
+    display: flex;
+    flex-direction: column;
+
+    & > a {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 150%;
+    }
+
+    & > span {
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 150%;
+    }
   }
 }

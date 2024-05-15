@@ -33,11 +33,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: absolute;
+  position: relative;
   width: 40%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: calc(50% - 1.5rem);
+  transform: translate(-50%, 0);
 
   .psm-logo {
     position: relative;
@@ -183,7 +182,8 @@
 // psm big logo
   .center-element {
     width: 70%;
-    
+    left: calc(50% - 0.5rem);
+
     // psm working experience
     .psm-work-experience {
       width: 50%;

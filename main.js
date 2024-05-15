@@ -1,28 +1,28 @@
 import { gsap } from "gsap";
 // import Lenis from "@studio-freight/lenis";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { carousel, contentSlider } from "./slider.js";
+import { carousel, heroCarousel } from "./slider.js";
 
 const startTime = performance.now() / 1000;
 
 // $(document).ready(function () {
 window.addEventListener("load", (e) => {
+  heroCarousel();
+
   const mm = gsap.matchMedia();
 
   showMenu("nav-toggle", "nav-menu");
 
   mm.add("(min-width: 768px", () => {
-    centerLogoMove("-2.75rem", "-7rem", 0.2, 0, true);
+    centerLogoMove(0, 0, 0.2, 0, true);
     navbarMove(1);
-    // contentSlider();
-    // carousel();
+    carousel();
   });
 
   mm.add("(max-width: 768px)", () => {
-    centerLogoMove("-1.6rem", "-4.5rem", 0.25, 0, true);
+    centerLogoMove(0, 0, 0.25, 0, true);
     navbarMove(1);
-    // contentSlider();
-    // carousel();
+    carousel();
   });
 });
 $(window).on("load", function (e) {
@@ -64,15 +64,13 @@ function navbarMove(et) {
   gsap.to("header", {
     height: "4rem",
     duration: 2,
-    onComplete: contentSlider(),
     ease: "ease.out",
   });
 }
 
 function centerLogoMove(top, left, scale, et, fullscreen) {
-  console.log("hi");
   gsap.to(".center-element", {
-    transform: "translate(0, 0)",
+    transform: "translate(-40%, 0)",
     top,
     left,
     delay: et,

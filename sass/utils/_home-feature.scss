@@ -1,41 +1,56 @@
 /* ====== Feature Section ====== */
 .feature-section {
-  background-image: url("./assets/wooden-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  color: white;
   width: 100%;
-  padding-bottom: 20rem;
-  background-color: lightblue;
+  background-color: #35463d;
   display: flex;
   flex-direction: column;
-  gap: 10vh;
+  justify-content: space-between;
   align-items: center;
   scroll-snap-align: start;
+  padding: 2rem;
+  gap: 2rem;
 
-  & > h1 {
+  & > h2 {
     font-size: 2rem;
-    text-transform: uppercase;
-    margin-top: 3rem;
+    text-transform: capitalize;
     font-weight: 700;
+    font-size: 38px;
+    text-align: center;
+    line-height: 140%;
   }
-}
 
+  .feature-blocks {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-.feature-blocks {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  padding: 0 5vw;
-  flex-shrink: 2;
-  gap: 1vw;
-}
+    .feature-single-block {
+      width: 33.33%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
 
-.feature-single-block {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 2.5vh;
-  flex: 1;
+    img {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 50%;
+      background-color: #fff;
+      object-fit: cover;
+    }
+
+    p {
+      font-size: 16px;
+      text-transform: capitalize;
+      text-align: center;
+      font-weight: 700;
+      line-height: 140%;
+    }
+  }
 }
 
 .feature-blocks > .feature-single-block > #block {
@@ -55,3 +70,34 @@
 }
 
 /* ----- Feature section end ----- */
+
+@media screen and (max-width: 525px) {
+  /* ====== Feature Section ====== */
+  .feature-section {
+    background-image: url("./assets/wooden-background.jpg");
+    height: 100%;
+    padding: 2rem 1.5rem;
+
+    & > h1 {
+      margin-bottom: 1.5rem;
+      font-size: 32px;
+    }
+
+    .feature-blocks {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem 1rem;
+
+      .feature-single-block {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.75rem;
+        flex: 1;
+      }
+    }
+  }
+}
