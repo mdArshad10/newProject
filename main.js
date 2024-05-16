@@ -1,11 +1,10 @@
 import { gsap } from "gsap";
-// import Lenis from "@studio-freight/lenis";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { carousel, heroCarousel } from "./slider.js";
 
 const startTime = performance.now() / 1000;
 
-// $(document).ready(function () {
+
 window.addEventListener("load", (e) => {
   heroCarousel();
 
@@ -47,18 +46,7 @@ $(window).on("load", function (e) {
 });
 // });
 
-// scrolling effect
-// function scrollingEffect() {
-//   const lenis = new Lenis();
 
-//   // lenis.on("scroll", ScrollTrigger.update);
-
-//   gsap.ticker.add((time) => {
-//     lenis.raf(time * 1000);
-//   });
-
-//   gsap.ticker.lagSmoothing(0);
-// }
 
 function navbarMove(et) {
   gsap.to("header", {

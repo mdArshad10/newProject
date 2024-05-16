@@ -32,20 +32,12 @@
     />
 
     <!-- swiper-js css -->
-    <!-- <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    /> -->
+    />
 
     <link defer rel="stylesheet" href="./style.css" />
-
-    <!-- <script type="module">
-      import { partytownSnippet } from "@builder.io/partytown/integration";
-
-      const snippetText = partytownSnippet();
-      const scriptTag = document.createElement("script");
-      scriptTag.innerHTML = snippetText;
-    </script> -->
   </head>
   <body>
     <div id="wrapper">
@@ -214,8 +206,12 @@
               srcset="public/assets/Home_page/homeTopSlider/small/1.webp"
               media="(max-width: 767px and min-width:550px)"
             />
+
+            <!-- ⁡⁣⁣⁢  ⁡⁢⁣⁢​‌‌‍‍‍⁡⁢‍change the image for checking the image size or image quality⁡​⁡ -->
             <source
-              srcset="public/assets/Home_page/homeTopSlider/extra-small/1.webp"
+              srcset="
+                public/assets/Home_page/homeTopSlider/extra-small/Image-01.jpg
+              "
               media="(max-width: 550px)"
             />
             <img
@@ -225,11 +221,12 @@
             />
           </picture>
 
-          <!-- <img
-            id="sticker"
-            src="/public/assets/Home_page/STICKER-16.png"
-            alt="sticker"
-          /> -->
+          <div id="sticker" style="position: absolute; ">
+            <img
+              src="public/assets/Home_page/onlySticker.png"
+              alt="sticker"
+            />
+          </div>
           <div class="content">
             <div class="swiper-slide-content">
               <h1>

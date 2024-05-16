@@ -55,17 +55,11 @@
 /* ====== Sticker ====== */
 #sticker {
   position: absolute;
-  width: 22%;
-  height: 30%;
-  top: 30%;
-  left: 72%;
-  width: fit-content;
   text-align: end;
-  z-index: 100;
-
-  & > img {
-    width: 18%;
-  }
+  z-index: 90;
+  width: calc(100vw / 5 );
+  top: 10vw;
+  right: 10vw;
 }
 
 /* ====== Sticker End ====== */
@@ -100,8 +94,9 @@
   }
 
   #sticker {
-    height: 20%;
-    top: 25%;
-    left: 65%;
+   width: calc(100vw / 3);
+    top: 20%;
+    left: 40%;
+    
   }
 }

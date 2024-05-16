@@ -1,5 +1,3 @@
-// import Swiper JS
-import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
 function heroCarousel() {
   $(".hero-slider").slick({
@@ -9,9 +7,9 @@ function heroCarousel() {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    speed: 2000,
-    autoplaySpeed: 4000,
-    autoplay: true,
+    // speed: 2000,
+    // autoplaySpeed: 4000,
+    // autoplay: true,
     responsive: [
       {
         breakpoint: 768,

@@ -153,40 +153,38 @@
 /* ====== Navbar End ====== */
 
 /* ====== Sticker ====== */
-#sticker {
-  position: absolute;
-  width: 22%;
-  height: 30%;
-  top: 30%;
-  left: 72%;
-  width: fit-content;
-  text-align: end;
-  z-index: 100;
+// #sticker {
+//   position: absolute;
+//   width: 22%;
+//   height: 30%;
+//   top: 30%;
+//   left: 72%;
+//   width: fit-content;
+//   text-align: end;
+//   z-index: 90;
 
-  & > img {
-    width: 18%;
-  }
-}
+//   & > img {
+//     width: 18%;
+//   }
+// }
 
-@media (max-width: 600px) {
-  #sticker {
-    height: 20%;
-    top: 25%;
-    left: 65%;
-  }
-}
+// @media (max-width: 600px) {
+//   #sticker {
+//     height: 20%;
+//     top: 25%;
+//     left: 65%;
+//   }
+// }
 
 /* ====== Sticker End ====== */
 
-@media screen and (max-width: "768px") {
-// psm big logo
-  .center-element {
-    width: 70%;
-    left: calc(50% - 0.5rem);
+// @media screen and (max-width: "768px") {
+//   .center-element {
+//     width: 70%;
+//     left: calc(50% - 0.5rem);
 
-    // psm working experience
-    .psm-work-experience {
-      width: 50%;
-    }
-  }
-}
+//     .psm-work-experience {
+//       width: 50%;
+//     }
+//   }
+// }

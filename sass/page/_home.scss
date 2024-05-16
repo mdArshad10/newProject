@@ -25,13 +25,12 @@
       height: 100%;
       position: absolute;
       left: 0;
+      top: 0;
       display: flex;
       align-items: center;
       padding: 1.5rem 2.5rem;
       line-height: 130%;
-      opacity: 0;
-      transition: 2s;
-      transition-delay: 1.5s;
+      opacity: 1;
 
       h1 {
         font-size: 38px;
@@ -52,16 +51,15 @@
 
   .slick-current {
     .content {
-      transition-delay: 0s;
       opacity: 1;
 
       h1 {
-        transition-delay: 0s;
+        transition-delay: 1s;
         opacity: 1;
       }
 
       p {
-        transition-delay: 0s;
+        transition-delay: 1s;
         opacity: 1;
       }
     }
@@ -220,11 +218,15 @@
 
       .content {
         height: fit-content;
+        
+      backdrop-filter: unset;
         width: 100%;
         bottom: 0;
+        top: unset;
         padding: 1.5rem;
         text-align: center;
         padding-bottom: 4rem;
+        justify-content: center;
 
         h1 {
           font-size: 28px;
@@ -300,6 +302,13 @@
 
     .slick-dots {
       bottom: -12%;
+    }
+    .slick-slide10 > picture {
+      img {
+        transition: 1s;
+        transition-delay: 1.25s;
+        scale: 1.1;
+      }
     }
   }
 }
