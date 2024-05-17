@@ -711,7 +711,7 @@ label {
 }
 
 #quick-fit-solution {
-  background-image: url("/public/assets/Home_page/3rd-image-default.jpg");
+  background-image: url("/public/assets/Home_page/mirror-2.jpg");
 }
 
 #personalised-styles {
@@ -736,9 +736,6 @@ label {
 @media screen and (max-width: 768px) {
   #personalised-styles {
     background-image: url("/public/assets/Home_page/2nd-image-2.jpg");
-  }
-  #quick-fit-solution {
-    background-image: url("/public/assets/Home_page/3rd-image-small.jpg");
   }
 }
 @media screen and (max-width: 525px) {
@@ -775,13 +772,9 @@ label {
     margin: 0.5rem 0rem;
   }
   #quick-fit-solution {
-    background-image: url("/public/assets/Home_page/3rd-image-mobile.jpg");
+    background-image: url("/public/assets/Home_page/k5.jpg");
   }
 }
-video {
-  width: 100%;
-}
-
 #retail_register_page {
   color: black;
 }
@@ -1202,6 +1195,31 @@ footer {
   bottom: -10%;
 }
 
+video {
+  width: 100%;
+  display: block;
+}
+
+#trustedBrandPartners {
+  width: 100%;
+  padding: 3rem 4rem;
+}
+#trustedBrandPartners > h2 {
+  text-align: center;
+  margin-bottom: 0.7rem;
+  font-size: clamp(1.25rem, 0.9259rem + 1.7284vw, 3rem);
+  font-weight: 700;
+}
+#trustedBrandPartners > .trustedBrandPartners {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 200px);
+}
+#trustedBrandPartners > .trustedBrandPartners .trustedBrandPartnersImage > img {
+  object-fit: contain;
+  scale: 0.5;
+}
+
 @media screen and (max-width: 525px) {
   .hero-slider {
     margin-top: 4rem;
@@ -1283,6 +1301,13 @@ footer {
     transition: 1s;
     transition-delay: 1.25s;
     scale: 1.1;
+  }
+  #trustedBrandPartners {
+    padding: 1.3rem 2rem;
+  }
+  #trustedBrandPartners .trustedBrandPartners {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 80px);
   }
 }
 #orderOnlinePageHeader > nav {
