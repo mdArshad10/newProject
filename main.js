@@ -4,7 +4,6 @@ import { carousel, heroCarousel } from "./slider.js";
 
 const startTime = performance.now() / 1000;
 
-
 window.addEventListener("load", (e) => {
   heroCarousel();
 
@@ -12,17 +11,20 @@ window.addEventListener("load", (e) => {
 
   showMenu("nav-toggle", "nav-menu");
 
-  mm.add("(min-width: 768px", () => {
+  mm.add("(min-width: 768px) and (max-width: 1919px)", () => {
     centerLogoMove(0, 0, 0.2, 0, true);
-    navbarMove(1);
-    carousel();
+  });
+
+  mm.add("(min-width: 1920px)", () => {
+    centerLogoMove("0.2rem", 0, 0.2, 0, true);
   });
 
   mm.add("(max-width: 768px)", () => {
     centerLogoMove(0, 0, 0.25, 0, true);
-    navbarMove(1);
-    carousel();
   });
+
+  navbarMove(1);
+  carousel();
 });
 $(window).on("load", function (e) {
   // const endTime = performance.now() / 1000; // when document is ready
@@ -45,8 +47,6 @@ $(window).on("load", function (e) {
   // });
 });
 // });
-
-
 
 function navbarMove(et) {
   gsap.to("header", {

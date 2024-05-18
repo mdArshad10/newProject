@@ -1,4 +1,3 @@
-
 function heroCarousel() {
   $(".hero-slider").slick({
     dots: true,
@@ -34,9 +33,15 @@ function carousel() {
     autoplaySpeed: 3000,
     autoplay: true,
     centerMode: true,
-    centerPadding: "12rem",
+    centerPadding: "10rem",
     // responsive
     responsive: [
+      {
+        breakpoint: 1440,
+        settings: {
+          centerPadding: "12rem",
+        },
+      },
       {
         breakpoint: 768,
         settings: {
