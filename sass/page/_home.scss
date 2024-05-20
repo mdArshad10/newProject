@@ -112,6 +112,7 @@
   .slick-next,
   .slick-prev {
     right: 3%;
+    top: 90%;
     z-index: 1;
 
     &::before {
@@ -124,7 +125,7 @@
   }
 
   .slick-prev {
-    left: -1%;
+    left: 0%;
 
     &::before {
       content: url("/public/icons/arrow-left-s-line.svg");
@@ -236,6 +237,62 @@ video {
         object-fit: contain;
         scale: 0.5;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  // hero section
+  .hero-slider {
+    .hero-item {
+      .content {
+        width: 40%;
+
+        h1 {
+          font-size: 46px;
+          line-height: 150%;
+        }
+
+        p {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  // catalog section
+  #catalog_section {
+    margin-top: 4rem;
+    gap: 0;
+
+    h2 {
+      font-size: 38px;
+    }
+
+    .collection-slider {
+      .item {
+        margin: 0rem 4rem;
+        padding: 4rem 4rem 6rem 4rem;
+
+        .swiper-slide-caption {
+          bottom: 2%;
+          font-size: 24px;
+        }
+      }
+    }
+
+    .slick-initialized {
+      // overflow: hidden;
+      width: 100%;
+    }
+
+    .slick-slide img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .slick-dots {
+      bottom: -10%;
     }
   }
 }
