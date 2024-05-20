@@ -495,10 +495,9 @@ label {
   gap: 2rem;
 }
 .feature-section > h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 1.2981rem + 0.8974vw, 2.375rem);
   text-transform: capitalize;
-  font-weight: 700;
-  font-size: 38px;
+  font-weight: 300;
   text-align: center;
   line-height: 140%;
 }
@@ -517,8 +516,8 @@ label {
   margin-bottom: 1.5rem;
 }
 .feature-section .feature-blocks img {
-  width: 6rem;
-  height: 6rem;
+  width: 5.5rem;
+  height: 5.5rem;
   border-radius: 50%;
   background-color: #fff;
   object-fit: cover;
@@ -527,7 +526,7 @@ label {
   font-size: 16px;
   text-transform: capitalize;
   text-align: center;
-  font-weight: 700;
+  font-weight: 300;
   line-height: 140%;
 }
 
@@ -685,12 +684,15 @@ label {
   line-height: 140% !important;
   width: 60%;
   z-index: 2;
+  font-size: clamp(1.5rem, 1.2981rem + 0.8974vw, 2.375rem);
+  text-transform: capitalize;
+  font-weight: 300;
 }
 .image-text-block p {
   margin: 0.5rem 0rem;
   z-index: 2;
   width: 60%;
-  font-size: 16px;
+  font-size: clamp(1rem, 0.9423rem + 0.2564vw, 1.25rem);
   line-height: 140%;
 }
 .image-text-block ol,
@@ -703,7 +705,7 @@ label {
 .image-text-block ul li {
   font-weight: 400;
   margin-bottom: 0.5rem;
-  font-size: 16px;
+  font-size: clamp(1rem, 0.9423rem + 0.2564vw, 1.25rem);
   line-height: 140%;
 }
 .image-text-block ul {
@@ -715,7 +717,7 @@ label {
 }
 
 #personalised-styles {
-  background-image: url("/public/assets/Home_page/2nd-image-default.jpg");
+  background-image: url("/public/assets/Home_page/2nd-image-large.webp");
 }
 #personalised-styles ul {
   margin: 1rem 0 0 0;
@@ -727,20 +729,16 @@ label {
   }
   .image-text-block h2 {
     width: 45%;
-    font-size: 38px;
-  }
-  .image-text-block ol li {
-    font-size: 20px;
   }
 }
 @media screen and (max-width: 768px) {
   #personalised-styles {
-    background-image: url("/public/assets/Home_page/2nd-image-2.jpg");
+    background-image: url("/public/assets/Home_page/2nd-image-tablet.webp");
   }
 }
 @media screen and (max-width: 525px) {
   #personalised-styles {
-    background-image: url("/public/assets/Home_page/2nd-image-mobile.jpg");
+    background-image: url("/public/assets/Home_page/2nd-image-mobile.webp");
   }
   #personalised-styles > #personalised-styles-content {
     padding-left: 2rem;
@@ -757,7 +755,6 @@ label {
     margin: 0rem;
     line-height: 140%;
     width: 100%;
-    font-size: 24px;
     margin-bottom: 1rem;
   }
   .image-text-block p {
@@ -1151,7 +1148,7 @@ footer {
 }
 #catalog_section h2 {
   color: #000;
-  font-size: 38px;
+  font-size: clamp(2rem, 1.9135rem + 0.3846vw, 2.375rem);
   font-weight: 300;
 }
 #catalog_section .collection-slider .item {
@@ -1290,7 +1287,6 @@ video {
     padding-bottom: 2rem;
   }
   #catalog_section h2 {
-    font-size: 32px;
     text-align: center;
     width: calc(100% - 3rem);
   }

@@ -1,9 +1,19 @@
+import Lenis from "lenis";
 import { gsap } from "gsap";
-
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { carousel, heroCarousel } from "./slider.js";
 
-const startTime = performance.now() / 1000;
+gsap.registerPlugin(ScrollTrigger);
 
+const lenis = new Lenis()
+
+lenis.on('scroll', ScrollTrigger.update)
+
+gsap.ticker.add((time)=>{
+  lenis.raf(time * 1000)
+})
+
+gsap.ticker.lagSmoothing(0)
 
 window.addEventListener("load", (e) => {
   heroCarousel();
@@ -16,12 +26,38 @@ window.addEventListener("load", (e) => {
     centerLogoMove(0, 0, 0.2, 0, true);
     navbarMove(1);
     carousel();
+    featureSectionMovement();
+    ContentMovement(
+      "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
+      "#personalised-styles",
+      "center",
+      "bottom"
+    );
+    ContentMovement(
+      "#quick-fit-solution> h2, #quick-fit-solution> ol",
+      "#quick-fit-solution",
+      "center",
+      "bottom"
+    );
   });
 
   mm.add("(max-width: 768px)", () => {
     centerLogoMove(0, 0, 0.25, 0, true);
     navbarMove(1);
     carousel();
+    featureSectionMovement();
+    ContentMovement(
+      "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
+      "#personalised-styles",
+      "center",
+      "bottom"
+    );
+    ContentMovement(
+      "#quick-fit-solution> h2, #quick-fit-solution> ol",
+      "#quick-fit-solution",
+      "center",
+      "bottom"
+    );
   });
 });
 $(window).on("load", function (e) {
@@ -45,8 +81,6 @@ $(window).on("load", function (e) {
   // });
 });
 // });
-
-
 
 function navbarMove(et) {
   gsap.to("header", {
@@ -80,9 +114,9 @@ function tagLineMove(et) {
   });
 }
 
-// animation done
+// animation done ✅
 function featureSectionMovement() {
-  gsap.from(".feature-section>h1 , .feature-section>.feature-blocks", {
+  gsap.from(".feature-section>h2", {
     y: 200,
     opacity: 0,
     scale: 0.2,
@@ -97,61 +131,45 @@ function featureSectionMovement() {
       toggleActions: "play reverse play none",
     },
   });
-}
 
-// animation done
-function craftingContentMovement() {
-  gsap.from("#crafting-content", {
-    y: 200,
+  gsap.from(".feature-blocks> .feature-single-block", {
+    x: -100,
     opacity: 0,
-    scale: 0,
     duration: 0.5,
-    // delay: 6,
+    stagger: 0.4,
     scrollTrigger: {
-      trigger: "#crafting-content",
+      trigger: ".feature-section",
       scroller: "body",
-      // markers: true,
-      start: "-600vh center",
-      end: "bottom center",
-      toggleActions: "play reverse play none",
+      markers: true,
+      scrub: 1,
+      start: "10vh center",
+      end: "600vh center",
+      toggleActions: "play reverse play reverse",
     },
   });
 }
 
-// animation done
-function settingStandardMovement() {
-  gsap.from("#setting-standard-content", {
-    y: 100,
+// animation done ✅
+function ContentMovement(
+  targetElement,
+  triggerElement,
+  topStart = "center",
+  topEnd = "center"
+) {
+  gsap.from(`${targetElement}`, {
     opacity: 0,
-    scale: 1,
     duration: 0.5,
-    // delay: 6,
+    delay: 0.5,
+    stagger: 0.4,
     scrollTrigger: {
-      trigger: "#setting-standard-content",
-      scroller: "body",
-      // markers: true,
-      start: "-100vh center",
-      end: "bottom center",
-      toggleActions: "play reverse play none",
-    },
-  });
-}
-
-// animation done
-function buildingTimelessMovement() {
-  gsap.from("#building-timeless-content", {
-    y: 100,
-    opacity: 0,
-    scale: 1,
-    duration: 0.5,
-    // delay: 6,
-    scrollTrigger: {
-      trigger: "#building-timeless-content",
-      scroller: "body",
-      // markers: true,
-      start: "-100vh center",
-      end: "bottom center",
-      toggleActions: "play reverse play none",
+      trigger: `${triggerElement}`,
+      scrollTarget: "body",
+      markers: true,
+      // start: "top center",
+      start: `${topStart} center`,
+      // end: "bottom center",
+      end: `${topEnd} center`,
+      toggleActions: "play reverse play reverse",
     },
   });
 }
@@ -182,43 +200,6 @@ function showMenuMovement() {
     delay: 4,
   });
 }
-
-// adding the delay
-// function mainContentMovement() {
-//   gsap.from(".main-content-container", {
-//     y: 1000,
-//     opacity: 1,
-//     delay: 2,
-//   });
-// }
-
-// moving the background image
-// function mainPageMovement() {
-//   gsap.from("#main", {
-//     y: 100,
-//     opacity: 1,
-//     duration: 2,
-//     // backgroundPosition: "0% 50%",
-//     delay: 2,
-//   });
-// }
-
-// function carouselMovement() {
-//   gsap.from("#page2>.slider, #page2>.page2-heading", {
-//     y: 200,
-//     opacity: 0,
-//     scale: 0.2,
-//     duration: 0.5,
-//     stagger: 1,
-//     scrollTrigger: {
-//       trigger: "#page2",
-//       scroller: "body",
-//       start: "30% center",
-//       end: "80% center",
-//       toggleActions: "play reverse play none",
-//     },
-//   });
-// }
 
 /*=============== SHOW MENU ===============*/
 const showMenu = (toggleId, navId) => {

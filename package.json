@@ -19,6 +19,7 @@
   "dependencies": {
     "gsap": "^3.12.5",
     "just-validate": "^4.3.0",
+    "lenis": "^1.0.45",
     "normalize.css": "^8.0.1"
   }
 }
