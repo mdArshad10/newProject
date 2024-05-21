@@ -31,21 +31,28 @@ function carousel() {
     slidesToScroll: 1,
     speed: 2000,
     autoplaySpeed: 3000,
-    autoplay: true,
+    autoplay: false,
     centerMode: true,
-    centerPadding: "10rem",
+    centerPadding: "30rem",
     // responsive
     responsive: [
       {
         breakpoint: 1440,
         settings: {
+          slidesToShow: 1,
           centerPadding: "12rem",
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 769,
         settings: {
           slidesToShow: 1,
+          centerPadding: "10rem",
+        },
+      },
+      {
+        breakpoint: 650,
+        settings: {
           slidesToShow: 1,
           centerPadding: "0rem",
         },
