@@ -1,3 +1,6 @@
+// @import "../global/variables";
+@use "../global/variables";
+
 /* ====== Feature Section ====== */
 .feature-section {
   color: white;
@@ -12,10 +15,12 @@
   gap: 2rem;
 
   & > h2 {
-    font-size: 2rem;
+    // font-size: 2rem;
+    // font-size: clamp(1.5rem, 1.3846rem + 0.5128vw, 2rem);
+    font-size: variables.$heading-fontSize;
     text-transform: capitalize;
-    font-weight: 700;
-    font-size: 38px;
+    font-weight: variables.$heading-fontWeight;
+    // font-size: 38px;
     text-align: center;
     line-height: 140%;
   }
@@ -36,8 +41,8 @@
     }
 
     img {
-      width: 6rem;
-      height: 6rem;
+      width: 5.5rem;
+      height: 5.5rem;
       border-radius: 50%;
       background-color: #fff;
       object-fit: cover;
@@ -47,7 +52,7 @@
       font-size: 16px;
       text-transform: capitalize;
       text-align: center;
-      font-weight: 700;
+      font-weight: 300;
       line-height: 140%;
     }
   }
