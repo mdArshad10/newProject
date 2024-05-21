@@ -85,5 +85,9 @@ form > .cta-btn {
 }
 
 :is(input, select) {
-  padding: 8px 6px;
+  padding: 16px 12px;
+}
+
+input[type="checkbox"]{
+  scale: 1.25;
 }

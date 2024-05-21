@@ -1,5 +1,3 @@
-
-
 @font-face {
   font-family: "helvetica";
   src: url("/public/fonts/Helvetica.ttf");
@@ -19,7 +17,7 @@ body {
   font-family: "helvetica", "baskerville";
 }
 
-::selection{
+::selection {
   color: #fff;
   background: #ffa300;
 }
@@ -45,7 +43,7 @@ a:active {
   color: white;
 }
 
-ul{
+ul {
   margin: 0;
   padding: 0;
 }
@@ -54,9 +52,12 @@ ul > li {
   list-style-type: none;
 }
 
-label {
-  font-size: 16px;
+label,
+.checkbox-btn-control {
+  font-size: clamp(0.75rem, 0.6923rem + 0.2564vw, 1rem);
 }
+
+
 
 .termsAndCondition {
   color: orange !important;
