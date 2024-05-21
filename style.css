@@ -1061,8 +1061,8 @@ footer {
 }
 
 .hero-slider {
-  margin-top: 4rem;
-  height: calc(100vh - 4rem);
+  margin-top: 5rem;
+  height: calc(100vh - 5rem);
   width: 100vw;
   position: relative;
 }
@@ -1224,12 +1224,11 @@ footer {
 #catalog_section .slick-initialized {
   width: 100%;
 }
-#catalog_section .slick-slide img {
-  width: 100%;
+#catalog_section .slick-slide picture img {
   object-fit: cover;
 }
 #catalog_section .slick-dots {
-  bottom: -10%;
+  bottom: -5%;
 }
 
 video {
@@ -1258,9 +1257,6 @@ video {
 }
 
 @media screen and (min-width: 1920px) {
-  .hero-slider .hero-item .content {
-    width: 40%;
-  }
   .hero-slider .hero-item .content h1 {
     font-size: 46px;
     line-height: 150%;

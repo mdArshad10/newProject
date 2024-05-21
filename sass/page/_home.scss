@@ -2,8 +2,8 @@
 
 // hero section
 .hero-slider {
-  margin-top: 4rem;
-  height: calc(100vh - 4rem);
+  margin-top: 5rem;
+  height: calc(100vh - 5rem);
   width: 100vw;
   position: relative;
 
@@ -144,7 +144,7 @@
   position: absolute;
   text-align: end;
   z-index: 90;
-  width: calc(100vw / 5 );
+  width: calc(100vw / 5);
   top: 10vw;
   right: 10vw;
 }
@@ -152,6 +152,8 @@
 // catalog section
 #catalog_section {
   height: calc(100vh - 4rem);
+  // height: 100%;
+  // padding-bottom: 2rem;
   width: 100vw;
   margin-top: 2rem;
   display: flex;
@@ -211,13 +213,14 @@
     width: 100%;
   }
 
-  .slick-slide img {
-    width: 100%;
+  .slick-slide picture img {
+    // width: 40%;
+    // height: 70%;
     object-fit: cover;
   }
 
   .slick-dots {
-    bottom: -10%;
+    bottom: -5%;
   }
 }
 
@@ -258,7 +261,7 @@ video {
   .hero-slider {
     .hero-item {
       .content {
-        width: 40%;
+        // width: 40%;
 
         h1 {
           font-size: 46px;
@@ -400,9 +403,9 @@ video {
   }
 
   #sticker {
-   width: calc(100vw / 3);
+    width: calc(100vw / 3);
     top: 20%;
-    left: 40%; 
+    left: 40%;
   }
 
   #catalog_section {

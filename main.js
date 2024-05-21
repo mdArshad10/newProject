@@ -180,7 +180,7 @@ function featureSectionMovement() {
     scrollTrigger: {
       trigger: ".feature-section",
       scroller: "body",
-      markers: true,
+      
       start: "10vh center",
       end: "600vh center",
       toggleActions: "play reverse play none",
@@ -195,7 +195,6 @@ function featureSectionMovement() {
     scrollTrigger: {
       trigger: ".feature-section",
       scroller: "body",
-      markers: true,
       scrub: 1,
       start: "10vh center",
       end: "600vh center",
@@ -219,7 +218,7 @@ function ContentMovement(
     scrollTrigger: {
       trigger: `${triggerElement}`,
       scrollTarget: "body",
-      markers: true,
+      
       // start: "top center",
       start: `${topStart} center`,
       // end: "bottom center",
