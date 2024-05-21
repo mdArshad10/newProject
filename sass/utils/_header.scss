@@ -101,6 +101,7 @@
       overflow: auto;
       pointer-events: none;
       opacity: 0;
+      // opacity: 1;
       transition: top 0.4s, opacity 0.3s;
     }
     &__list {

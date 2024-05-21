@@ -24,7 +24,7 @@ window.addEventListener("load", (e) => {
 
   mm.add("(min-width: 768px) and (max-width: 1919px)", () => {
     centerLogoMove(0, 0, 0.2, 0, true);
-    navbarMove(1);
+    navbarMove(1, true);
     carousel();
     featureSectionMovement();
     ContentMovement(
@@ -59,7 +59,7 @@ window.addEventListener("load", (e) => {
   });
 
   mm.add("(max-width: 768px)", () => {
-    centerLogoMove(0, 0, 0.25, 0, true);
+    centerLogoMove(0, 0, 0.5, 0, false, 25);
 
     navbarMove(1);
     carousel();
@@ -103,17 +103,17 @@ $(window).on("load", function (e) {
 });
 // });
 
-function navbarMove(et) {
+function navbarMove(et, isLargeScreen = false) {
   gsap.to("header", {
-    height: "4rem",
+    height: "5rem",
     duration: 2,
     ease: "ease.out",
   });
 }
 
-function centerLogoMove(top, left, scale, et, fullscreen) {
+function centerLogoMove(top, left, scale, et, fullscreen, translateX = 38) {
   gsap.to(".center-element", {
-    transform: "translate(-40%, 0)",
+    transform: `translate(-${translateX}%, 0)`,
     top,
     left,
     delay: et,
@@ -195,7 +195,7 @@ function ContentMovement(
   });
 }
 
-function navbarMenuMovement() {
+function navbarMenuMovement(isFullScreen) {
   const dropdown__item = document.querySelectorAll(".dropdown__item");
   gsap.to(".nav__toggle", {
     delay: 2.25,
@@ -204,10 +204,11 @@ function navbarMenuMovement() {
   gsap.to(".nav__menu", {
     delay: 1,
     display: "flex",
+    // opacity: isFullScreen ? 1 : 0,
   });
   gsap.from(dropdown__item, {
     duration: 0.5,
-    // opacity: fullscreen ? 1 : 0,
+    // opacity: isFullScreen ? 0 : 1,
     y: 10,
     stagger: 0.1,
     delay: 1,

@@ -87,7 +87,7 @@
 
   .slick-dots {
     bottom: 5%;
-    left: 25%;
+    left: 0;
 
     li {
       button {
@@ -102,7 +102,7 @@
     .slick-active {
       button {
         &::before {
-          color: yellow;
+          color: #4c4c4c;
           font-size: 1rem;
         }
       }
@@ -112,8 +112,9 @@
   .slick-next,
   .slick-prev {
     right: 3%;
-    top: 90%;
     z-index: 1;
+    position: absolute;
+    top: 50%;
 
     &::before {
       content: url("/public/icons/arrow-right-s-line.svg");
@@ -121,6 +122,7 @@
       display: block;
       width: 3rem;
       height: 3rem;
+      position: absolute;
     }
   }
 
@@ -135,6 +137,16 @@
       height: 3rem;
     }
   }
+}
+
+// sticker intside the hero section
+#sticker {
+  position: absolute;
+  text-align: end;
+  z-index: 90;
+  width: calc(100vw / 5 );
+  top: 10vw;
+  right: 10vw;
 }
 
 // catalog section
@@ -273,6 +285,7 @@ video {
       .item {
         margin: 0rem 4rem;
         padding: 4rem 4rem 6rem 4rem;
+        height: 75vh; // adding the height of the large screen
 
         .swiper-slide-caption {
           bottom: 2%;
@@ -292,7 +305,7 @@ video {
     }
 
     .slick-dots {
-      bottom: -10%;
+      bottom: -5%;
     }
   }
 }
@@ -348,7 +361,7 @@ video {
       .slick-active {
         button {
           &::before {
-            color: yellow;
+            color: #4c4c4c;
             font-size: 1rem;
           }
         }
@@ -359,6 +372,8 @@ video {
     .slick-prev {
       right: 10%;
       z-index: 1;
+      position: absolute;
+      top: 50%;
 
       &::before {
         content: url("/public/icons/arrow-right-s-line.svg");
@@ -380,6 +395,12 @@ video {
         height: 3rem;
       }
     }
+  }
+
+  #sticker {
+   width: calc(100vw / 3);
+    top: 20%;
+    left: 40%; 
   }
 
   #catalog_section {
