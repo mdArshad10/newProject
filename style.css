@@ -458,11 +458,15 @@ label,
   }
   .dropdown__item:hover .dropdown__menu {
     opacity: 1;
-    top: 3.5rem;
+    top: 3rem;
     pointer-events: initial;
     transition: top 0.3s;
     font-size: 0.7rem;
-    padding-left: 0.2rem;
+    padding-left: 0rem;
+  }
+  .dropdown_item .dropdown_menu > li:hover {
+    background-color: rgb(61, 61, 61);
+    color: rgb(173, 173, 173);
   }
   .dropdown__subitem:hover > .dropdown__submenu {
     opacity: 1;
@@ -475,6 +479,7 @@ label,
 .order__now-btn {
   background-color: orange;
   padding: 1rem;
+  font-weight: 700;
 }
 
 #navbar-menu > strong {
@@ -697,6 +702,7 @@ label,
     margin: 0.5rem 0rem;
   }
   #quick-fit-solution {
+    height: 80vh !important;
     background-image: url("/public/assets/Home_page/3rd-image-mobile.webp");
   }
 }
@@ -807,6 +813,10 @@ footer {
   line-height: 150%;
 }
 
+#footer-bottom-social-media > p {
+  font-size: clamp(0.75rem, 0.6923rem + 0.2564vw, 1rem);
+  margin-bottom: 0.3rem;
+}
 #footer-bottom-social-media > ul {
   display: flex;
   gap: 0.8rem;
@@ -840,7 +850,7 @@ footer {
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   column-gap: 1rem;
 }
 #footer-bottom-container > p {
@@ -848,8 +858,17 @@ footer {
   font-weight: 500;
 }
 
+#iconsCombLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0.3rem;
+  width: 100%;
+}
+
 #footer-australian-made-logo {
-  width: 30%;
+  width: 8vw;
   object-fit: cover;
 }
 
@@ -933,7 +952,7 @@ footer {
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     column-gap: 1rem;
   }
   #footer-bottom-container > p {
@@ -941,8 +960,13 @@ footer {
     font-weight: 500;
   }
   #footer-australian-made-logo {
-    width: 30%;
+    width: 8%;
     object-fit: cover;
+  }
+  #iconsCombLogo {
+    margin-top: 1rem;
+    justify-content: space-around;
+    align-items: center;
   }
   #footer-bottom-disclaimer > p {
     margin-top: 10px;
@@ -963,9 +987,12 @@ footer {
 @media (max-width: 768px) {
   #footer-bottom-container {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 1rem;
     margin-top: 0.5rem;
+  }
+  #footer-bottom-container > #footer-bottom-social-media {
+    margin-right: auto;
   }
 }
 @media (max-width: 600px) {
@@ -1003,6 +1030,12 @@ footer {
     font-size: 14px;
     font-weight: 300;
     line-height: 150%;
+  }
+  #iconsCombLogo {
+    justify-content: space-between;
+  }
+  #footer-australian-made-logo {
+    width: 25%;
   }
 }
 #door-gallery {
@@ -1373,7 +1406,7 @@ video {
   }
   #trustedBrandPartners .trustedBrandPartners {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 80px);
+    grid-template-rows: repeat(7, 80px);
   }
 }
 #orderOnlinePageHeader > nav {

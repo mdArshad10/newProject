@@ -1,3 +1,5 @@
+@use "../global/variables";
+
 footer {
   background-color: #2d2827;
   padding: 2rem;
@@ -38,26 +40,32 @@ footer {
   }
 }
 
-#footer-bottom-social-media > ul {
-  display: flex;
-  gap: 0.8rem;
-
-  & > li > a {
-    font-size: 14px;
-    background-color: white;
-    border-radius: 50%;
-    height: 1.75rem;
-    width: 1.75rem;
+#footer-bottom-social-media {
+  & > p {
+    font-size: clamp(0.75rem, 0.6923rem + 0.2564vw, 1rem);
+    margin-bottom: 0.3rem;
+  }
+  & > ul {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 0.8rem;
 
-    i {
-      color: black;
-    }
+    & > li > a {
+      font-size: 14px;
+      background-color: white;
+      border-radius: 50%;
+      height: 1.75rem;
+      width: 1.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    &:hover {
-      background-color: #505050;
+      i {
+        color: black;
+      }
+
+      &:hover {
+        background-color: #505050;
+      }
     }
   }
 }
@@ -76,7 +84,7 @@ footer {
   display: grid;
   justify-items: center;
   align-items: center;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   column-gap: 1rem;
 
   & > p {
@@ -85,8 +93,17 @@ footer {
   }
 }
 
+#iconsCombLogo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0.3rem;
+  width: 100%;
+}
+
 #footer-australian-made-logo {
-  width: 30%;
+  width: 8vw;
   object-fit: cover;
 }
 
@@ -182,7 +199,7 @@ footer {
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr;
     column-gap: 1rem;
 
     & > p {
@@ -192,8 +209,14 @@ footer {
   }
 
   #footer-australian-made-logo {
-    width: 30%;
+    width: 8%;
     object-fit: cover;
+  }
+
+  #iconsCombLogo {
+    margin-top: 1rem;
+    justify-content: space-around;
+    align-items: center;
   }
 
   #footer-bottom-disclaimer > p {
@@ -218,9 +241,13 @@ footer {
 @media (max-width: 768px) {
   #footer-bottom-container {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     gap: 1rem;
     margin-top: 0.5rem;
+
+    & > #footer-bottom-social-media {
+      margin-right: auto;
+    }
   }
 }
 
@@ -263,5 +290,11 @@ footer {
       font-weight: 300;
       line-height: 150%;
     }
+  }
+  #iconsCombLogo {
+    justify-content: space-between;
+  }
+  #footer-australian-made-logo {
+    width: 25%;
   }
 }
