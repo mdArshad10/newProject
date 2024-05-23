@@ -1,84 +1,157 @@
-#personalised-styles {
+@import "../global/variables";
+
+.image-text-block {
+  position: relative;
   display: flex;
   color: white;
   height: 100vh;
-  background-image: url("/public/assets/Home_page/2nd-image-default.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 4rem;
 
-  & > #personalised-styles-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 4rem;
-    padding-right: 4rem;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.2);
+    z-index: 1;
+  }
 
-    & > .personalised-styles-heading {
-      margin-bottom: 2vh;
+  h2 {
+    margin-top: 3rem;
+    line-height: 140% !important;
+    width: 60%;
+    z-index: 2;
+    font-size: $heading-fontSize;
+    text-transform: $text-style;
+    font-weight: $heading-fontWeight;
+  }
+
+  p {
+    margin: 0.5rem 0rem;
+    z-index: 2;
+    width: 60%;
+    // font-size: 16px;
+    font-size: $paragraph-fontSize;
+    line-height: 140%;
+  }
+
+  ol,
+  ul {
+    margin: 1rem 0rem;
+    padding-left: 1rem;
+    z-index: 2;
+
+    li {
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      // font-size: 16px;
+      font-size: $paragraph-fontSize;
+      line-height: 140%;
     }
+  }
 
-    & > .personalised-styles-para {
-      width: 60%;
-    }
+  ul {
+    padding-left: 0;
   }
 }
 
 #quick-fit-solution {
-  display: flex;
-  color: white;
-  height: 100vh;
-  background-image: url("/public/assets/Home_page/3rd-image-default.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("/public/assets/Home_page/3rd-image-large.webp");
+}
 
-  & > #quick-fit-solution-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 4rem;
-    padding-right: 4rem;
+#personalised-styles {
+  background-image: url("/public/assets/Home_page/2nd-image-large.webp");
 
-    & > .quick-fit-solution-heading {
-      margin-bottom: 2vh;
-      width: 60%;
+  ul {
+    margin: 1rem 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .image-text-block {
+    height: 90vh;
+
+    h2 {
+      width: 45%;
+      // font-size: 38px;
     }
 
-    & > ol {
-      padding-left: 1rem;
+    ol {
+      li {
+        // font-size: 20px;
+      }
     }
   }
 }
 
-/* ----- orange craft Section end ----- */
-
-@media (max-width: 768px) {
-  #personalised-styles {
-    background-image: url("/public/assets/Home_page/2nd-image-2.jpg");
+@media screen and (min-width: 1920px) {
+  .image-text-block {
+    p {
+      width: 50%;
+      line-height: 150%;
+    }
   }
+}
+
+@media screen and (max-width: 768px) {
+  #personalised-styles {
+    background-image: url("/public/assets/Home_page/2nd-image-tablet.webp");
+  }
+
   #quick-fit-solution {
-    background-image: url("/public/assets/Home_page/3rd-image-small.jpg");
+    background-image: url("/public/assets/Home_page/3rd-image-tablet.webp");
   }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 525px) {
   #personalised-styles {
-    background-image: url("/public/assets/Home_page/2nd-image-mobile.jpg");
+    background-image: url("/public/assets/Home_page/2nd-image-mobile.webp");
     & > #personalised-styles-content {
       padding-left: 2rem;
       padding-right: 2rem;
     }
   }
 
-  #quick-fit-solution {
-    background-image: url("/public/assets/Home_page/3rd-image-mobile.jpg");
-    & > #quick-fit-solution-content {
-      padding-left: 2rem;
-      padding-right: 2rem;
+  .image-text-block {
+    justify-content: flex-end;
+    background-position: center;
+    padding: 0rem 1.5rem;
+    padding-bottom: 10vh;
 
-      & > .quick-fit-solution-heading {
-        width: 100%;
-      }
+    &::before {
+      background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+
+    h2 {
+      margin: 0rem;
+      line-height: 140%;
+      width: 100%;
+      // font-size: 24px;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin: 0.5rem 0rem;
+      z-index: 2;
+      width: 100%;
+      font-size: 16px;
+      line-height: 140%;
+    }
+
+    ul,
+    ol {
+      margin: 0.5rem 0rem;
     }
   }
-}
 
+  #quick-fit-solution {
+    height: 80vh !important;
+    background-image: url("/public/assets/Home_page/3rd-image-mobile.webp");
+  }
+}

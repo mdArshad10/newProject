@@ -8,7 +8,6 @@
       type="image/x-icon"
       href="./public/assets/basic/favicon.png"
     />
-    <base href="/index.html" />
     <title>PSM</title>
 
     <!-- Add the slick-theme.css if you want default styling -->
@@ -37,15 +36,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
-    <link defer rel="stylesheet" href="./style.css" />
-
-    <script type="module">
-      import { partytownSnippet } from "@builder.io/partytown/integration";
-
-      const snippetText = partytownSnippet();
-      const scriptTag = document.createElement("script");
-      scriptTag.innerHTML = snippetText;
-    </script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="wrapper">
@@ -54,28 +45,23 @@
 
       <!--=============== HEADER ===============-->
       <header class="header">
-        <nav class="nav container">
-          <div class="black-screen-for-logo">
-            <div class="center-element">
-              <img
-                class="psm-logo"
-                src="/public/assets/basic/psm.png"
-                alt="psm-logo"
-              />
-              <img
-                class="psm-work-experience"
-                src="/public/assets/basic/60-year-silver.svg"
-                alt="60-year-silver"
-              />
-            </div>
-          </div>
-          <div class="nav__data">
-            <div class="center-logo"></div>
+        <div class="center-element">
+          <img
+            class="psm-logo"
+            src="/public/assets/basic/psm.png"
+            alt="psm-logo"
+          />
+          <img
+            class="psm-work-experience"
+            src="/public/assets/basic/60-year-silver.svg"
+            alt="60-year-silver"
+          />
+        </div>
 
-            <div class="nav__toggle" id="nav-toggle">
-              <i class="ri-menu-line nav__burger"></i>
-              <i class="ri-close-line nav__close"></i>
-            </div>
+        <nav class="nav">
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line nav__burger"></i>
+            <i class="ri-close-line nav__close"></i>
           </div>
 
           <!--=============== NAV MENU ===============-->
@@ -84,7 +70,7 @@
               <!--=============== DROPDOWN 1 ===============-->
               <li class="dropdown__item">
                 <div class="nav__link">
-                  Cabinetries and doors
+                  Cabinets and Doors
                   <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                 </div>
 
@@ -108,7 +94,7 @@
 
                 <ul class="dropdown__menu">
                   <li>
-                    <a href="#" class="dropdown__link"> Gallary </a>
+                    <a href="#" class="dropdown__link"> Gallery </a>
                   </li>
 
                   <li>
@@ -192,7 +178,7 @@
                       href="/src/cabinets_order/index.html"
                       class="dropdown__link"
                     >
-                      Kitchen Cabinetries
+                      Cabinets/ Flatpacks
                     </a>
                   </li>
 
@@ -208,240 +194,253 @@
       </header>
 
       <!-- HERO SECTION -->
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <picture>
-              <source
-                srcset="public/assets/Home_page/homeTopSlider/medium/1.webp"
-                media="(max-width: 1200px and min-width:768px)"
-              />
-              <source
-                srcset="public/assets/Home_page/homeTopSlider/small/1.webp"
-                media="(max-width: 767px and min-width:550px)"
-              />
-              <source
-                srcset="
-                  public/assets/Home_page/homeTopSlider/extra-small/1.webp
-                "
-                media="(max-width: 550px)"
-              />
-              <img
-                class="swiper-slide-image"
-                src="public/assets/homeTopSlider/1.webp"
-                alt="carousel-1"
-              />
-            </picture>
-
-            <img
-              id="sticker"
-              src="/public/assets/Home_page/STICKER-16.png"
-              alt="sticker"
+      <section class="slider hero-slider">
+        <div class="hero-item">
+          <picture>
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/phone/01-phone.webp"
+              media="(max-width: 650px)"
             />
-            <div class="swiper-slide-content-wrapper">
-              <div class="swiper-slide-content">
-                <h1>
-                  Designs for Australia. <br />
-                  Built in Australia.
-                </h1>
-                <p>
-                  Australia’s most preferred custom-fit Kitchen cabinetry
-                  solutions.
-                </p>
-              </div>
-            </div>
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/tablet/01-tab.webp"
+              media="(max-width: 800px)"
+            />
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/01-large.webp"
+              media="(min-width: 1440px)"
+            />
+            <source
+              src="public/assets/Home_page/homeTopSlider/01-large.webp"
+              media="(min-width: 1920px)"
+            />
+            <img
+              src="public/assets/Home_page/homeTopSlider/mid/01-mid.webp"
+              alt="first-image"
+            />
+          </picture>
+
+          <div id="sticker" style="position: absolute">
+            <img src="public/assets/Home_page/onlySticker.png" alt="sticker" />
           </div>
-          <div class="swiper-slide">
-            <picture>
-              <source
-                srcset="public/assets/Home_page/homeTopSlider/medium/2.webp"
-                media="(max-width: 1200px and min-width:768px)"
-              />
-              <source
-                srcset="public/assets/Home_page/homeTopSlider/small/2.webp"
-                media="(max-width: 767px and min-width:550px)"
-              />
-              <source
-                srcset="
-                  public/assets/Home_page/homeTopSlider/extra-small/2.webp
-                "
-                media="(max-width: 550px)"
-              />
-              <img
-                class="swiper-slide-image"
-                src="public/assets/homeTopSlider/2.webp"
-                alt="2nd-slider-image"
-              />
-            </picture>
-            <div class="swiper-slide-content-wrapper">
-              <div class="swiper-slide-content">
-                <h1>Flatpacks to assembled.<br />Selection to installation.</h1>
-                <p>
-                  Endless end-to-end budget-friendly options. <br />
-                  Save time, effort, and A$s.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <picture>
-              <source
-                srcset="public/assets/Home_page/homeTopSlider/medium/3.webp"
-                media="(max-width: 1200px and min-width:768px)"
-              />
-              <source
-                srcset="public/assets/Home_page/homeTopSlider/small/3.webp"
-                media="(max-width: 767px and min-width:550px)"
-              />
-              <source
-                srcset="
-                  public/assets/Home_page/homeTopSlider/extra-small/3.webp
-                "
-                media="(max-width: 550px)"
-              />
-              <img
-                class="swiper-slide-image"
-                src="public/assets/homeTopSlider/3.webp"
-                alt="3rd-slider-image"
-              />
-            </picture>
-            <div class="swiper-slide-content-wrapper">
-              <div class="swiper-slide-content">
-                <h1>
-                  Adjustable sizes. <br />
-                  For convertible kitchens.
-                </h1>
-                <p>
-                  Quick, easy, flexible installations with ready-fit options or
-                  customizable dimensions.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide-content"></div>
-          <div class="swiper-slide">
-            <picture>
-              <source
-                srcset="public/assets/Home_page/homeTopSlider/medium/4.webp"
-                media="(max-width: 1200px and min-width:768px)"
-              />
-              <source
-                srcset="public/assets/Home_page/homeTopSlider/small/4.webp"
-                media="(max-width: 767px and min-width:550px)"
-              />
-              <source
-                srcset="
-                  public/assets/Home_page/homeTopSlider/extra-small/4.webp
-                "
-                media="(max-width: 550px)"
-              />
-              <img
-                class="swiper-slide-image"
-                src="public/assets/homeTopSlider/4.webp"
-                alt="4th-slider-image"
-              />
-            </picture>
-            <div class="swiper-slide-content-wrapper">
-              <div class="swiper-slide-content">
-                <h1>
-                  Profits for trade partners. <br />
-                  Fits pockets of end users too.
-                </h1>
-                <p>
-                  Best offers available with widest range of solutions perfect
-                  for modern Australian kitchen styles.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <picture>
-              <source
-                srcset="public/assets/Home_page/homeTopSlider/medium/5.webp"
-                media="(max-width: 1200px and min-width:768px)"
-              />
-              <source
-                srcset="public/assets/Home_page/homeTopSlider/small/5.webp"
-                media="(max-width: 767px and min-width:550px)"
-              />
-              <source
-                srcset="
-                  public/assets/Home_page/homeTopSlider/extra-small/5.webp
-                "
-                media="(max-width: 550px)"
-              />
-              <img
-                class="swiper-slide-image"
-                src="public/assets/homeTopSlider/5.webp"
-                alt="4th-slider-image"
-              />
-            </picture>
-            <div class="swiper-slide-content-wrapper">
-              <div class="swiper-slide-content">
-                <h1>
-                  Experienced experts. <br />
-                  Behind excellence extraordinaire.
-                </h1>
-                <p>
-                  A 60+ year old legacy of crafting benchmarks in
-                  revolutionizing kitchen spaces.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <picture>
-              <source
-                srcset="public/assets/Home_page/homeTopSlider/medium/6.webp"
-                media="(max-width: 1200px and min-width:768px)"
-              />
-              <source
-                srcset="public/assets/Home_page/homeTopSlider/small/6.webp"
-                media="(max-width: 767px and min-width:550px)"
-              />
-              <source
-                srcset="
-                  public/assets/Home_page/homeTopSlider/extra-small/6.webp
-                "
-                media="(max-width: 550px)"
-              />
-              <img
-                class="swiper-slide-image"
-                src="public/assets/homeTopSlider/6.webp"
-                alt="4th-slider-image"
-              />
-            </picture>
-            <div class="swiper-slide-content-wrapper">
-              <div class="swiper-slide-content">
-                <h1>
-                  DIY inspirations and tips. <br />
-                  Always at your fingertips.
-                </h1>
-                <p>
-                  Big or small, change to your dream kitchen space hassle-free
-                  with our professional tips and guides.
-                </p>
-              </div>
+          <div class="content">
+            <div class="swiper-slide-content">
+              <h1>
+                Made in Australia <br />
+                For Australia
+              </h1>
+              <p>
+                Australia’s most preferred custom-fit Kitchen cabinetry
+                solutions.
+              </p>
             </div>
           </div>
         </div>
-        <div class="swiper-button-next"></div>
+        <div class="hero-item">
+          <picture>
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/phone/02-phone.webp"
+              media="(max-width: 650px)"
+            />
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/tablet/02-tab.webp"
+              media="(max-width: 800px)"
+            />
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/02-large.webp"
+              media="(min-width: 1440px)"
+            />
+            <source
+              src="public/assets/Home_page/homeTopSlider/02-large.webp"
+              media="(min-width: 1920px)"
+            />
+            <img
+              src="public/assets/Home_page/homeTopSlider/mid/02-mid.webp"
+              alt="second-image"
+            />
+          </picture>
+          <div class="content">
+            <div class="swiper-slide-content">
+              <h1>Flatpacks to assembled.<br />Selection to installation.</h1>
+              <p>
+                Endless end-to-end budget-friendly options. <br />
+                Save time, effort, and A$s.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-item">
+          <picture>
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/phone/03-phone.webp"
+              media="(max-width: 650px)"
+            />
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/tablet/03-tab.webp"
+              media="(max-width: 800px)"
+            />
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/03-large.webp"
+              media="(min-width: 1440px)"
+            />
+            <source
+              src="public/assets/Home_page/homeTopSlider/03-large.webp"
+              media="(min-width: 1920px)"
+            />
+            <img
+              src="public/assets/Home_page/homeTopSlider/mid/03-mid.webp"
+              alt="third-image"
+            />
+          </picture>
+          <div class="content">
+            <div class="swiper-slide-content">
+              <h1>
+                Adjustable sizes. <br />
+                For convertible kitchens.
+              </h1>
+              <p>
+                Quick, easy, flexible installations with ready-fit options or
+                customizable dimensions.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-item">
+          <picture>
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/phone/04-phone.webp"
+              media="(max-width: 650px)"
+            />
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/tablet/04-tab.webp"
+              media="(max-width: 800px)"
+            />
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/04-large.webp"
+              media="(min-width: 1440px)"
+            />
+            <source
+              src="public/assets/Home_page/homeTopSlider/04-large.webp"
+              media="(min-width: 1920px)"
+            />
+            <img
+              src="public/assets/Home_page/homeTopSlider/mid/04-mid.webp"
+              alt="fourth-image"
+            />
+          </picture>
+          <div class="content">
+            <div class="swiper-slide-content">
+              <h1>
+                Profits for trade partners. <br />
+                Fits pockets of end users too.
+              </h1>
+              <p>
+                Best offers available with widest range of solutions perfect for
+                modern Australian kitchen styles.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-item">
+          <picture>
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/phone/05-phone.webp"
+              media="(max-width: 650px)"
+            />
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/tablet/05-tab.webp"
+              media="(max-width: 800px)"
+            />
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/05-large.webp"
+              media="(min-width: 1440px)"
+            />
+            <source
+              src="public/assets/Home_page/homeTopSlider/05-large.webp"
+              media="(min-width: 1920px)"
+            />
+            <img
+              src="public/assets/Home_page/homeTopSlider/mid/05-mid.webp"
+              alt="fifth-image"
+            />
+          </picture>
+          <div class="content">
+            <div class="swiper-slide-content">
+              <h1>
+                Experienced experts. <br />
+                Behind excellence extraordinaire.
+              </h1>
+              <p>
+                A 60+ year old legacy of crafting benchmarks in revolutionizing
+                kitchen spaces.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="hero-item">
+          <picture>
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/phone/06-phone.webp"
+              media="(max-width: 650px)"
+            />
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/tablet/06-tab.webp"
+              media="(max-width: 800px)"
+            />
+            <source
+              srcset="public/assets/Home_page/homeTopSlider/06-large.webp"
+              media="(min-width: 1440px)"
+            />
+            <source
+              src="public/assets/Home_page/homeTopSlider/06-large.webp"
+              media="(min-width: 1920px)"
+            />
+            <img
+              src="public/assets/Home_page/homeTopSlider/mid/06-mid.webp"
+              alt="sixth-image"
+            />
+          </picture>
+          <div class="content">
+            <div class="swiper-slide-content">
+              <h1>
+                DIY inspirations and tips. <br />
+                Always at your fingertips.
+              </h1>
+              <p>
+                Big or small, change to your dream kitchen space hassle-free
+                with our professional tips and guides.
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-      </div>
+        <div class="swiper-pagination"></div> -->
+      </section>
 
-      <!-- page-2 slider -->
-      <div id="page2">
-        <!-- page heading -->
-        <h1 class="page2-heading">Get Inspired To Get Started</h1>
+      <section id="catalog_section">
+        <h2 class="page2-heading">Get Inspired To Get Started</h2>
 
-        <!-- slider js -->
         <div class="slider collection-slider">
-          <!-- Doors -->
           <div class="item">
             <picture>
+              <!-- min-width:1440px -->
+
+              <source
+                srcset="public/assets/Home_page/collection/small/Doors_3.webp"
+                media="(max-width: 800px)"
+              />
+
+              <source
+                src="public/assets/Home_page/collection/Doors.webp"
+                media="(min-width:1440px)"
+              />
+              <source
+                src="public/assets/Home_page/collection/Doors.webp"
+                media="(max-width: 1920px)"
+              />
+
               <img
-                src="/public/assets/Home_page/collection/Doors.webp"
+                src="/public/assets/Home_page/collection/mid/Doors_2.webp"
                 loading="lazy"
                 class="lazy-loading"
                 alt="Internal & External Doors"
@@ -449,213 +448,390 @@
             </picture>
             <div class="swiper-slide-caption">Internal & External Doors</div>
           </div>
-          <!-- Wardrobes -->
           <div class="item">
             <picture>
+              <source
+                srcset="
+                  public/assets/Home_page/collection/small/Wardrobes_3.webp
+                "
+                media="(max-width: 800px)"
+              />
+
+              <source
+                srcset="public/assets/Home_page/collection/Wardrobes.webp"
+                media="(min-width:1440px)"
+              />
+              <source
+                srcset="public/assets/Home_page/collection/Wardrobes.webp"
+                media="(max-width: 1920px)"
+              />
+
               <img
-                src="/public/assets/Home_page/collection/Wardrobes.webp"
-                alt="wardrobes"
+                src="/public/assets/Home_page/collection/mid/Wardrobes_2.webp"
                 loading="lazy"
                 class="lazy-loading"
+                alt="Wardrobes"
               />
             </picture>
-            <div class="swiper-slide-caption">WARDROBES</div>
+            <div class="swiper-slide-caption">Wardrobes</div>
           </div>
-          <!-- Bathroom -->
           <div class="item">
             <picture>
+              <source
+                srcset="
+                  public/assets/Home_page/collection/small/Bathroom_3.webp
+                "
+                media="(max-width: 800px)"
+              />
+
+              <source
+                srcset="public/assets/Home_page/collection/Bathroom.webp"
+                media="(min-width:1440px)"
+              />
+              <source
+                srcset="public/assets/Home_page/collection/Bathroom.webp"
+                media="(max-width: 1920px)"
+              />
+
               <img
-                src="/public/assets/Home_page/collection/Bathroom.webp"
-                alt="bathroom"
+                src="/public/assets/Home_page/collection/mid/Bathroom_2.webp"
                 loading="lazy"
                 class="lazy-loading"
+                alt="Wardrobes"
               />
             </picture>
             <div class="swiper-slide-caption">Bathroom</div>
           </div>
-          <!-- Milled panel -->
           <div class="item">
             <picture>
+              <source
+                srcset="
+                  public/assets/Home_page/collection/small/milled-panel_3.webp
+                "
+                media="(max-width: 800px)"
+              />
+
+              <source
+                srcset="public/assets/Home_page/collection/milled-panel.webp"
+                media="(min-width:1440px)"
+              />
+              <source
+                srcset="public/assets/Home_page/collection/milled-panel.webp"
+                media="(max-width: 1920px)"
+              />
+
               <img
-                src="/public/assets/Home_page/collection/milled-panel.jpg"
-                alt="milled_panel"
+                src="/public/assets/Home_page/collection/mid/milled-panel_2.webp"
                 loading="lazy"
                 class="lazy-loading"
+                alt="milled-panel"
               />
             </picture>
-            <div class="swiper-slide-caption">MILLED PANELS</div>
+            <div class="swiper-slide-caption">Milled Panels</div>
           </div>
-          <!-- Tv Units -->
           <div class="item">
             <picture>
+              <source
+                srcset="
+                  public/assets/Home_page/collection/small/Tv-units_3.webp
+                "
+                media="(max-width: 800px)"
+              />
+
+              <source
+                srcset="public/assets/Home_page/collection/TvUnits.webp"
+                media="(min-width:1440px)"
+              />
+              <source
+                srcset="public/assets/Home_page/collection/TvUnits.webp"
+                media="(max-width: 1920px)"
+              />
+
               <img
-                src="/public/assets/Home_page/collection/TvUnits.webp"
-                alt="tv unites"
-                data-src="/public/assets/sliderImage/slider-4.jpg"
+                src="/public/assets/Home_page/collection/mid/Tv-units_2.webp"
                 loading="lazy"
                 class="lazy-loading"
+                alt="Tv units"
               />
             </picture>
-            <div class="swiper-slide-caption">TV UNITS</div>
+            <div class="swiper-slide-caption">TV Units</div>
           </div>
-          <!-- DIY -->
           <div class="item">
             <picture>
+              <source
+                srcset="public/assets/Home_page/collection/small/DIY_3.webp"
+                media="(max-width: 800px)"
+              />
+
+              <source
+                srcset="public/assets/Home_page/collection/DIY.webp"
+                media="(min-width:1440px)"
+              />
+              <source
+                srcset="public/assets/Home_page/collection/DIY.webp"
+                media="(max-width: 1920px)"
+              />
+
               <img
-                src="/public/assets/Home_page/collection/DIY.webp"
+                src="/public/assets/Home_page/collection/mid/DIY_2.webp"
+                loading="lazy"
+                class="lazy-loading"
                 alt="DIY & Trade Solutions"
-                loading="lazy"
-                class="lazy-loading"
               />
             </picture>
             <div class="swiper-slide-caption">DIY & Trade Solutions</div>
           </div>
-          <!-- kitchen -->
           <div class="item">
             <picture>
+              <source
+                srcset="public/assets/Home_page/collection/small/Kitchen_3.webp"
+                media="(max-width: 800px)"
+              />
+
+              <source
+                srcset="public/assets/Home_page/collection/Kitchen.webp"
+                media="(min-width:1440px)"
+              />
+              <source
+                srcset="public/assets/Home_page/collection/Kitchen.webp"
+                media="(max-width: 1920px)"
+              />
+
               <img
-                src="/public/assets/Home_page/collection/Kitchen.webp"
-                alt="kitchen"
+                src="/public/assets/Home_page/collection/mid/Kitchen_2.webp"
                 loading="lazy"
                 class="lazy-loading"
+                alt="Kitchen"
               />
             </picture>
             <div class="swiper-slide-caption">Kitchen</div>
           </div>
-          <!-- Laundries -->
           <div class="item">
             <picture>
+              <source
+                src="public/assets/Home_page/collection/small/Laundries_3.webp"
+                media="(max-width: 800px)"
+              />
+
+              <source
+                src="public/assets/Home_page/collection/Laundries.webp"
+                media="(min-width:1440px)"
+              />
+              <source
+                src="public/assets/Home_page/collection/Laundries.webp"
+                media="(max-width: 1920px)"
+              />
+
               <img
-                src="/public/assets/Home_page/collection/Laundries.webp"
-                alt="Laundries"
+                src="/public/assets/Home_page/collection/mid/Laundries_2.webp"
                 loading="lazy"
                 class="lazy-loading"
+                alt="Laundries"
               />
             </picture>
             <div class="swiper-slide-caption">Laundries</div>
           </div>
-          <!-- shop-fitouts -->
           <div class="item">
             <picture>
+              <source
+                srcset="
+                  public/assets/Home_page/collection/small/Shop-Fitouts_3.webp
+                "
+                media="(max-width: 800px)"
+              />
+
+              <source
+                srcset="public/assets/Home_page/collection/Shop-Fitouts.webp"
+                media="(min-width:1440px)"
+              />
+              <source
+                srcset="public/assets/Home_page/collection/Shop-Fitouts.webp"
+                media="(max-width: 1920px)"
+              />
+
               <img
-                src="/public/assets/Home_page/collection/Shop-Fitouts.webp"
-                alt="Laundries"
+                src="/public/assets/Home_page/collection/mid/Shop-Fitouts_2.webp"
                 loading="lazy"
                 class="lazy-loading"
+                alt="Shop Fitouts"
               />
             </picture>
             <div class="swiper-slide-caption">Shop Fitouts</div>
           </div>
+          <!-- for office fitout -->
+          <div class="item">
+            <picture>
+              <img
+                src="/public/assets/Home_page/collection/office-fitouts.jpg"
+                loading="lazy"
+                class="lazy-loading"
+                alt="Shop Fitouts"
+              />
+            </picture>
+            <div class="swiper-slide-caption">Office Fitouts</div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <!--  -->
 
       <!-- Feature section -->
       <section class="feature-section">
-        <h1>The PSM Edge For Your Ultra-Style Kitchen Space</h1>
+        <h2>The PSM Edge For Your Ultra-Style Kitchen Space</h2>
         <div class="feature-blocks">
           <div class="feature-single-block">
             <img
-              id="feature-single-mnumoic"
               src="/public/assets/Home_page/mnumonic/excellent_craftsmanship.svg"
               alt="craftmanship"
             />
-            <p class="feature-section-title">Excellent craftmanship</p>
+            <p class="feature-section-title">
+              Excellent <br />
+              craftsmanship
+            </p>
           </div>
           <div class="feature-single-block">
             <img
-              id="feature-single-mnumoic"
-              src="public/assets/mnumonic/premium_quality.svg"
               src="/public/assets/Home_page/mnumonic/premium_quality.svg"
               alt="premium quality"
             />
-            <p class="feature-section-title">premium quality</p>
+            <p class="feature-section-title">
+              premium <br />
+              quality
+            </p>
           </div>
           <div class="feature-single-block">
             <img
-              id="feature-single-mnumoic"
               src="/public/assets/Home_page/mnumonic/customisation_options.svg"
               alt="Customization"
             />
-            <p class="feature-section-title">Customization options</p>
+            <p class="feature-section-title">
+              Customization <br />
+              options
+            </p>
           </div>
           <div class="feature-single-block">
             <img
-              id="feature-single-mnumoic"
               src="/public/assets/Home_page/mnumonic/innovation_designs.svg"
               alt="innovate Designs"
             />
-            <p class="feature-section-title">innovative Designs</p>
+            <p class="feature-section-title">
+              innovative <br />
+              Designs
+            </p>
           </div>
           <div class="feature-single-block">
             <img
-              id="feature-single-mnumoic"
               src="/public/assets/Home_page/mnumonic/practice_sustainability.svg"
               alt="Sustainability"
             />
-            <p class="feature-section-title">practice Sustainability</p>
+            <p class="feature-section-title">
+              practice <br />
+              Sustainability
+            </p>
           </div>
           <div class="feature-single-block">
             <img
-              id="feature-single-mnumoic"
               src="/public/assets/Home_page/mnumonic/unmatched_support.svg"
               alt="unmatched customer support"
             />
-            <p class="feature-section-title">unmatched support</p>
+            <p class="feature-section-title">unmatched <br />support</p>
           </div>
         </div>
       </section>
 
-      <!-- video section -->
-      <div id="video-section">
-        <video
-          class="lazy-video"
-          controls
-          src="/public/assets/Home_page/video/PSMCabinetsPromoVideo.mp4"
-          autoplay
-          loop
-          muted
-        ></video>
-      </div>
-
       <!-- "crafting trust" heading -->
-      <section id="personalised-styles" class="personalised-styles-bg">
-        <div id="personalised-styles-content" class="crafting-bg-position">
-          <h2 class="personalised-styles-heading">
-            UNMATCHED ASSEMBLED VARIETIES. <br />
-            UNIQUE PERSONALISED STYLES.
-          </h2>
-          <p class="personalised-styles-para">
-            No more confusions. No more running around. No more budget stress.
-            PSM brings you the smoothest way to transform your kitchen space in
-            any corner of Australia. In almost no time.
-          </p>
+      <section id="personalised-styles" class="image-text-block">
+        <h2>unmatched assembled varieties unique personalised styles.</h2>
+        <p>
+          No more confusions. No more running around. No more budget stress. PSM
+          brings you the smoothest way to transform your kitchen space in any
+          corner of Australia. In almost no time.
+        </p>
 
-          <ul class="personalised-styles-points">
-            <li><i class="ri-arrow-right-line"></i> Low Price Guarantee</li>
-            <li>
-              <i class="ri-arrow-right-line"></i> DIY Solutions – Fast Access
-              and Worry-free
-            </li>
-            <li><i class="ri-arrow-right-line"></i> Expert Installation</li>
-          </ul>
-        </div>
+        <ol>
+          <li>Low Price Guarantee</li>
+          <li>DIY Solutions – Fast Access and Worry-free</li>
+          <li>Expert Installation</li>
+        </ol>
       </section>
 
+      <!-- video section -->
+      <video
+        class="lazy-video"
+        controls
+        src="https://res.cloudinary.com/dfcgj5h5c/video/upload/v1715162210/psm/video/fxk1qbvwh7hoxgigw4px.mp4"
+        autoplay
+        loop
+        muted
+      ></video>
+
       <!-- "setting the standard"  -->
-      <section id="quick-fit-solution" class="quick-fit-solution-bg">
-        <div
-          id="quick-fit-solution-content"
-          class="setting-standard-bg-position"
-        >
-          <h2 class="quick-fit-solution-heading">
-            3 EASY STEPS – FROM ORDERING TO INSTALLING YOUR QUICK-FIT CABINETRY
-            SOLUTION.
-          </h2>
-          <ol class="quick-fit-solution-numbers">
-            <li>Measure your specifics – Get professional help</li>
-            <li>Order online or book a free consultation</li>
-            <li>Get step-by-step expert DIY and Installation assistance</li>
-          </ol>
+      <section id="quick-fit-solution" class="image-text-block">
+        <h2>
+          3 easy steps - from ordering to installing your quick-fit cabinetry
+          solution
+        </h2>
+        <ol>
+          <li>Measure your specifics – Get professional help</li>
+          <li>Order online or book a free consultation</li>
+          <li>Get step-by-step expert DIY and Installation assistance</li>
+        </ol>
+      </section>
+
+      <!-- Choose from all the latest brands section -->
+      <section id="trustedBrandPartners">
+        <h2>Our Trusted Partners</h2>
+
+        <div class="trustedBrandPartners">
+          <div class="trustedBrandPartnersImage">
+            <img src="public/icons/Laminex-Logo.svg" alt="Laminex-Logo" />
+          </div>
+          <div class="trustedBrandPartnersImage">
+            <img src="public/icons/polytec.svg" alt="polytec-logo" />
+          </div>
+          <div class="trustedBrandPartnersImage">
+            <img src="public/icons/Wilsonart_ES-01.svg" alt="Wilsonart-logo" />
+          </div>
+          <div class="trustedBrandPartnersImage">
+            <img src="public/icons/formica.svg" alt="formica-logo" />
+          </div>
+          <div class="trustedBrandPartnersImage">
+            <img
+              src="public/icons/Smartstyle-logo-01.png"
+              alt="Smartstyle-logo"
+            />
+          </div>
+
+          <div class="trustedBrandPartnersImage">
+            <img src="public/icons/Titus_tekform.png" alt="Titus_tekform" />
+          </div>
+          <div class="trustedBrandPartnersImage">
+            <img src="public/icons/haefele_logo.png" alt="haefele_logo" />
+          </div>
+          <div class="trustedBrandPartnersImage">
+            <img src="public/icons/Hettich_logo_sw.svg" alt="hettich-logo" />
+          </div>
+          <div class="trustedBrandPartnersImage">
+            <img src="public/icons/blum-logo.png" alt="blum-logo" />
+          </div>
+          <div class="trustedBrandPartnersImage">
+            <img src="public/icons/biesse-logo.png" alt="biesse-logo" />
+          </div>
+          <div class="trustedBrandPartnersImage">
+            <img src="public/icons/scm_logo.svg" alt="scm_logo" />
+          </div>
+          <div class="trustedBrandPartnersImage">
+            <img
+              src="public/icons/wilson&bradley-logo.png"
+              alt="wilson&bradley_logo"
+            />
+          </div>
+          <div class="trustedBrandPartnersImage">
+            <img
+              src="public/icons/lincoln-sentry-logo.png"
+              alt="lincoln-sentry-logo"
+            />
+          </div>
         </div>
       </section>
 
@@ -695,7 +871,11 @@
             <a
               href="https://google.com/maps/place/Factory+3%2F438+Mt+Dandenong+Rd,+Kilsyth+VIC+3137,+Australia/@-37.8016667,145.3046558,17z/data=!3m1!4b1!4m6!3m5!1s0x6ad63aaf4aa7926b:0x2869c1b7fd7cbd15!8m2!3d-37.8016667!4d145.3046558!16s%2Fg%2F11csjtphm0?entry=ttu"
               target="_blank"
-              >438 Mt Dandenong Rd, Kilsyth VIC 3137, Australia</a
+              >3/438 Mt Dandenong Rd, Kilsyth VIC 3137, Australia</a
+            >
+            <a href="tel:+61-432-200-001">+61 432 200 001</a>
+            <a href="mailto: Info@psmcabinets.com.au"
+              >Info@psmcabinets.com.au</a
             >
           </div>
 
@@ -704,6 +884,11 @@
             <h4>Useful Links</h4>
             <ul>
               <li><a href="#">About us</a></li>
+              <li>
+                <a href="public/pdf/Digital_Brochure_web.pdf" target="_blank"
+                  >PSM Brochure</a
+                >
+              </li>
               <li><a href="#">Our process</a></li>
               <li><a href="#">FAQs</a></li>
               <li><a href="#">Price guide</a></li>
@@ -724,56 +909,38 @@
               Trademarks.
             </p>
           </div>
+          <div id="iconsCombLogo">
+            <div id="footer-bottom-social-media">
+              <p>Follow Us On</p>
+              <ul>
+                <li>
+                  <a href="#"><i class="ri-facebook-fill"></i></a>
+                </li>
 
-          <div id="footer-bottom-social-media">
-            <ul>
-              <li>
-                <a href="#"><i class="ri-facebook-fill"></i></a>
-              </li>
-
-              <li>
-                <a href="#"><i class="ri-instagram-fill"></i></a>
-              </li>
-              <li>
-                <a href="#">
-                  <i class="ri-tiktok-fill"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#"><i class="ri-linkedin-fill"></i></a>
-              </li>
-            </ul>
+                <li>
+                  <a href="#"><i class="ri-instagram-fill"></i></a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="ri-tiktok-fill"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"><i class="ri-linkedin-fill"></i></a>
+                </li>
+              </ul>
+            </div>
+            <img
+              id="footer-australian-made-logo"
+              src="/public/assets/basic/australian-made-campaign-logo.png"
+              loading="lazy"
+              class="lazy-loading"
+              alt="australian-made-logo"
+            />
           </div>
-          <img
-            id="footer-australian-made-logo"
-            src="/public/assets/basic/australian-made-campaign-logo.png"
-            loading="lazy"
-            class="lazy-loading"
-            alt="australian-made-logo"
-          />
         </section>
       </footer>
     </div>
-
-    <!-- adding the lenis cdn -->
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
-
-    <!-- adding the gsap cdn -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-      rel="preconnect"
-    ></script>
-
-    <!-- adding the scrollTrigger cdn -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
 
     <!-- jquery library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -784,8 +951,6 @@
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
 
-    <script defer type="module" src="/main.js"></script>
-    <script type="module" src="/video.js"></script>
-    <!-- <script type="module" src="/slider.js"></script> -->
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

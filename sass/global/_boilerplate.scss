@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   font-size: calc(1rem + 0.25vw);
 }
@@ -6,15 +12,8 @@ html {
   font-size: 100%;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
-body, html {
-  position: relative;
-  height: 100%;
+#wrapper {
   overflow-x: hidden;
 }
 
@@ -81,5 +80,9 @@ form > .cta-btn {
 }
 
 :is(input, select) {
-  padding: 8px 6px;
+  padding: 16px 12px;
+}
+
+input[type="checkbox"]{
+  scale: 1.25;
 }

@@ -1,15 +1,8 @@
 import path, { resolve } from "path";
-import { defineConfig } from "vite"; // Use double quotes
-import { partytownVite } from "@builder.io/partytown/utils";
-
-// vite.config.js
+import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [
-    partytownVite({
-      dest: path.join(__dirname, "dist", "~partytown"),
-    }),
-  ],
+  plugins: [],
 
   build: {
     rollupOptions: {

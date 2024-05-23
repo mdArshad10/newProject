@@ -1,47 +1,36 @@
 /*=============== HEADER ===============*/
 .header {
   position: fixed;
-  top: -1px;
-  left: 0;
-  width: 100vw;
+  top: 0px;
+  left: 0px;
+  width: 100%;
   background-color: black;
   box-shadow: 0 2px 16px hsla(220, 32%, 8%, 0.3);
-  z-index: 100;
+  z-index: 99;
   display: flex;
-  height: 80vh;
+  height: 100vh;
   align-items: center;
-  justify-content: center;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-}
-
-// trying the navbar
-nav > .nav__menu {
-  display: none;
-}
-
-nav > .black-screen-for-logo {
-  width: 25rem;
+  justify-content: space-between;
+  padding: 0rem 1.5rem;
 }
 
 .nav__menu,
 .nav__toggle {
-  display: none;
+  opacity: 0;
+  transition: 0.2s;
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
   width: 90%;
-  // margin-inline: 1.5rem;
 }
 
 /*=============== NAV ===============*/
 .nav {
-  height: 3.5rem;
-  position: relative;
-  margin-right: 0.4rem;
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  align-items: center;
 
   &__burger,
   &__close {
@@ -71,7 +60,7 @@ nav > .black-screen-for-logo {
 
     & i {
       font-weight: initial;
-      font-size: 1.25rem;
+      font-size: 2rem;
     }
   }
   &__toggle {
@@ -86,7 +75,7 @@ nav > .black-screen-for-logo {
     height: max-content;
     inset: 0;
     margin: auto;
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     cursor: pointer;
     transition: opacity 0.1s, transform 0.4s;
   }
@@ -104,7 +93,7 @@ nav > .black-screen-for-logo {
     &__menu {
       position: absolute;
       left: 0;
-      top: 3.5rem;
+      top: 3rem;
       justify-content: flex-end;
       display: flex;
       width: 100%;
@@ -112,11 +101,8 @@ nav > .black-screen-for-logo {
       overflow: auto;
       pointer-events: none;
       opacity: 0;
+      // opacity: 1;
       transition: top 0.4s, opacity 0.3s;
-
-      &::-webkit-scrollbar {
-        width: 0;
-      }
     }
     &__list {
       background-color: black;
@@ -180,13 +166,13 @@ nav > .black-screen-for-logo {
     column-gap: 0.5rem;
 
     transition: background-color 0.3s;
-
+    padding-left: 1.5rem;
     & i {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       font-weight: initial;
     }
     &:hover {
-      background-color: black;
+      background-color: rgb(111, 111, 111);
     }
   }
   &__menu {
@@ -195,19 +181,23 @@ nav > .black-screen-for-logo {
     background-color: black;
     transition: max-height 0.4s ease-out;
     padding-left: 0;
-    padding-left: 1.2rem;
+    // padding-left: 1.2rem;
+    padding-left: 0px;
     font-size: 0.7rem;
   }
   // Show dropdown menu & submenu
   &__item:hover &__menu {
     max-height: 1000px;
     transition: max-height 0.4s ease-in;
+
   }
   // Rotate dropdown icon
   &__item:hover &__arrow {
     transform: rotate(180deg);
   }
 }
+
+
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
@@ -264,6 +254,7 @@ nav > .black-screen-for-logo {
       left: 0;
       top: 5.2rem;
       opacity: 0;
+      padding-left: 1.2rem;
       pointer-events: none;
       transition: opacity 0.3s, top 0.3s;
     }
@@ -281,12 +272,20 @@ nav > .black-screen-for-logo {
     // Show dropdown menu
     &__item:hover &__menu {
       opacity: 1;
-      top: 5.5rem;
+      top: 3.4rem;
       pointer-events: initial;
       transition: top 0.3s;
       font-size: 0.7rem;
-      padding-left: 0.2rem;
+      padding-left: 0rem;
+
     }
+
+    &_item &_menu > li:hover{
+      background-color: rgb(61, 61, 61);
+      color: rgb(173, 173, 173);
+    }
+
+
     // Show dropdown submenu
     &__subitem:hover > &__submenu {
       opacity: 1;
@@ -301,9 +300,16 @@ nav > .black-screen-for-logo {
 .order__now-btn {
   background-color: orange;
   padding: 1rem;
+  font-weight: 700;
 }
 
 // for other navbar
 #navbar-menu > strong {
   color: white;
+}
+
+@media screen and (max-width: "768px") {
+  .header {
+    padding: 0rem 1.5rem;
+  }
 }

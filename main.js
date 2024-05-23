@@ -1,101 +1,177 @@
+import Lenis from "lenis";
 import { gsap } from "gsap";
-import Lenis from "@studio-freight/lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { carousel, contentSlider } from "./slider.js";
+import { carousel, heroCarousel } from "./slider.js";
 
-const startTime = performance.now() / 1000;
+gsap.registerPlugin(ScrollTrigger);
 
-// $(document).ready(function () {
-  $(window).on("load", function (e) {
-  const endTime = performance.now() / 1000; // when document is ready
+const lenis = new Lenis();
 
-  const executionTime = startTime - endTime;
+lenis.on("scroll", ScrollTrigger.update);
 
-  gsap.registerPlugin(ScrollTrigger);
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);
+
+window.addEventListener("load", (e) => {
+  heroCarousel();
+
   const mm = gsap.matchMedia();
 
-  console.log(`the execution time ${executionTime}`);
   showMenu("nav-toggle", "nav-menu");
-  centerLogoMove(executionTime, 0.3, `-40rem`, true);
-  navbarMove(executionTime);
-  contentSlider();
+
+  mm.add("(min-width: 768px) and (max-width: 1120px)", () => {
+    centerLogoMove(0, 0, 0.2, 0, false);
+    navbarMove(1, true);
+    carousel();
+    featureSectionMovement();
+    ContentMovement(
+      "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
+      "#personalised-styles",
+      "center",
+      "bottom"
+    );
+    ContentMovement(
+      "#quick-fit-solution> h2, #quick-fit-solution> ol",
+      "#quick-fit-solution",
+      "center",
+      "bottom"
+    );
+  });
+
+  mm.add("(min-width: 1119px) and (max-width:1919px)",()=>{
+    centerLogoMove(0, 0, 0.2, 0, true);
+    navbarMove(1, true);
+    carousel();
+    featureSectionMovement();
+    ContentMovement(
+      "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
+      "#personalised-styles",
+      "center",
+      "bottom"
+    );
+    ContentMovement(
+      "#quick-fit-solution> h2, #quick-fit-solution> ol",
+      "#quick-fit-solution",
+      "center",
+      "bottom"
+    );
+  })
+
+  mm.add("(min-width: 1920px)", () => {
+    centerLogoMove("0.2rem", 0, 0.2, 0, true);
+    featureSectionMovement();
+    ContentMovement(
+      "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
+      "#personalised-styles",
+      "center",
+      "bottom"
+    );
+    ContentMovement(
+      "#quick-fit-solution> h2, #quick-fit-solution> ol",
+      "#quick-fit-solution",
+      "center",
+      "bottom"
+    );
+  });
+
+
+
+  mm.add("(max-width: 768px)", () => {
+    centerLogoMove(0, 0, 0.5, 0, false, 25);
+
+    navbarMove(1);
+    carousel();
+    featureSectionMovement();
+    ContentMovement(
+      "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
+      "#personalised-styles",
+      "center",
+      "bottom"
+    );
+    ContentMovement(
+      "#quick-fit-solution> h2, #quick-fit-solution> ol",
+      "#quick-fit-solution",
+      "center",
+      "bottom"
+    );
+  });
+
+  navbarMove(1);
   carousel();
-
-  mm.add("(max-width: 1118px)", () => {
-    centerLogoMove(executionTime, 0.3, "-40vw", false);
-    navbarMove(executionTime);
-    contentSlider();
-    showMenuMovement();
-    carousel();
-  });
-
-  mm.add("(max-width:700px)", () => {
-    centerLogoMove(executionTime, 0.3, "-36vw", false);
-    navbarMove(executionTime);
-    showMenuMovement();
-    contentSlider();
-    carousel();
-  });
-
-  mm.add("(max-width:450px)", () => {
-    centerLogoMove(endTime, 0.3, "-31vw", false);
-    navbarMove(executionTime);
-    showMenuMovement();
-    contentSlider();
-    carousel();
-  });
 });
-// });
 
-// scrolling effect
-function scrollingEffect() {
-  const lenis = new Lenis();
-
-  lenis.on("scroll", ScrollTrigger.update);
-
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-
-  gsap.ticker.lagSmoothing(0);
-}
-
-function navbarMove(et) {
+function navbarMove(et, isLargeScreen = false) {
   gsap.to("header", {
-    height: "5.5rem",
-    delay: et,
-    duration: 2.5,
-    onComplete: contentSlider(),
+    height: "5rem",
+    duration: 2,
+    ease: "ease.out",
   });
 }
 
-function centerLogoMove(et, scale, xPosition, fullscreen) {
-  gsap.to(".psm-logo", {
-    x: xPosition,
-    y: 5,
-    delay: et,
-    scale,
-    duration: 2,
-    onStart: tagLineMove(et),
-    onComplete: navbarMenuMovement(et + 1.5, fullscreen),
+function centerLogoMove(top, left, scale, et, fullscreen, translateX = 38) {
+  if (fullscreen) {
+    gsap.to(".center-element", {
+      transform: `translate(-${translateX}%, 0)`,
+      top,
+      left,
+      delay: et,
+      scale,
+      duration: 2,
+      onStart: tagLineMove(et),
+      onComplete: navbarMenuMovement(fullscreen),
+    });
+  } else {
+    gsap.to(".center-element", {
+      transform: `translate(-${translateX}%, 0)`,
+      top,
+      left,
+      delay: et,
+      scale,
+      duration: 2,
+      onStart: tagLineMove(et),
+      onComplete: navbarMenuMovementInPhone(),
+    });
+  }
+}
+
+// center logo move in phone
+function navbarMenuMovementInPhone() {
+  const dropdown__item = document.querySelectorAll(".dropdown__item");
+  gsap.to(".nav__toggle", {
+    delay: 2.25,
+    opacity:1 ,
+  });
+  gsap.to(".nav__menu", {
+    delay: 1,
+    display: "flex",
+    // opacity: 1,
+  });
+  gsap.from(dropdown__item, {
+    duration: 0.5,
+
+    y: 10,
+    stagger: 0.1,
+    delay: 1,
   });
 }
 
 function tagLineMove(et) {
   gsap.to(".psm-work-experience", {
-    x: "-42vw",
-    y: 5,
+    // x: "-42vw",
+    // y: 5,
     opacity: 0,
     scale: 0.2,
-    // display: "none",
     delay: et,
     duration: 2,
   });
 }
 
-// animation done
+// animation done ✅
 function featureSectionMovement() {
-  gsap.from(".feature-section>h1 , .feature-section>.feature-blocks", {
+  gsap.from(".feature-section>h2", {
     y: 200,
     opacity: 0,
     scale: 0.2,
@@ -104,87 +180,71 @@ function featureSectionMovement() {
     scrollTrigger: {
       trigger: ".feature-section",
       scroller: "body",
-      markers: true,
+      
       start: "10vh center",
       end: "600vh center",
       toggleActions: "play reverse play none",
     },
   });
-}
 
-// animation done
-function craftingContentMovement() {
-  gsap.from("#crafting-content", {
-    y: 200,
+  gsap.from(".feature-blocks> .feature-single-block", {
+    x: -100,
     opacity: 0,
-    scale: 0,
     duration: 0.5,
-    // delay: 6,
+    stagger: 0.4,
     scrollTrigger: {
-      trigger: "#crafting-content",
+      trigger: ".feature-section",
       scroller: "body",
-      // markers: true,
-      start: "-600vh center",
-      end: "bottom center",
-      toggleActions: "play reverse play none",
+      scrub: 1,
+      start: "10vh center",
+      end: "600vh center",
+      toggleActions: "play reverse play reverse",
     },
   });
 }
 
-// animation done
-function settingStandardMovement() {
-  gsap.from("#setting-standard-content", {
-    y: 100,
+// animation done ✅
+function ContentMovement(
+  targetElement,
+  triggerElement,
+  topStart = "center",
+  topEnd = "center"
+) {
+  gsap.from(`${targetElement}`, {
     opacity: 0,
-    scale: 1,
     duration: 0.5,
-    // delay: 6,
+    delay: 0.5,
+    stagger: 0.4,
     scrollTrigger: {
-      trigger: "#setting-standard-content",
-      scroller: "body",
-      // markers: true,
-      start: "-100vh center",
-      end: "bottom center",
-      toggleActions: "play reverse play none",
+      trigger: `${triggerElement}`,
+      scrollTarget: "body",
+      
+      // start: "top center",
+      start: `${topStart} center`,
+      // end: "bottom center",
+      end: `${topEnd} center`,
+      toggleActions: "play reverse play reverse",
     },
   });
 }
 
-// animation done
-function buildingTimelessMovement() {
-  gsap.from("#building-timeless-content", {
-    y: 100,
-    opacity: 0,
-    scale: 1,
-    duration: 0.5,
-    // delay: 6,
-    scrollTrigger: {
-      trigger: "#building-timeless-content",
-      scroller: "body",
-      // markers: true,
-      start: "-100vh center",
-      end: "bottom center",
-      toggleActions: "play reverse play none",
-    },
-  });
-}
-
-function navbarMenuMovement(et, fullscreen) {
-  const menuChild = document.querySelector(".nav__menu");
+function navbarMenuMovement(isFullScreen) {
   const dropdown__item = document.querySelectorAll(".dropdown__item");
-  gsap.set("header", {
-    justifyContent: "normal",
+  gsap.to(".nav__toggle", {
+    delay: 2.25,
+    opacity: 1,
   });
-  gsap.to(menuChild, {
-    delay: et,
+  gsap.to(".nav__menu", {
+    delay: 1,
     display: "flex",
+    opacity: 1,
   });
   gsap.from(dropdown__item, {
     duration: 0.5,
-    // opacity: fullscreen ? 1 : 0,
+
     y: 10,
     stagger: 0.1,
-    delay: et,
+    delay: 1,
   });
 }
 
@@ -195,43 +255,6 @@ function showMenuMovement() {
     delay: 4,
   });
 }
-
-// adding the delay
-// function mainContentMovement() {
-//   gsap.from(".main-content-container", {
-//     y: 1000,
-//     opacity: 1,
-//     delay: 2,
-//   });
-// }
-
-// moving the background image
-// function mainPageMovement() {
-//   gsap.from("#main", {
-//     y: 100,
-//     opacity: 1,
-//     duration: 2,
-//     // backgroundPosition: "0% 50%",
-//     delay: 2,
-//   });
-// }
-
-// function carouselMovement() {
-//   gsap.from("#page2>.slider, #page2>.page2-heading", {
-//     y: 200,
-//     opacity: 0,
-//     scale: 0.2,
-//     duration: 0.5,
-//     stagger: 1,
-//     scrollTrigger: {
-//       trigger: "#page2",
-//       scroller: "body",
-//       start: "30% center",
-//       end: "80% center",
-//       toggleActions: "play reverse play none",
-//     },
-//   });
-// }
 
 /*=============== SHOW MENU ===============*/
 const showMenu = (toggleId, navId) => {

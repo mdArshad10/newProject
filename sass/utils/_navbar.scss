@@ -1,38 +1,18 @@
-#center_logos {
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-
-  & > .center-logo {
-    width: 15%;
-  }
-  & > #tag-line {
-    width: 10%;
-  }
-}
-
-#wrapper {
-  position: relative;
-}
-
 /* ====== india tag ====== */
 #india-tag {
   position: fixed;
   text-transform: uppercase;
   top: 30%;
   z-index: 99;
-  font-size: var(--india-tag-font-size);
-
+  font-size: 0.8rem;
+  font-weight: bold;
   background-color: #fff;
-  border-top-right-radius: 13px;
-  border-bottom-right-radius: 13px;
+  border-radius: 0px 13px 13px 0px;
+  padding: 4px 8px;
 }
 
 #india-tag > a {
   color: red;
-  padding: 4px 8px;
 }
 
 /* ====== india tag end ====== */
@@ -45,36 +25,34 @@
   position: fixed;
 }
 
-#psm-logo {
-  position: absolute;
-  width: initial;
-  height: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-// black screen background
-.black-screen-for-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-25%, -50%);
-}
-
-// psm working experience
-.psm-work-experience {
-  width: 40%;
-}
-
 // psm big logo
 .center-element {
-  width: fit-content;
-  /* background-color: brown; */
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  width: 50%;
-  align-items: flex-end;
+  position: relative;
+  width: 40%;
+  left: calc(50% - 1.5rem);
+  transform: translate(-50%, 0);
+
+  .psm-logo {
+    position: relative;
+    width: 100%;
+  }
+
+  // psm working experience
+  .psm-work-experience {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .center-element {
+    left: calc(50% + .5rem);
+    scale: 1;
+  //  transform: translate(-50%, -100%);
+  }
 }
 
 /*  ====== Navbar ======  */
@@ -181,27 +159,38 @@
 /* ====== Navbar End ====== */
 
 /* ====== Sticker ====== */
-#sticker {
-  position: absolute;
-  width: 22%;
-  height: 30%;
-  top: 30%;
-  left: 72%;
-  width: fit-content;
-  text-align: end;
-  z-index: 100;
+// #sticker {
+//   position: absolute;
+//   width: 22%;
+//   height: 30%;
+//   top: 30%;
+//   left: 72%;
+//   width: fit-content;
+//   text-align: end;
+//   z-index: 90;
 
-  & > img {
-    width: 18%;
-  }
-}
+//   & > img {
+//     width: 18%;
+//   }
+// }
 
-@media (max-width: 600px) {
-  #sticker {
-    height: 20%;
-    top: 25%;
-    left: 65%;
-  }
-}
+// @media (max-width: 600px) {
+//   #sticker {
+//     height: 20%;
+//     top: 25%;
+//     left: 65%;
+//   }
+// }
 
 /* ====== Sticker End ====== */
+
+// @media screen and (max-width: "768px") {
+//   .center-element {
+//     width: 70%;
+//     left: calc(50% - 0.5rem);
+
+//     .psm-work-experience {
+//       width: 50%;
+//     }
+//   }
+// }
