@@ -18,6 +18,8 @@ gsap.ticker.lagSmoothing(0);
 window.addEventListener("load", (e) => {
   heroCarousel();
 
+  carousel();
+
   const mm = gsap.matchMedia();
 
   showMenu("nav-toggle", "nav-menu");
@@ -86,7 +88,7 @@ window.addEventListener("load", (e) => {
   });
 
   navbarMove(1);
-  carousel();
+  
   
   ContentMovement(
     "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
