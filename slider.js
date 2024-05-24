@@ -8,7 +8,7 @@ function heroCarousel() {
     slidesToScroll: 1,
     initialSlide:0,
     speed: 1000,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
     autoplay: true,
     responsive: [
       {
@@ -31,7 +31,7 @@ function carousel() {
     slidesToShow: 1,
     slidesToScroll: 1,
     speed: 1000,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1000,
     autoplay: true,
     centerMode: true,
     initialSlide:0,

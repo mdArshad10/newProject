@@ -1244,7 +1244,7 @@ footer {
 #videoSection video {
   width: 85%;
   display: block;
-  outline: 16px solid #FFA300;
+  outline: 16px solid #ffa300;
 }
 
 #trustedBrandPartners {
@@ -1381,6 +1381,9 @@ footer {
   }
   #videoSection {
     padding: 2rem 1.5rem;
+  }
+  #videoSection video {
+    outline: 8px solid #ffa300;
   }
 }
 #orderOnlinePageHeader > nav {
