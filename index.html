@@ -63,12 +63,11 @@
             <i class="ri-menu-line nav__burger"></i>
             <i class="ri-close-line nav__close"></i>
           </div>
-
           <!--=============== NAV MENU ===============-->
           <div class="nav__menu" id="nav-menu">
             <ul class="nav__list">
               <!--=============== DROPDOWN 1 ===============-->
-              <li class="dropdown__item">
+              <!-- <li class="dropdown__item">
                 <div class="nav__link">
                   Cabinets and Doors
                   <i class="ri-arrow-down-s-line dropdown__arrow"></i>
@@ -83,10 +82,10 @@
                     <a href="#" class="dropdown__link"> Elegant </a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
 
               <!--=============== DROPDOWN 2 ===============-->
-              <li class="dropdown__item">
+              <!-- <li class="dropdown__item">
                 <div class="nav__link">
                   Inspiration
                   <i class="ri-arrow-down-s-line dropdown__arrow"></i>
@@ -94,17 +93,18 @@
 
                 <ul class="dropdown__menu">
                   <li>
-                    <a href="#" class="dropdown__link"> Gallery </a>
+                    // ⁡⁢⁣⁢𝗚𝗮𝗹𝗹𝗲𝗿𝘆 ===> 𝗼𝘂𝗿 𝗽𝗿𝗼𝗷𝗲𝗰𝘁⁡
+                    <a href="#" class="dropdown__link"> Our projects </a>
                   </li>
 
                   <li>
                     <a href="#" class="dropdown__link"> Blogs </a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
 
               <!-- ====== DROPDOWN 3 ========= -->
-              <li class="dropdown__item">
+              <!-- <li class="dropdown__item">
                 <div class="nav__link">
                   Why us <i class="ri-arrow-down-s-line dropdown__arrow"></i>
                 </div>
@@ -132,7 +132,7 @@
                     <a href="#" class="dropdown__link">Our process</a>
                   </li>
                 </ul>
-              </li>
+              </li> -->
 
               <!-- ====== DROPDOWN 4 ========= -->
               <li class="dropdown__item">
@@ -150,18 +150,18 @@
                     </a>
                   </li>
 
-                  <li>
+                  <!-- <li>
                     <a href="#" class="dropdown__link"> Job vacancy </a>
-                  </li>
+                  </li> -->
 
-                  <li>
+                  <!-- <li>
                     <a
                       href="/src/contact_us_page/index.html"
                       class="dropdown__link"
                     >
                       Contact us
                     </a>
-                  </li>
+                  </li> -->
                 </ul>
               </li>
 
@@ -184,7 +184,12 @@
 
                   <li>
                     <!-- TODO: SHOPIFY LINKS -->
-                    <a href="https://4bbc21-3.myshopify.com/" class="dropdown__link"> Doors </a>
+                    <a
+                      href="https://4bbc21-3.myshopify.com/"
+                      class="dropdown__link"
+                    >
+                      Doors
+                    </a>
                   </li>
                 </ul>
               </li>
@@ -263,7 +268,7 @@
               <h1>Flatpacks to assembled.<br />Selection to installation.</h1>
               <p>
                 Endless end-to-end budget-friendly options. <br />
-                Save time, effort, and A$s.
+                Save time, effort and money.
               </p>
             </div>
           </div>
@@ -412,9 +417,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div> -->
+        
       </section>
 
       <section id="catalog_section">
@@ -609,7 +612,9 @@
           <div class="item">
             <picture>
               <source
-                srcset="public/assets/Home_page/collection/small/Laundries_3.webp"
+                srcset="
+                  public/assets/Home_page/collection/small/Laundries_3.webp
+                "
                 media="(max-width: 800px)"
               />
 
@@ -661,8 +666,23 @@
           <!-- for office fitout -->
           <div class="item">
             <picture>
+              <source
+                srcset="
+                  public/assets/Home_page/collection/small/office-fitouts_3.webp
+                "
+                media="(max-width: 800px)"
+              />
+
+              <source
+                srcset="public/assets/Home_page/collection/office-fitouts.webp"
+                media="(min-width:1440px)"
+              />
+              <source
+                srcset="public/assets/Home_page/collection/office-fitouts.webp"
+                media="(max-width: 1920px)"
+              />
               <img
-                src="/public/assets/Home_page/collection/office-fitouts.jpg"
+                src="/public/assets/Home_page/collection/mid/office-fitouts_2.webp"
                 loading="lazy"
                 class="lazy-loading"
                 alt="Shop Fitouts"
@@ -756,14 +776,17 @@
       </section>
 
       <!-- video section -->
-      <video
-        class="lazy-video"
-        controls
-        src="https://res.cloudinary.com/dfcgj5h5c/video/upload/v1715162210/psm/video/fxk1qbvwh7hoxgigw4px.mp4"
-        autoplay
-        loop
-        muted
-      ></video>
+      <div id="videoSection">
+        <video
+          class="lazy-video"
+          controls
+          src="https://res.cloudinary.com/dfcgj5h5c/video/upload/v1715162210/psm/video/fxk1qbvwh7hoxgigw4px.mp4"
+          autoplay
+          loop
+          muted
+        ></video>
+
+      </div>
 
       <!-- "setting the standard"  -->
       <section id="quick-fit-solution" class="image-text-block">
@@ -776,6 +799,7 @@
           <li>Order online or book a free consultation</li>
           <li>Get step-by-step expert DIY and Installation assistance</li>
         </ol>
+        <a href="/src/cabinets_order/index.html">Get a Quote</a>
       </section>
 
       <!-- Choose from all the latest brands section -->
@@ -882,17 +906,21 @@
           <div id="footer-top-additional-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><a href="#">About us</a></li>
+              <!-- <li><a href="#">About us</a></li> -->
               <li>
-                <a href="http://localhost:4173/pdf/Digital_Brochure_web.pdf" target="_blank"
+                <a
+                  href="https://psmcabinets.com.au/pdf/Digital_Brochure_web.pdf"
+                  target="_blank"
                   >PSM Brochure</a
                 >
               </li>
-              <li><a href="#">Our process</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Price guide</a></li>
+              <!-- <li><a href="#">Our Process</a></li> -->
+              <!-- <li><a href="#">FAQs</a></li> -->
+              <!-- <li><a href="#">Price guide</a></li> -->
               <li>
-                <a href="/src/consultancy_page/index.html">Book consultation</a>
+                <a href="/src/consultancy_page/index.html"
+                  >Book a consultation</a
+                >
               </li>
             </ul>
           </div>
@@ -913,11 +941,16 @@
               <p>Follow us on</p>
               <ul>
                 <li>
-                  <a href="https://www.facebook.com/psmcabinetsau"><i class="ri-facebook-fill"></i></a>
+                  <a href="https://www.facebook.com/psmcabinetsau"
+                    ><i class="ri-facebook-fill"></i
+                  ></a>
                 </li>
 
                 <li>
-                  <a href="https://www.instagram.com/psmcabinets_au?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="ri-instagram-fill"></i></a>
+                  <a
+                    href="https://www.instagram.com/psmcabinets_au?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                    ><i class="ri-instagram-fill"></i
+                  ></a>
                 </li>
                 <li>
                   <a href="https://www.tiktok.com/@psm.australia">

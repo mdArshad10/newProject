@@ -240,9 +240,18 @@
 }
 
 // video section
-video {
-  width: 100%;
-  display: block;
+#videoSection {
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+  video {
+    width: 85%;
+    display: block;
+    outline: 16px solid #FFA300;
+  }
 }
 
 // trusted brand partner section
@@ -302,6 +311,10 @@ video {
     .slick-dots {
       bottom: 0%;
     }
+  }
+
+  #videoSection {
+    padding: 4rem;
   }
 }
 
@@ -394,8 +407,8 @@ video {
 
   #sticker {
     width: calc(100vw / 3);
-    top: 20%;
-    left: 40%;
+    top: 15%;
+    left: 55%;
   }
 
   #catalog_section {
@@ -427,5 +440,9 @@ video {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(7, 80px);
     }
+  }
+
+  #videoSection {
+    padding: 2rem 1.5rem;
   }
 }

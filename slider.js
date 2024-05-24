@@ -6,8 +6,9 @@ function heroCarousel() {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    speed: 2000,
-    autoplaySpeed: 4000,
+    initialSlide:0,
+    speed: 1000,
+    autoplaySpeed: 2000,
     autoplay: true,
     responsive: [
       {
@@ -29,10 +30,11 @@ function carousel() {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    speed: 2000,
-    autoplaySpeed: 3000,
-    autoplay: false,
+    speed: 1000,
+    autoplaySpeed: 2000,
+    autoplay: true,
     centerMode: true,
+    initialSlide:0,
     centerPadding: "30rem",
     // responsive
     responsive: [
@@ -60,5 +62,8 @@ function carousel() {
     ],
   });
 }
+
+
+
 
 export { carousel, heroCarousel };

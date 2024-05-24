@@ -26,81 +26,80 @@ window.addEventListener("load", (e) => {
     centerLogoMove(0, 0, 0.2, 0, false);
     navbarMove(1, true);
     carousel();
-    featureSectionMovement();
-    ContentMovement(
-      "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
-      "#personalised-styles",
-      "center",
-      "bottom"
-    );
-    ContentMovement(
-      "#quick-fit-solution> h2, #quick-fit-solution> ol",
-      "#quick-fit-solution",
-      "center",
-      "bottom"
-    );
+    
   });
 
-  mm.add("(min-width: 1119px) and (max-width:1919px)",()=>{
+  mm.add("(min-width: 1119px) and (max-width:1919px)", () => {
     centerLogoMove(0, 0, 0.2, 0, true);
     navbarMove(1, true);
     carousel();
-    featureSectionMovement();
-    ContentMovement(
-      "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
-      "#personalised-styles",
-      "center",
-      "bottom"
-    );
-    ContentMovement(
-      "#quick-fit-solution> h2, #quick-fit-solution> ol",
-      "#quick-fit-solution",
-      "center",
-      "bottom"
-    );
-  })
+    // featureSectionMovement();
+    // ContentMovement(
+    //   "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
+    //   "#personalised-styles",
+    //   "center",
+    //   "bottom"
+    // );
+    // ContentMovement(
+    //   "#quick-fit-solution> h2, #quick-fit-solution> ol, #quick-fit-solution > a ",
+    //   "#quick-fit-solution",
+    //   "center",
+    //   "bottom"
+    // );
+  });
 
   mm.add("(min-width: 1920px)", () => {
     centerLogoMove("0.2rem", 0, 0.2, 0, true);
-    featureSectionMovement();
-    ContentMovement(
-      "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
-      "#personalised-styles",
-      "center",
-      "bottom"
-    );
-    ContentMovement(
-      "#quick-fit-solution> h2, #quick-fit-solution> ol",
-      "#quick-fit-solution",
-      "center",
-      "bottom"
-    );
+    // featureSectionMovement();
+    // ContentMovement(
+    //   "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
+    //   "#personalised-styles",
+    //   "center",
+    //   "bottom"
+    // );
+    // ContentMovement(
+    //   "#quick-fit-solution> h2, #quick-fit-solution> ol, #quick-fit-solution > a ",
+    //   "#quick-fit-solution",
+    //   "center",
+    //   "bottom"
+    // );
   });
-
-
 
   mm.add("(max-width: 768px)", () => {
     centerLogoMove(0, 0, 0.5, 0, false, 25);
 
     navbarMove(1);
     carousel();
-    featureSectionMovement();
+    
     ContentMovement(
       "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
       "#personalised-styles",
-      "center",
+      "top",
       "bottom"
     );
     ContentMovement(
-      "#quick-fit-solution> h2, #quick-fit-solution> ol",
+      "#quick-fit-solution> h2, #quick-fit-solution> ol, #quick-fit-solution > a ",
       "#quick-fit-solution",
-      "center",
+      "top",
       "bottom"
     );
   });
 
   navbarMove(1);
   carousel();
+  
+  ContentMovement(
+    "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
+    "#personalised-styles",
+    "top",
+    "bottom"
+  );
+  ContentMovement(
+    "#quick-fit-solution> h2, #quick-fit-solution> ol, #quick-fit-solution > a ",
+    "#quick-fit-solution",
+    "top",
+    "bottom"
+  );
 });
 
 function navbarMove(et, isLargeScreen = false) {
@@ -142,7 +141,7 @@ function navbarMenuMovementInPhone() {
   const dropdown__item = document.querySelectorAll(".dropdown__item");
   gsap.to(".nav__toggle", {
     delay: 2.25,
-    opacity:1 ,
+    opacity: 1,
   });
   gsap.to(".nav__menu", {
     delay: 1,
@@ -170,58 +169,57 @@ function tagLineMove(et) {
 }
 
 // animation done ✅
-function featureSectionMovement() {
-  gsap.from(".feature-section>h2", {
-    y: 200,
-    opacity: 0,
-    scale: 0.2,
-    duration: 0.5,
+// function featureSectionMovement() {
+//   gsap.from(".feature-section>h2", {
+//     y: 200,
+//     opacity: 0,
+//     scale: 0.2,
+//     duration: 0.5,
 
-    scrollTrigger: {
-      trigger: ".feature-section",
-      scroller: "body",
-      
-      start: "10vh center",
-      end: "600vh center",
-      toggleActions: "play reverse play none",
-    },
-  });
+//     scrollTrigger: {
+//       trigger: ".feature-section",
+//       scroller: "body",
 
-  gsap.from(".feature-blocks> .feature-single-block", {
-    x: -100,
-    opacity: 0,
-    duration: 0.5,
-    stagger: 0.4,
-    scrollTrigger: {
-      trigger: ".feature-section",
-      scroller: "body",
-      scrub: 1,
-      start: "10vh center",
-      end: "600vh center",
-      toggleActions: "play reverse play reverse",
-    },
-  });
-}
+//       start: "10vh center",
+//       end: "600vh center",
+//       toggleActions: "play reverse play none",
+//     },
+//   });
+
+//   gsap.from(".feature-blocks> .feature-single-block", {
+//     x: -100,
+//     opacity: 0,
+//     duration: 0.5,
+//     stagger: 0.4,
+//     scrollTrigger: {
+//       trigger: ".feature-section",
+//       scroller: "body",
+//       scrub: 1,
+//       start: "top center",
+//       end: "600vh center",
+//       toggleActions: "play reverse play reverse",
+//     },
+//   });
+// }
 
 // animation done ✅
 function ContentMovement(
   targetElement,
   triggerElement,
-  topStart = "center",
+  topStart = "top",
   topEnd = "center"
 ) {
   gsap.from(`${targetElement}`, {
     opacity: 0,
     duration: 0.5,
     delay: 0.5,
-    stagger: 0.4,
     scrollTrigger: {
       trigger: `${triggerElement}`,
       scrollTarget: "body",
-      
       // start: "top center",
       start: `${topStart} center`,
       // end: "bottom center",
+      // markers:true,
       end: `${topEnd} center`,
       toggleActions: "play reverse play reverse",
     },
