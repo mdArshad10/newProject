@@ -36,7 +36,8 @@
 
       h1 {
         font-size: 38px;
-        margin-bottom: 1.25rem;
+        line-height: 120%;
+        margin-bottom: 0.5rem;
         opacity: 0;
         transition: 2s;
         transition-delay: 1.5s;
@@ -288,7 +289,7 @@
 
         h1 {
           font-size: 46px;
-          line-height: 150%;
+          line-height: 120%;
         }
 
         p {

@@ -1081,7 +1081,8 @@ footer {
 }
 .hero-slider .hero-item .content h1 {
   font-size: 38px;
-  margin-bottom: 1.25rem;
+  line-height: 120%;
+  margin-bottom: 0.5rem;
   opacity: 0;
   transition: 2s;
   transition-delay: 1.5s;
@@ -1270,7 +1271,7 @@ footer {
 @media screen and (min-width: 1920px) {
   .hero-slider .hero-item .content h1 {
     font-size: 46px;
-    line-height: 150%;
+    line-height: 120%;
   }
   .hero-slider .hero-item .content p {
     font-size: 24px;
