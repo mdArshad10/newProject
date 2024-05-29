@@ -102,8 +102,8 @@
   }
 }
 
-@media (orientation: landscape) {
+@media (orientation: landscape) and (max-width: 768px) {
   .feature-section {
-    width: 100vw;
+    width: 100% !important;
   }
 }
