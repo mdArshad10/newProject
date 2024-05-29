@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #35463d !important;
 }
 
 :root {
@@ -575,7 +574,7 @@ label,
     gap: 0.75rem;
   }
 }
-@media (orientation: landscape) and (max-width: 768px) {
+@media screen and (orientation: landscape) and (max-width: 768px) {
   .feature-section {
     width: 100% !important;
   }
