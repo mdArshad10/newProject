@@ -227,7 +227,7 @@ footer {
   }
 }
 
-@media (max-width: 992px) {
+@media screen and (max-width: 992px) {
   #footer-top-container {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
@@ -238,7 +238,7 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #footer-bottom-container {
     display: flex;
     flex-direction: column;
@@ -251,7 +251,7 @@ footer {
   }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   footer {
     padding: 2rem 1.5rem;
 
