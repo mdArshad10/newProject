@@ -101,3 +101,9 @@
     }
   }
 }
+
+@media (orientation: landscape) {
+  .feature-section {
+    width: 100vw;
+  }
+}
