@@ -789,7 +789,7 @@ label,
   }
 }
 footer {
-  background-color: #2d2827;
+  background-color: #000;
   padding: 2rem;
   color: white;
 }
@@ -900,7 +900,7 @@ footer {
 }
 @media screen and (min-width: 1920px) {
   footer {
-    background-color: #2d2827;
+    background-color: #000;
     padding: 2rem;
     color: white;
   }
@@ -1394,7 +1394,7 @@ footer {
   }
 }
 #orderOnlinePageHeader > nav {
-  background: #2d2926;
+  background: #000000;
   display: flex;
   justify-content: space-between;
   align-items: center;
