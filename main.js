@@ -24,55 +24,12 @@ window.addEventListener("load", (e) => {
 
   showMenu("nav-toggle", "nav-menu");
 
-  mm.add("(min-width: 768px) and (max-width: 1120px)", () => {
-    centerLogoMove(0, 0, 0.2, 0, false);
-    navbarMove(1, true);
-    carousel();
-    
-  });
-
-  mm.add("(min-width: 1119px) and (max-width:1919px)", () => {
-    centerLogoMove(0, 0, 0.2, 0, true);
-    navbarMove(1, true);
-    carousel();
-    // featureSectionMovement();
-    // ContentMovement(
-    //   "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
-    //   "#personalised-styles",
-    //   "center",
-    //   "bottom"
-    // );
-    // ContentMovement(
-    //   "#quick-fit-solution> h2, #quick-fit-solution> ol, #quick-fit-solution > a ",
-    //   "#quick-fit-solution",
-    //   "center",
-    //   "bottom"
-    // );
-  });
-
-  mm.add("(min-width: 1920px)", () => {
-    centerLogoMove("0.2rem", 0, 0.2, 0, true);
-    // featureSectionMovement();
-    // ContentMovement(
-    //   "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
-    //   "#personalised-styles",
-    //   "center",
-    //   "bottom"
-    // );
-    // ContentMovement(
-    //   "#quick-fit-solution> h2, #quick-fit-solution> ol, #quick-fit-solution > a ",
-    //   "#quick-fit-solution",
-    //   "center",
-    //   "bottom"
-    // );
-  });
-
   mm.add("(max-width: 768px)", () => {
     centerLogoMove(0, 0, 0.5, 0, false, 25);
 
     navbarMove(1);
     carousel();
-    
+
     ContentMovement(
       "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
       "#personalised-styles",
@@ -87,9 +44,24 @@ window.addEventListener("load", (e) => {
     );
   });
 
+  mm.add("(min-width: 769px) and (max-width: 1119px)", () => {
+    centerLogoMove(0, 0, 0.2, 0, false);
+    navbarMove(1, true);
+    carousel();
+  });
+
+  mm.add("(min-width: 1120px) and (max-width:1919px)", () => {
+    centerLogoMove(0, 0, 0.2, 0, true);
+    navbarMove(1, true);
+    carousel();
+  });
+
+  mm.add("(min-width: 1920px)", () => {
+    centerLogoMove("0.2rem", 0, 0.2, 0, true);
+  });
+
   navbarMove(1);
-  
-  
+
   ContentMovement(
     "#personalised-styles > h2, #personalised-styles > p, #personalised-styles > ol",
     "#personalised-styles",

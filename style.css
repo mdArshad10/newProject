@@ -1243,10 +1243,12 @@ footer {
 #videoSection {
   padding: 2rem 4rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 #videoSection video {
+  margin-top: 1rem;
   width: 85%;
   display: block;
   outline: 16px solid #ffa300;
