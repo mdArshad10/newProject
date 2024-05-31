@@ -1241,11 +1241,18 @@ footer {
 }
 
 #videoSection {
-  padding: 2rem 4rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
+}
+#videoSection h2 {
+  font-size: clamp(1.5rem, 1.2981rem + 0.8974vw, 2.375rem);
+  text-transform: capitalize;
+  font-weight: 300;
+  text-align: center;
 }
 #videoSection video {
   margin-top: 1rem;
@@ -1289,7 +1296,7 @@ footer {
     bottom: 0%;
   }
   #videoSection {
-    padding: 4rem;
+    padding: 3rem 4rem;
   }
 }
 @media screen and (max-width: 525px) {
