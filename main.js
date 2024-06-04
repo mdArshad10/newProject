@@ -132,39 +132,6 @@ function tagLineMove(et) {
   });
 }
 
-// animation done ✅
-// function featureSectionMovement() {
-//   gsap.from(".feature-section>h2", {
-//     y: 200,
-//     opacity: 0,
-//     scale: 0.2,
-//     duration: 0.5,
-
-//     scrollTrigger: {
-//       trigger: ".feature-section",
-//       scroller: "body",
-
-//       start: "10vh center",
-//       end: "600vh center",
-//       toggleActions: "play reverse play none",
-//     },
-//   });
-
-//   gsap.from(".feature-blocks> .feature-single-block", {
-//     x: -100,
-//     opacity: 0,
-//     duration: 0.5,
-//     stagger: 0.4,
-//     scrollTrigger: {
-//       trigger: ".feature-section",
-//       scroller: "body",
-//       scrub: 1,
-//       start: "top center",
-//       end: "600vh center",
-//       toggleActions: "play reverse play reverse",
-//     },
-//   });
-// }
 
 // animation done ✅
 function ContentMovement(
